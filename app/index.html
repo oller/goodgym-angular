@@ -12,6 +12,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
@@ -26,7 +27,25 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+
+    <div class="container">
+
+
+      <div class="pure-g-r" id="layout">
+
+        <div ng-include="'views/nav.html'" class="pure-u-1"></div>
+
+      <div class="pure-u-1" id="main">
+
+        <div ng-view=""></div>
+
+      </div>
+
+      </div>
+
+    </div>      
+
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -50,8 +69,11 @@
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/lib/responsive.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
+        <script src="scripts/directives/responsive.js"></script>
         <!-- endbuild -->
 </body>
 </html>
