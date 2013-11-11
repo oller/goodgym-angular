@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="styles/e0afbcbc.main.css"/>
+        <link rel="stylesheet" href="styles/4f99e98c.main.css"/>
 </head>
   <body ng-app="angularGoodgymApp">
     <!--[if lt IE 7]>
@@ -24,7 +24,25 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+
+    <div class="container">
+
+
+      <div class="pure-g-r" id="layout">
+
+        <div ng-include="'views/nav.html'" class="pure-u-1"></div>
+
+      <div class="pure-u-1" id="main">
+
+        <div ng-view=""></div>
+
+      </div>
+
+      </div>
+
+    </div>      
+
+    
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -42,6 +60,6 @@
 
         <script src="scripts/2b3f0065.modules.js"></script>
 
-        <script src="scripts/833e09fe.scripts.js"></script>
+        <script src="scripts/df144736.scripts.js"></script>
 </body>
 </html>
