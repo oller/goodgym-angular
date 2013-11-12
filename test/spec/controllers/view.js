@@ -1,22 +1,22 @@
 'use strict';
 
-describe('Controller: NavCtrl', function () {
+describe('Controller: ViewCtrl', function () {
 
   // load the controller's module
   beforeEach(module('angularGoodgymApp'));
 
-  var NavCtrl,
+  var ViewCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    NavCtrl = $controller('NavCtrl', {
+    ViewCtrl = $controller('ViewCtrl', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of nav elements to the scope', function () {
-    expect(scope.nav.length).toBe(5);
+  it('should import the title', function () {
+    expect(scope.title).toContain('Runs');
   });
 });

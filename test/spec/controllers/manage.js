@@ -1,22 +1,22 @@
 'use strict';
 
-describe('Controller: NavCtrl', function () {
+describe('Controller: ManageCtrl', function () {
 
   // load the controller's module
   beforeEach(module('angularGoodgymApp'));
 
-  var NavCtrl,
+  var ManageCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    NavCtrl = $controller('NavCtrl', {
+    ManageCtrl = $controller('ManageCtrl', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of nav elements to the scope', function () {
-    expect(scope.nav.length).toBe(5);
+  it('should import the title', function () {
+    expect(scope.title).toContain('Manage');
   });
 });

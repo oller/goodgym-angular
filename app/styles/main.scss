@@ -41,17 +41,14 @@ h4 {
 a {
     color: hsla(0, 64%, 38%, 1); /* block-background-text-normal */
     text-decoration: none;
-    /*border-bottom: 1px solid;*/
     transition: all 0.2s linear;
-}
-
-a:hover,
-a:focus {
-  color: hsla(0, 94%, 38%, 1);
+    &:hover, &:focus {
+        color: hsla(0, 94%, 38%, 1);
+    }
 }
 
 a:visited {
-    color: hsla(0, 64%, 38%, 1); /* block-normal-text-normal */
+    color: hsla(0, 94%, 38%, 1); /* block-normal-text-normal */
 }
 
 dt {
@@ -104,7 +101,6 @@ dd {
      background: #fff;
  }
     .header h1 {
-        font-family: "omnes-pro", sans-serif;
         margin: 0.2em 0;
         font-size: 3em;
         font-weight: 300;
@@ -154,11 +150,7 @@ aside {
         line-height: 1.8em;
     }
 
-    /* A code snippet that has been syntax highlighted */
-    .content .snippet {
-        margin: 1.3em 0 1em;
-        padding: 1.3em;
-    }
+
 
     .content .content-quote {
         font-family: "Georgia", serif;
@@ -169,22 +161,7 @@ aside {
         padding-left: 1.5em;
     }
 
-    .content-link {
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: block;
-        height: 100%;
-        width: 20px;
-        background: transparent url('/img/link-icon.png') no-repeat center center;
-        background-size: 20px 20px;
-    }
 
-    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-        .content-link {
-            background-image: url('/img/link-icon@2x.png');
-        }
-    }
 
 /* --------------------------
  * Footer Module Styles
@@ -254,7 +231,7 @@ aside {
 
     #menu .pure-menu ul,
     #menu .pure-menu .menu-item-divided {
-        border-top: 1px solid hsla(0, 85%, 38%, 1);;
+        border-top: 1px solid #DDD;
     }
 
     #menu .pure-menu li a.selected {
@@ -267,22 +244,31 @@ aside {
        color: #373737;
     }
 
+
+    .menu-link-header {
+      background: hsla(0, 90%, 38%, 0.8);
+      position: fixed;
+      width: 100%;
+      transition: all 0.2s ease-out;
+      cursor: pointer;
+    }
+
+    .menu-link-header:hover,
+    .menu-link-header:focus  {
+      background: hsla(0, 90%, 38%, 1);
+    }
+
+
     .pure-menu-link {
         display: none; /* show this only on small screens */
         top: 0;
         left: 200px; /* "#menu width" */
-        background: hsla(0, 80%, 38%, 0.6);
         font-size: 10px; /* change this value to increase/decrease button size */
         z-index: 10;
         width: 2em;
         height: auto;
         padding: 2.1em 1.6em;
     }
-
-        .pure-menu-link:hover,
-        .pure-menu-link:focus {
-            background: hsla(0, 80%, 38%, 1);;
-        }
 
         .pure-menu-link span {
             position: relative;
@@ -313,11 +299,11 @@ aside {
                 margin-top: .6em;
             }
 
-        .pure-menu-link.active span {
+        .menu-link-header.active .pure-menu-link span {
             background: transparent;
         }
 
-            .pure-menu-link.active span:before {
+            .menu-link-header.active .pure-menu-link span:before {
                 -webkit-transform: rotate(45deg) translate(.5em, .4em);
                    -moz-transform: rotate(45deg) translate(.5em, .4em);
                     -ms-transform: rotate(45deg) translate(.5em, .4em);
@@ -325,7 +311,7 @@ aside {
                         transform: rotate(45deg) translate(.5em, .4em);
             }
 
-            .pure-menu-link.active span:after {
+            .menu-link-header.active .pure-menu-link span:after {
                 -webkit-transform: rotate(-45deg) translate(.45em, -.35em);
                    -moz-transform: rotate(-45deg) translate(.45em, -.35em);
                     -ms-transform: rotate(-45deg) translate(.45em, -.35em);
@@ -363,11 +349,11 @@ aside {
 */
 
 .masthead {
-  background: transparent url('/images/bg_goodgym2.jpeg') no-repeat bottom center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: transparent url('/images/bg_goodgym2.jpeg') no-repeat top center fixed;
+  -webkit-background-size: initial;
+  -moz-background-size: initial;
+  -o-background-size: initial;
+  background-size: initial;
   text-align: center;
   height: 450px;
   width: 100%;
@@ -456,10 +442,15 @@ a.pure-button-primary {
         left: 0;
     }
 
+
     .pure-menu-link {
-        position: fixed;
-        left: 0;
+/*        position: fixed;
+*/        left: 0;
         display: block;
+    }
+
+    #menu .pure-menu-heading {
+      display: none;
     }
 
     #layout.active .pure-menu-link {

@@ -1,18 +1,19 @@
-<a href="#menu" id="menuLink" responsive="" class="pure-menu-link">
+<div id="menuLink" responsive="" class="menu-link-header">
+	<a href="#menu" class="pure-menu-link">
 		<span></span>
-</a>
+	</a>
+</div>
 
 <nav class="pure-u" id="menu" ng-controller="NavCtrl">
 		<div class="pure-menu pure-menu-open">
-				<a class="pure-menu-heading" href="/">GG</a>
+				<a class="pure-menu-heading" href="/">GG Logo</a>
 
 				<ul>
 					
-						<li class="" ng-repeat="link in nav">
+						<li ng-repeat="link in nav">
 								<a active-link="pure-menu-selected" href="#/{{link.slug | lowercase}}">{{ link.title }}</a>
 						</li>
 					
-
 						<li class="menu-item-divided">
 								<a href="#">Logout</a>
 						</li>
