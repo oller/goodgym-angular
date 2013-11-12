@@ -8,13 +8,13 @@
 
 				<ul>
 					
-						<li class=" " ng-repeat="link in nav">
-								<a href="/#{{link}}/">{{ link }}</a>
+						<li class="" ng-repeat="link in nav" >
+								<a active-link="pure-menu-selected" href="#/{{link.slug | lowercase}}">{{ link.title }}</a>
 						</li>
 					
 
 						<li class="menu-item-divided">
-								<a href="http://yui.github.io/skinbuilder/?mode=pure">Logout</a>
+								<a href="#">Logout</a>
 						</li>
 
 				</ul>
