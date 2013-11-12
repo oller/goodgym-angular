@@ -5,7 +5,7 @@ body {
 body,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
-    font-family: "proxima-nova", sans-serif;
+    font-family: 'Helvetica Neue', Arial, Helvetica, Verdana, sans-serif;
 }
 
 
@@ -67,7 +67,7 @@ dd {
 */
 
 #layout {
-    padding-left: 150px; /* left col width "#menu" */
+    padding-left: 200px; /* left col width "#menu" */
     left: 0;
 }
 
@@ -220,26 +220,26 @@ aside {
 */
 
 #menu {
-    margin-left: -150px; /* "#menu" width */
-    width: 150px;
+    margin-left: -200px; /* "#menu" width */
+    width: 200px;
     position: fixed;
     top: 0;
-    left: 150px;
+    left: 200px;
     bottom: 0;
     z-index: 1000; /* so the menu or its navicon stays above all content */
-/*    background: #9C9C9C;
-*/
-
-background-image: url('/images/bg_nav.png' );
+    background: #f2f2f2;
     overflow-y: auto;
     -webkit-overflow-scroll: touch;
 }
     #menu a {
-        color: #999;
+        color: #959595;
         border: none;
         white-space: normal;
-        padding: 0.6em 0 0.6em 0.6em;
-        transition: all 0.1s ease-out;
+        padding: 1em 0 1em 1em;
+        transition: all 0.15s ease-out;
+        vertical-align: middle;
+        font-weight: 500;
+        font-size: inherit;
     }
 
     #menu .pure-menu-open {
@@ -257,17 +257,21 @@ background-image: url('/images/bg_nav.png' );
         border-top: 1px solid hsla(0, 85%, 38%, 1);;
     }
 
+    #menu .pure-menu li a.selected {
+      background: #FFF;
+      color: #373737;
+    }
+
     #menu .pure-menu li a:hover,
     #menu .pure-menu li a:focus {
-        background: #AAA;
-        color: #FFF;
+       color: #373737;
     }
 
     .pure-menu-link {
         display: none; /* show this only on small screens */
         top: 0;
-        left: 150px; /* "#menu width" */
-        background: hsla(0, 64%, 38%, 0.6);
+        left: 200px; /* "#menu width" */
+        background: hsla(0, 80%, 38%, 0.6);
         font-size: 10px; /* change this value to increase/decrease button size */
         z-index: 10;
         width: 2em;
@@ -277,7 +281,7 @@ background-image: url('/images/bg_nav.png' );
 
         .pure-menu-link:hover,
         .pure-menu-link:focus {
-            background: hsla(0, 64%, 38%, 1);;
+            background: hsla(0, 80%, 38%, 1);;
         }
 
         .pure-menu-link span {
@@ -343,11 +347,8 @@ background-image: url('/images/bg_nav.png' );
     }
 
     #menu .pure-menu-selected {
-        background: #1f8dd6;
-    }
-
-    #menu .pure-menu-selected a {
-        color: #fff;
+        background: #fff;
+        color: #373737;
     }
 
     #menu li.pure-menu-selected a:hover,
@@ -357,12 +358,12 @@ background-image: url('/images/bg_nav.png' );
 
 
 /* --------------------------
- * Responsive Styles
+ * Masthead
  * --------------------------
 */
 
-.banner {
-  background: transparent url('/images/bg_goodgym.jpeg') center center no-repeat fixed;
+.masthead {
+  background: transparent url('/images/bg_goodgym2.jpeg') no-repeat bottom center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -390,14 +391,15 @@ background-image: url('/images/bg_nav.png' );
 
 }
 
-.banner h1 {
+.masthead h1 {
   color: #FFF;
-  font-size: 300%;
+  font-size: 400%;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
   font-weight: normal;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  font-weight: 200;
 }
 
 
@@ -443,11 +445,11 @@ a.pure-button-primary {
     }
         #layout.active {
             position: relative;
-            left: 150px;
+            left: 200px;
         }
             #layout.active #menu {
-                left: 150px;
-                width: 150px;
+                left: 200px;
+                width: 200px;
             }
 
     #menu {
@@ -461,7 +463,7 @@ a.pure-button-primary {
     }
 
     #layout.active .pure-menu-link {
-        left: 150px;
+        left: 200px;
     }
 }
 
