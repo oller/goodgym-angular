@@ -1,0 +1,158 @@
+
+/* --------------------------
+ * Main Navigation Bar Styles
+ * -------------------------- */
+
+#menu {
+  margin-left: -200px;
+  /* "#menu" width */
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 200px;
+  bottom: 0;
+  z-index: 1000;
+  /* so the menu or its navicon stays above all content */
+  background: #f2f2f2;
+  overflow-y: auto;
+  -webkit-overflow-scroll: touch;
+  a {
+    color: #959595;
+    border: none;
+    white-space: normal;
+    padding: 1em 0 1em 1em;
+    transition: all 0.15s ease-out;
+    vertical-align: middle;
+    font-weight: 500;
+    font-size: inherit;
+  }
+  .pure-menu-open {
+    background: transparent;
+    border: 0;
+  }
+  .pure-menu {
+    ul {
+      border: none;
+      background: transparent;
+      border-top: 1px solid #dddddd;
+    }
+    .menu-item-divided {
+      border-top: 1px solid #dddddd;
+    }
+    li a {
+      &.selected {
+        background: white;
+        color: #373737;
+      }
+      &:hover, &:focus {
+        color: #373737;
+      }
+    }
+  }
+}
+
+.menu-link-header {
+  background: hsla(0, 90%, 38%, 0.8);
+  position: fixed;
+  width: 100%;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  &:hover, &:focus {
+    background: hsla(0, 90%, 38%, 1);
+  }
+}
+
+.pure-menu-link {
+  display: none;
+  /* show this only on small screens */
+  top: 0;
+  left: 200px;
+  /* "#menu width" */
+  font-size: 10px;
+  /* change this value to increase/decrease button size */
+  z-index: 10;
+  width: 2em;
+  height: auto;
+  padding: 2.1em 1.6em;
+  background: hsla(0, 80%, 38%, 1);
+  span {
+    position: relative;
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 0.2em;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    transition: all 0.8s;
+    &:before, &:after {
+      background-color: white;
+      width: 100%;
+      height: 0.2em;
+      -webkit-transition: all 0.8s;
+      -moz-transition: all 0.8s;
+      -ms-transition: all 0.8s;
+      -o-transition: all 0.8s;
+      transition: all 0.8s;
+    }
+    &:before {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+    }
+    &:after {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+      margin-top: 0.6em;
+    }
+  }
+  &.active span {
+    background: transparent;
+    &:before {
+      -webkit-transform: rotate(45deg) translate(0.5em, 0.4em);
+      -moz-transform: rotate(45deg) translate(0.5em, 0.4em);
+      -ms-transform: rotate(45deg) translate(0.5em, 0.4em);
+      -o-transform: rotate(45deg) translate(0.5em, 0.4em);
+      transform: rotate(45deg) translate(0.5em, 0.4em);
+    }
+    &:after {
+      -webkit-transform: rotate(-45deg) translate(0.45em, -0.35em);
+      -moz-transform: rotate(-45deg) translate(0.45em, -0.35em);
+      -ms-transform: rotate(-45deg) translate(0.45em, -0.35em);
+      -o-transform: rotate(-45deg) translate(0.45em, -0.35em);
+      transform: rotate(-45deg) translate(0.45em, -0.35em);
+    }
+  }
+}
+
+#menu {
+  .pure-menu-heading {
+    font-size: 110%;
+    color: white;
+    background: hsla(0, 80%, 38%, 1);
+    margin: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    a {
+      display: block;
+      background-image: url(/images/logo_goodgym.svg);
+      width: 100%;
+      height: 74px;
+      background-size: 100% auto;
+      text-indent: -9999px;
+      padding: 0;
+      background-repeat: no-repeat;
+    }
+  }
+  .pure-menu-selected {
+    background: white;
+    color: #373737;
+  }
+  li.pure-menu-selected a {
+    &:hover, &:focus {
+      background: none;
+    }
+  }
+}

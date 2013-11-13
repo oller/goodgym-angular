@@ -4,7 +4,7 @@ angular.module('angularGoodgymApp')
   .directive('activeLink', ['$location', function(location) {
     return {
         restrict: 'A',
-        link: function(scope, element, attrs, controller) {
+        link: function(scope, element, attrs) {
             var selectedClass = attrs.activeLink;
             var path = attrs.href;
             path = path.substring(1); //hack because path does bot return including hashbang
