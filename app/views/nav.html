@@ -1,23 +1,28 @@
-<a href="#" id="menuLink" class="pure-menu-link" ng-class="{active: showResponsiveMenu}" responsive>
-	<span></span>
-</a>
-
-<nav class="pure-u" id="menu" ng-controller="NavCtrl" ng-class="{active: showResponsiveMenu}">
-		<div class="pure-menu pure-menu-open">
-				<div class="pure-menu-heading brando">
-					<a href="/">GoodGym</a>
-				</div>
-
-				<ul>
-					
-						<li ng-repeat="link in nav">
-								<a active-link="pure-menu-selected" href="#/{{link.slug | lowercase}}" responsive>{{ link.title }}</a>
-						</li>
-					
-						<li class="menu-item-divided">
-								<a href="#">Logout</a>
-						</li>
-
-				</ul>
-		</div>
-</nav>
+<div class="sliding-nav relative overflow-hidden navtoggle" ng-controller="NavCtrl">
+    <div class="brand-icon navtoggle">
+        <a href="/patterns/" class="block"></a>
+    </div>
+    <ul class="primary-nav nomargin navtoggle">
+        <li ng-repeat="link in nav">
+            <a href="#/{{link.slug | lowercase}}" title="{{ link.title }}" active-link="selected" responsive>
+                <span class="nav-label">{{ link.title }}</span>
+            </a>
+        </li>
+       
+    </ul>
+    <ul id="acl" class="acl-menu nomargin navtoggle">
+        <li class="separator">My Account</li>
+        <li class="top-links">
+            <a href="/login/out" class="logout">
+                <span class="nav-label">Log Out</span>
+            </a>
+        </li>
+        <li class="separator alignc absolute copyright">© 2001–2013 MailChimp®</li>
+    </ul>
+    <div class="toggle-nav hide-mobile navtoggle">
+        <div class="toggle-nav-btn pad-lv3 dim-el freddicon&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+"></div>
+    </div>
+</div>

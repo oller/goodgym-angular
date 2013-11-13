@@ -11,8 +11,8 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <!-- build:css(.tmp) styles/style.css -->
+        <link rel="stylesheet" href="styles/style.css">
         <!-- endbuild -->
 </head>
   <body ng-app="angularGoodgymApp">
@@ -27,19 +27,35 @@
 
     <!-- Add your site or application content here -->
 
-    <div class="pure-g-r" id="layout" ng-class="{active: showResponsiveMenu}">
-
       <div ng-include="'views/nav.html'"></div>
 
-      <div class="pure-u-1" id="main">
 
-        <div ng-view=""></div>
+      <div id="wrap" class="wrap selfclear nopadding relative navtoggle" ng-class="{'menu-active': showResponsiveMenu}">
 
-        <div ng-include="'views/footer.html'"></div>
+        <div class="main full-height relative">
+            <div class="tablet-nav hide-desktop relative">
+                <div class="line selfclear">
+                    <div class="menu-left float-left">
+                        <a href="#" class="menu-btn" responsive>
+<!--                             <span class="freddicon menu"></span>
+ -->                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="main-content" class="main-content" ng-class="{slide: showResponsiveMenu}">
+                <div id="av-flash-block"></div>
+                <div id="content" class="selfclear relative">
 
-      </div>
+                <!-- View Populted Via Angular Here -->
+                <div ng-view=""></div>
 
-    </div>      
+                </div>
+            </div>
+        </div>
+
+      </div>  
+
+       <!--  <div ng-include="'views/footer.html'"></div> -->
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
