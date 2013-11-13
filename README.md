@@ -1,0 +1,1 @@
+# A lightweight, responsive single-page app for interacting with the GoodGym API

@@ -1,39 +1,33 @@
 @charset "UTF-8";
-/*------------------------------------*\
-    STYLE.CSS
-\*------------------------------------*/
-/**
+/* --------------------------
+ * GoodGym Styles
  *
- * sass --watch style.scss:style.min.css --style compressed
- *
- * Here we pull in some variables, include the inuit.css framework, then add our
- * project-specific components afterwards.
- */
-
+ * @extends PureCSS http://purecss.io
+ * -------------------------- */
 
 /**
- * Setup
+ * Bring in our Pure.css Library
  */
-// @import "vars";
-// @import "inuit.css/inuit";
 
+@import "pure-min.css";
+
+/**
+ * And now we extend with our partials
+ */
+@import "goodgym/vars";
 @import "goodgym/nav";
 @import "goodgym/type";
-
-
-/**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
-//@import "ui/example";
+@import "goodgym/footer";
+@import "goodgym/responsive";
 
 
 body {
   color: #777777;
-  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font-family: $ggDefaultFontStack;
 }
 
 .pure-g [class*="pure-u"], .pure-g-r [class*="pure-u"] {
-  font-family: "Helvetica Neue", Arial, Helvetica, Verdana, sans-serif;
+  font-family: $ggDefaultFontStack;
 }
 
 /* Add transition to containers so they can push in and out */
@@ -52,28 +46,12 @@ body {
  * -------------------------- */
 
 #layout {
-  padding-left: 200px;
+  padding-left: $navColWidth;
   /* left col width "#menu" */
   left: 0;
 }
 
-/* Apply the .box class on the immediate parent of any grid element (pure-u-*) to apply some padding. */
 
-.l-box {
-  padding: 1.3em;
-}
-
-.l-vbox {
-  padding: 1.3em 0;
-}
-
-.l-hbox {
-  padding: 0 1.3em;
-}
-
-.l-centered {
-  text-align: center;
-}
 
 /* --------------------------
  * Header Module Styles
@@ -113,71 +91,8 @@ aside {
   }
 }
 
-/* --------------------------
- * Content Module Styles
- * -------------------------- */
 
-/* The content div is placed as a wrapper around all the docs */
 
-.content {
-  margin: 0 auto;
-  padding: 0 2em;
-  max-width: 800px;
-  margin-bottom: 50px;
-  p {
-    line-height: 1.6em;
-    font-size: 1.125em;
-  }
-  .content-subhead {
-    margin: 50px 0 20px 0;
-    font-weight: 300;
-    color: #888888;
-    position: relative;
-  }
-  .content-spaced {
-    line-height: 1.8em;
-  }
-  .content-quote {
-    font-family: "Georgia", serif;
-    color: #666666;
-    font-style: italic;
-    line-height: 1.8em;
-    border-left: 5px solid #dddddd;
-    padding-left: 1.5em;
-  }
-}
-
-/* --------------------------
- * Footer Module Styles
- * -------------------------- */
-
-.legal {
-  font-size: 87.5%;
-  border-top: 1px solid #eeeeee;
-  padding: 0.5em 1.1429em;
-  background: rgb(250, 250, 250);
-  line-height: 1.6em;
-}
-
-.legal-license {
-  margin: 0;
-}
-
-.legal-copyright {
-  text-align: right;
-  margin: 0;
-}
-
-.legal-links {
-  text-align: right;
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
-.legal-logo {
-  text-align: center;
-}
 
 
 /* --------------------------
@@ -251,58 +166,4 @@ a.pure-button-primary {
 
 .muted {
   color: #cccccc;
-}
-
-/* --------------------------
- * Responsive Styles
- * -------------------------- */
-
-@media (max-width: 870px) {
-  /* Navigation Push Styles */
-  #layout {
-    position: relative;
-    padding-left: 0;
-    &.active {
-      position: relative;
-      left: 200px;
-      #menu {
-        left: 200px;
-        width: 200px;
-      }
-    }
-  }
-  #menu {
-    left: 0;
-  }
-  .pure-menu-link {
-    position: fixed;
-    left: 0;
-    display: block;
-  }
-  #layout.active .pure-menu-link {
-    left: 200px;
-  }
-}
-
-@media (max-width: 767px) {
-  .header, .content {
-    font-size: 87.5%;
-  }
-  .header, .content, .legal {
-    padding-left: 1.1429em;
-    padding-right: 1.1429em;
-  }
-  .legal-license, .legal-copyright {
-    text-align: center;
-  }
-  .legal-links {
-    text-align: center;
-    li {
-      text-align: center;
-    }
-  }
-  /* normalize paddings on small screens */
-  .l-hbox {
-    padding: 1.3em;
-  }
 }

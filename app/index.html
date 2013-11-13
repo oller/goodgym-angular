@@ -12,7 +12,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/pure-min.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
@@ -28,26 +27,20 @@
 
     <!-- Add your site or application content here -->
 
-    <div class="container">
+    <div class="pure-g-r" id="layout" ng-class="{active: showResponsiveMenu}">
 
-
-      <div class="pure-g-r" id="layout" ng-class="{active: showResponsiveMenu}">
-        
-
-        <div ng-include="'views/nav.html'"></div>
-
+      <div ng-include="'views/nav.html'"></div>
 
       <div class="pure-u-1" id="main">
 
         <div ng-view=""></div>
 
-      </div>
+        <div ng-include="'views/footer.html'"></div>
 
       </div>
 
     </div>      
 
-    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

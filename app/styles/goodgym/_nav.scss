@@ -1,15 +1,14 @@
-
 /* --------------------------
  * Main Navigation Bar Styles
  * -------------------------- */
 
 #menu {
-  margin-left: -200px;
+  margin-left: -$navColWidth;
   /* "#menu" width */
-  width: 200px;
+  width: $navColWidth;
   position: fixed;
   top: 0;
-  left: 200px;
+  left: $navColWidth;
   bottom: 0;
   z-index: 1000;
   /* so the menu or its navicon stays above all content */
@@ -66,7 +65,7 @@
   display: none;
   /* show this only on small screens */
   top: 0;
-  left: 200px;
+  left: $navColWidth;
   /* "#menu width" */
   font-size: 10px;
   /* change this value to increase/decrease button size */
@@ -74,7 +73,7 @@
   width: 2em;
   height: auto;
   padding: 2.1em 1.6em;
-  background: hsla(0, 80%, 38%, 1);
+  background: $ggRed;
   span {
     position: relative;
     display: block;
@@ -131,7 +130,7 @@
   .pure-menu-heading {
     font-size: 110%;
     color: white;
-    background: hsla(0, 80%, 38%, 1);
+    background: $ggRed;
     margin: 0;
     padding-top: 3em;
     padding-bottom: 3em;

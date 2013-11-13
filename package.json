@@ -1,6 +1,7 @@
 {
   "name": "angulargoodgym",
   "version": "0.0.0",
+  "description": " A lightweight, responsive single-page app for interacting with the GoodGym API",
   "dependencies": {
     "gzippo": "~0.2.0",
     "express": "~3.4.4"
