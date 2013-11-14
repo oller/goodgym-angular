@@ -40,16 +40,19 @@
 <!--                             <span class="freddicon menu"></span>
  -->                        </a>
                     </div>
-                    <div class="menu-right float-right">
+<!--                     <div class="menu-right float-right">
                         <a href="#" class="menu-btn">
-                          test
+                          Login
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div id="main-content" class="main-content" ng-class="{slide: showResponsiveMenu}">
+            <div id="main-content" class="main-content nopadding" ng-class="{slide: showResponsiveMenu}">
                 <div id="av-flash-block"></div>
-                <div id="content" class="selfclear relative">
+                <div class="masthead grayscale">
+                  <h1>Do Good, Get Fit</h1>         
+                </div>
+                <div id="content" class="selfclear relative pad-lv2 pad-tb0">
 
                 <!-- View Populted Via Angular Here -->
                 <div ng-view=""></div>
@@ -94,6 +97,8 @@
         <script src="scripts/controllers/manage.js"></script>
         <script src="scripts/controllers/account.js"></script>
         <script src="scripts/controllers/team.js"></script>
+        <script src="scripts/directives/mobileMenu.js"></script>
+        <script src="scripts/directives/scrollTo.js"></script>
         <!-- endbuild -->
 </body>
 </html>

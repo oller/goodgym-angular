@@ -1,13 +1,13 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .directive('responsive', function($rootScope) {
+  .directive('mobileMenu', function() {
       // Runs during compile
       return {
           link: function($scope, iElm) {
               iElm.on('click', function(e) {
                   e.preventDefault;
-                  $rootScope.showResponsiveMenu = !$rootScope.showResponsiveMenu;
+                  iElm.parent().toggleClass('active');
                 });
             }
         };
