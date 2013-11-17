@@ -5,7 +5,7 @@
     <ul class="primary-nav nomargin navtoggle">
         <li ng-repeat="link in nav">
             <a href="#/{{link.slug | lowercase}}" title="{{ link.title }}" active-link="selected" responsive>
-                <span class="nav-label">{{ link.title }}</span>
+                <span class="nav-label"><span class="ggicon icon-{{ link.icon }}"></span> {{ link.title }}</span>
             </a>
         </li>
        
