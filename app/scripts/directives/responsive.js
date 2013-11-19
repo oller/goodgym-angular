@@ -2,8 +2,6 @@
 
 angular.module('angularGoodgymApp')
   .directive('responsive', function($rootScope, $window) {
-
-
       // Runs during compile
       return {
           link: function($scope, iElm) {

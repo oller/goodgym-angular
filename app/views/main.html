@@ -1,67 +1,54 @@
 <!-- Header -->
 <div class="lastUnit size1of1 header">
-    <h2>{{ text.strapline }}</h2>
+  <h2>{{ text.strapline }}</h2>
 </div>
 <!-- /Header -->
 
 
 
 <div class="line main-section">
-    <div class="sub-section" ng-controller="LoginCtrl">
+  <div class="sub-section" ng-controller="LoginCtrl">
 
 
-<div class="feedback-block {{feedback.class}} section" ng-show="feedback">
-        <div class="lastUnit size1of1">
-            <div class="media">
-                <div class="media-image">
-                    <span class="ggicon icon-{{feedback.icon}}"></span>
-                </div>
-                <div class="media-body ">
-                    <h4>{{feedback.title}}</h4>
-                    <p>{{feedback.message}}</p>
-                </div>
-            </div>
-        </div>
+    <div class="size1of2">
+
+
+      <form accept-charset="utf-8" name="auth" ng-submit="login();">
+        <fieldset>
+          <legend>Let's log you in!</legend>
+          <div class="field-wrapper">
+            <label>Username</label>
+            <input type="email" class="av-text" name="user" ng-model="user.username" required>
+          </div>
+          <div class="field-wrapper">
+            <label>Password</label>
+            <input type="password" class="av-text" name="password" ng-model="user.password" required>
+          </div>
+          <div class="field-wrapper">
+            <button class="p0 button" ng-class="{'button-loading': loading}">Login</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
+    <div class="size1of2 lastUnit"></div>
+  </div>
+  <div class="sub-section">
+    <div class="lastUnit size1of1">
+      <code>token: {{ token }}</code>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, dignissimos, eum, eos, aliquid quod ut fugiat nesciunt officiis sapiente autem molestiae facilis nihil maxime reiciendis possimus sit porro sunt impedit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, obcaecati culpa incidunt animi officiis aspernatur mollitia ratione ullam reiciendis accusamus assumenda quo nostrum itaque! Suscipit, nemo quidem aliquid iste labore.</p>
+      <ul class="disc p">
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Aliquam tincidunt mauris eu risus.</li>
+        <li>Vestibulum auctor dapibus neque.</li>
+      </ul>
 
-        <div class="size1of2">
-            <form accept-charset="utf-8" name="auth" ng-submit="login();">
-
-                <fieldset>
-                    <legend>Let's log you in!</legend>
-                    <div class="field-wrapper">
-                        <label>Username</label>
-                        <input type="email" class="av-text" name="user" ng-model="user.username" required>
-                    </div>
-                    <div class="field-wrapper">
-                        <label>Password</label>
-                        <input type="password" class="av-text" name="password" ng-model="user.password" required>
-                    </div>
-                    <div class="field-wrapper">
-                    	<button class="p0 button" ng-class="{'button-loading': loading}">Login</button>
-                    </div>
-                </fieldset>
-            </form>
-        </div>
-        <div class="size1of2 lastUnit"></div>
     </div>
-    <div class="sub-section">
-        <div class="lastUnit size1of1">
-        <code>token: {{ token }}</code>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, dignissimos, eum, eos, aliquid quod ut fugiat nesciunt officiis sapiente autem molestiae facilis nihil maxime reiciendis possimus sit porro sunt impedit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, obcaecati culpa incidunt animi officiis aspernatur mollitia ratione ullam reiciendis accusamus assumenda quo nostrum itaque! Suscipit, nemo quidem aliquid iste labore.</p>
-            <ul class="disc p">
-                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                <li>Aliquam tincidunt mauris eu risus.</li>
-                <li>Vestibulum auctor dapibus neque.</li>
-            </ul>
-
-        </div>
+  </div>
+  <div class="sub-section">
+    <div class="lastUnit size1of1">
+      <h3>Title</h3>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
     </div>
-    <div class="sub-section">
-        <div class="lastUnit size1of1">
-            <h3>Title</h3>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-        </div>
-    </div>
+  </div>
 </div>

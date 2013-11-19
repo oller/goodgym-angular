@@ -11,6 +11,7 @@ angular.module('angularGoodgymApp')
 
         // Toggle loading state of button
         $scope.loading = true;
+        $scope.feedback = {};
 
         $http({
             url: 'http://goodgym-api.herokuapp.com/oauth/token',
@@ -29,6 +30,7 @@ angular.module('angularGoodgymApp')
                 'message': 'You\'ve successfully logged in, well done!',
                 'icon': 'checkmark'
               };
+
             }
             else {
               AuthService.isLogged = false;
@@ -39,6 +41,7 @@ angular.module('angularGoodgymApp')
                 'message': 'NO NO NO',
                 'icon': 'cross'
               };
+
             }
 
             $scope.loading = false;
@@ -54,6 +57,7 @@ angular.module('angularGoodgymApp')
               'message': 'NO NO NO',
               'icon': 'cross'
             };
+
 
             $scope.loading = false;
           });
