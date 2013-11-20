@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .controller('LoginCtrl', function ($scope, $http, AuthService) {
+  .controller('LoginCtrl', function ($scope, $http, AuthService, NotificationService) {
    
     $scope.login = function() {
         console.log('logging in with user: ' + $scope.user.username + ' and password: '+ $scope.user.password );
@@ -11,7 +11,6 @@ angular.module('angularGoodgymApp')
 
         // Toggle loading state of button
         $scope.loading = true;
-        $scope.feedback = {};
 
         $http({
             url: 'http://goodgym-api.herokuapp.com/oauth/token',
@@ -24,23 +23,29 @@ angular.module('angularGoodgymApp')
               AuthService.isLogged = true;
               AuthService.token = data.access_token;
               console.log(AuthService);
-              $scope.feedback = {
-                'class': 'success',
-                'title': 'Logged in!',
-                'message': 'You\'ve successfully logged in, well done!',
-                'icon': 'checkmark'
+              NotificationService= {
+                class: 'success',
+                title: 'Logged in!',
+                message: 'You\'ve successfully logged in, well done!',
+                icon: 'checkmark'
               };
+              console.log('From LoginCtrl: ');
+              console.log(NotificationService);
+
 
             }
             else {
               AuthService.isLogged = false;
               AuthService.token = '';
-              $scope.feedback = {
-                'class': 'error',
-                'title': 'Error logging in!',
-                'message': 'NO NO NO',
-                'icon': 'cross'
+              NotificationService= {
+                class: 'error',
+                title: 'Error logging in!',
+                message: 'NO NO NO',
+                icon: 'cross'
               };
+              console.log('From LoginCtrl: ');
+
+              console.log(NotificationService);
 
             }
 
@@ -51,13 +56,16 @@ angular.module('angularGoodgymApp')
             console.log('error: ' + data);
             AuthService.isLogged = false;
             AuthService.token = '';
-            $scope.feedback = {
-              'class': 'error',
-              'title': 'Error logging in!',
-              'message': 'NO NO NO',
-              'icon': 'cross'
+            
+            NotificationService= {
+                class: 'error',
+                title: 'Error logging in!',
+                message: 'NO NO NO',
+                icon: 'cross'
             };
+                          console.log('From LoginCtrl: ');
 
+              console.log(NotificationService);
 
             $scope.loading = false;
           });

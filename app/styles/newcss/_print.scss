@@ -1,0 +1,92 @@
+/* ===================================
+ *
+ * Print
+ * 
+ * ================================= */
+
+@media print {
+    html {
+        height: auto;
+        overflow: visible;
+    }
+    body {
+        font-size: .8em;
+        background: #fff;
+    }
+    .header h1, .sliding-nav, .tablet-nav, .header + .local-nav-container {
+        display: none;
+    }
+    .wrap {
+        margin-left: 0;
+    }
+    .header {
+        margin: 0 0 1em 0;
+    }
+    .main-content {
+        position: relative !important;
+        top: 0 !important;
+    }
+    .line {
+        overflow: visible;
+    }
+    .table td {
+        white-space: normal;
+    }
+    .show-print {
+        display: block;
+    }
+    .hide-print {
+        display: none;
+    }
+    .button, .button-small {
+        display: none !important;
+    }
+    .button.show-print, .button-small.show-print {
+        display: inline-block !important;
+    }
+    .billing-receipt {
+        #content .header {
+            display: none;
+        }
+        .below36 {
+            margin-bottom: 0 !important;
+        }
+    }
+    .billing-actions {
+        visibility: hidden;
+    }
+    .billing-receipt .table th {
+        width: 180px;
+    }
+    .slats .dijitCheckBox, .action-bar {
+        display: none;
+    }
+    .cp-meta {
+        &.size3of4 {
+            width: 100%;
+        }
+        h4, p {
+            padding-left: 54px;
+        }
+    }
+    .meter {
+        border: 1px solid #333333;
+    }
+    #print-report {
+        #print-bar {
+            display: none;
+        }
+        .page-content {
+            page-break-after: always;
+            padding: 0;
+            box-shadow: none;
+            &:last-child {
+                page-break-after: avoid;
+            }
+        }
+    }
+}
+
+.bg-r1 {
+    background-color: #f5b7ab;
+}

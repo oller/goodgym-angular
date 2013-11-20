@@ -1,0 +1,96 @@
+/* ===================================
+ *
+ * Lists - Horizontal
+ * 
+ * ================================= */
+
+.linear-list {
+    display: block;
+    > li {
+        float: left;
+        display: inline-block;
+        height: inherit;
+        font-size: .9375em;
+        > a {
+            display: inline-block;
+        }
+        &:first-child {
+            padding-left: 0;
+            margin-left: 0;
+            border-left: 0;
+            &:before {
+                content: "";
+            }
+        }
+    }
+    &.vbars > li {
+        padding-left: .8125em;
+        margin-left: .75em;
+        position: relative;
+        &:before {
+            content: "|";
+            color: transparent;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-left: 1px solid #c9c9c9;
+        }
+        &:first-child {
+            padding-left: 0;
+            margin-left: 0;
+            &:before {
+                content: "";
+            }
+        }
+    }
+    &.spaces > li {
+        padding-left: 18px;
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+    &.dots > li {
+        padding-right: 15px;
+        position: relative;
+        &:after {
+            content: "aaa";
+            position: absolute;
+            top: 0;
+            right: 6px;
+            font-size: 10px;
+        }
+        &:last-child {
+            padding-right: 0;
+            &:after {
+                content: "";
+            }
+        }
+    }
+}
+
+.leaders {
+    overflow-x: hidden;
+    li {
+        line-height: 1.6em;
+        margin-bottom: .8em;
+        &:before {
+            float: left;
+            width: 0;
+            white-space: nowrap;
+            color: #d9d9d9;
+            content: "................................................................................................................................................................................................................................................................................................................................";
+            font-size: 10px;
+            line-height: inherit;
+        }
+        > span {
+            background-color: #fff;
+            &:first-child {
+                padding-right: 12px;
+            }
+            + span {
+                float: right;
+                padding-left: 12px;
+            }
+        }
+    }
+}

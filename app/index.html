@@ -30,8 +30,7 @@
       <div ng-include="'views/nav.html'"></div>
 
 
-      <div id="wrap" class="wrap selfclear nopadding relative navtoggle" ng-class="{'menu-active': showResponsiveMenu}">
-
+      <div id="wrap" class="wrap selfclear nopadding relative" ng-class="{'menu-active': showResponsiveMenu}">
         <div class="main full-height relative">
             <div class="tablet-nav hide-desktop relative">
                 <div class="line selfclear">
@@ -48,11 +47,12 @@
                 </div>
             </div>
             <div id="main-content" class="main-content nopadding" ng-class="{slide: showResponsiveMenu}">
-                <feedback></feedback>
-                <div class="masthead grayscale">
-                  <h1>Do Good, Get Fit</h1>  
-                </div>
+              
+                <div ng-include="'/views/partials/masthead.html'"></div>
+
                 <div id="content" class="selfclear relative pad-lv2 pad-tb0">
+
+                <feedback></feedback>
 
                 <!-- View Populted Via Angular Here -->
                 <div ng-view=""></div>

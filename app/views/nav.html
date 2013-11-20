@@ -1,13 +1,12 @@
-<div class="sliding-nav relative overflow-hidden navtoggle" ng-controller="NavCtrl">
-    <div class="brand-icon navtoggle">
-        <a href="/patterns/" class="block"></a>
+<div class="sliding-nav relative overflow-hidden" ng-controller="NavCtrl">
+    <div class="brand-icon">
+        <a href="/" class="block"></a>
     </div>
-    <ul class="primary-nav nomargin navtoggle">
+    <ul class="primary-nav nomargin">
         <li ng-repeat="link in nav">
             <a href="#/{{link.slug | lowercase}}" title="{{ link.title }}" active-link="selected" responsive>
-                <span class="nav-label"><span class="ggicon icon-{{ link.icon }}"></span> {{ link.title }}</span>
+               <span class="ggicon icon-{{ link.icon }}"></span> <span class="nav-label">{{ link.title }}</span>
             </a>
         </li>
-       
     </ul>
 </div>

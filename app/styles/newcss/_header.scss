@@ -1,0 +1,161 @@
+/* ===================================
+ *
+ * Header
+ *
+ * <div class="lastUnit size1of1 header"> 
+ *   <h1><a href="/">Main Header</a></h1> 
+ *   <h2>Sub Header</h2>
+ * </div>
+ * 
+ * ================================= */
+
+.header {
+    margin-top: 1.875em;
+    margin-bottom: 2.5625em;
+    position: relative;
+    z-index: 5;
+    ul, ol {
+        font-size: 1.0666666666666667em;
+    }
+    h1, h2 {
+        vertical-align: bottom;
+        line-height: 1.2em;
+        letter-spacing: -0.03em;
+        margin-bottom: 6px;
+    }
+    h1 {
+        + h2 {
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+        a {
+            line-height: inherit;
+            + .hover-list {
+                margin-left: 15px;
+            }
+        }
+    }
+    .add-btn {
+        float: right;
+        display: inline-block;
+        margin: 3px 0 0 15px;
+    }
+    .dijitSelect.add-btn {
+        display: block;
+        overflow: hidden;
+    }
+    .hover-list {
+        display: inline-block;
+        float: left;
+        margin-top: -7px;
+        font-size: 36px;
+        > li > {
+            ul {
+                right: auto;
+                top: auto;
+                font-size: .45em;
+                font-weight: 300;
+                letter-spacing: normal;
+            }
+            a {
+                padding: 0 12px 0 0;
+                &:after {
+                    font-size: .5em;
+                    vertical-align: inherit;
+                }
+            }
+        }
+        .freddicon {
+            font-size: .75em;
+        }
+    }
+    .title, .sub-count {
+        float: left;
+        margin: 0 12px 0 0;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .header {
+        margin-bottom: 1.0625em;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .header {
+        h1, h2 {
+            font-size: 1.625em;
+            line-height: 1.3846153846153846em;
+            margin-bottom: 1px;
+        }
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .header h1 + h2 {
+        font-size: 1.625em;
+        line-height: 1.3846153846153846em;
+        margin-bottom: 7px;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .header .add-btn {
+        margin: 24px 0 0;
+        width: 100%;
+        display: block;
+        + .add-btn {
+            margin-top: 17px;
+        }
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .header .dijitSelect.add-btn {
+        display: table;
+        width: 100%;
+        .dijitButtonContents {
+            width: 100%;
+        }
+        .dijitButtonText {
+            float: none;
+        }
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .header .p0 {
+        height: 48px;
+        line-height: 48px;
+        tbody {
+            line-height: 45px;
+            * {
+                line-height: 45px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .header .hover-list {
+        margin-top: -14px;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .header .hover-list > li > ul {
+        max-width: 40em;
+        a {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+
+@media screen and (max-width: 31.25em) {
+    .header .hover-list > li > ul {
+        max-width: 14em;
+    }
+}

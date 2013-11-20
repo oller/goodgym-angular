@@ -1,0 +1,129 @@
+/* ===================================
+ *
+ * Primary Nav
+ *
+ * Requires Markup
+ * 
+ * #optional class#
+ * 
+ * <ul class="primary-nav #narrow# nomargin">
+ *  <li ng-repeat="link in nav">
+ *    <a href="" title="Home">
+ *      <span class="ggicon icon-house"></span> <span class="nav-label">Home</span> <span class="badge">X</span>
+ *    </a>
+ *  </li>
+ * </ul>
+ * ================================= */
+
+.primary-nav {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: auto;
+    width: 250px;
+    -webkit-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    -moz-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    -o-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    -ms-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    font-family: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
+    > li {
+        font-size: 1.2em;
+        line-height: 2.3333333333333335em;
+    }
+    a {
+        color: #959595;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 14px 24px;
+        &:hover {
+            color: #373737;
+        }
+        &.selected {
+            background-color: #fff;
+            color: #373737;
+        }
+        .ggicon {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    }
+    left: 0;
+    border-radius: 6px 0 0 0;
+    background-color: #f2f2f2;
+    top: 180px;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    border-bottom: 60px solid transparent;
+    box-sizing: content-box;
+    .notifications {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        width: 80px;
+        &.active {
+            .badge, &:hover .badge {
+                background-color: #fff;
+                color: #5b5c5d;
+            }
+        }
+        &:hover .badge {
+            background-color: #5b5c5d;
+            color: #fff;
+        }
+    }
+    .badge {
+        margin: 0;
+    }
+    > li:first-child a {
+        &.selected {
+            border-radius: 6px 0 0 0;
+        }
+        &.notifications {
+            border-radius: 0;
+        }
+    }
+    .fade {
+        display: none;
+    }
+    a {
+        width: 250px;
+        padding: 12px 24px;
+    }
+    border-bottom: none;
+}
+
+@media only screen and (max-width: 64em) {
+    .primary-nav > li {
+        line-height: 1.6666666666666667em;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+    .primary-nav a {
+        padding: 12px 24px;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+    .primary-nav {
+        top: 0;
+        border-radius: 0;
+    }
+}
+
+// .primary-nav.narrow{width:80px}
+// @media only screen and (max-width:64em){.primary-nav.narrow{width:250px;text-align:left}}
+// .primary-nav.narrow .notifications{position:relative}
+// .primary-nav.narrow .badge{margin:0 0 0 -3px}
+// .primary-nav.narrow a{width:80px;padding:8px 24px}
+// @media only screen and (max-width:64em){.primary-nav.narrow a{width:250px;padding:17px 24px}}
+// .primary-nav.narrow .nav-label{text-indent:-600em;overflow:hidden;white-space:nowrap}
+// @media only screen and (max-width:64em){.primary-nav.narrow .nav-label{text-indent:0}}
+// .primary-nav.narrow .ggicon{margin:0}
+// @media only screen and (max-width:64em){.primary-nav.narrow .ggicon{margin-right:12px}}
+// .primary-nav.narrow .fade{display:block;top:0;left:0;right:0;bottom:0;background-image:-moz-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:-webkit-gradient(linear, left top, right top, color-stop(0, rgba(242,242,242,0)), color-stop(50%, #f2f2f2));background-image:-webkit-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:-o-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:-ms-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:linear-gradient(to right, rgba(242,242,242,0) 0, #f2f2f2 50%);position:absolute}
+// .primary-nav.narrow .selected .fade{background-image:-moz-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:-webkit-gradient(linear, left top, right top, color-stop(0, rgba(255,255,255,0)), color-stop(50%, #fff));background-image:-webkit-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:-o-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:-ms-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:linear-gradient(to right, rgba(255,255,255,0) 0, #fff 50%)}
+// .primary-nav li.zero-notifications .acl-settings{width:auto}
+// .primary-nav li.zero-notifications .nav-label{width:170px}

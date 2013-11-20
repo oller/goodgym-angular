@@ -1,0 +1,33 @@
+/* ===================================
+ *
+ * Percentage Progress Meter
+ *
+ * <div class="lastUnit size1of2">
+ *      <p class="full-width selfclear nomargin alignr">
+ *        <span class="h4 float-left">27 Opened</span>
+ *        <span class="h2 nomargin"> <a href="" title="">73.0%</a> 
+ *        </span>
+ *      </p>
+ *      <div class="meter below24">
+ *        <span style="width:73.0%"></span>
+ *      </div>
+ *    </div>
+ * 
+ * ================================= */
+
+.meter {
+    position: relative;
+    background: #eee;
+    margin: 7px 0 18px;
+    height: 13px;
+    overflow: hidden;
+    border-radius: 2px;
+    > span {
+        position: relative;
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        border: none;
+        border-bottom: 13px solid #95d1c4;
+    }
+}

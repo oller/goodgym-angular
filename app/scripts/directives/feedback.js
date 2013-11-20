@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .directive('feedback', function (loginCtrl) {
+  .directive('feedback', function () {
     return {
       templateUrl: '/views/partials/feedback.html',
       restrict: 'E',
@@ -33,4 +33,3 @@ angular.module('angularGoodgymApp')
 // 		}
 // 	};
 // }]);
-

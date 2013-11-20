@@ -9,6 +9,8 @@ angular.module('angularGoodgymApp')
 			token: ''
 		};
 
+	console.log('Auth service changed!');
+
 	return sdo;
 
   });
