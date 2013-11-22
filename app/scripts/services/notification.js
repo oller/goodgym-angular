@@ -1,17 +1,19 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .service('NotificationService', function Notification() {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-    var feedback = {
-		class: '',
-		title: '',
-		message: '',
-		icon: ''
+  .service('NotificationService', function() {
+
+    var feedbackObj = {};
+
+    return {
+
+      getFeedback: function() {
+        return feedbackObj;
+      },
+      setFeedback: function(feedback) {
+        feedbackObj = feedback;
+      }
     };
 
-    console.log('From Service:');
-    console.log(feedback);
 
-    return feedback;
   });

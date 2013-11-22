@@ -1,0 +1,131 @@
+/* ===================================
+ *
+ * Progress Steps
+ * 
+ * <div id="progress-bar">
+ *       <ul>
+ *           <li><a href="">Step x</a></li>
+ *           <li><a href="">Step x</a></li>
+ *           <li class="current"><a href="">Step x</a></li>
+ *           <li><a href="">Step x</a></li>
+ *           <li><a href="">Step x</a></li>
+ *           <li><a href="">Step x</a></li>
+ *       </ul>
+ *   </div>
+ *  
+ * ================================= */
+
+
+#progress-bar {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    // top: 19px;
+    list-style: none;
+    overflow: hidden;
+    li {
+        &:first-child {
+            z-index: 10;
+            margin-left: 0;
+        }
+        &:nth-child(2) {
+            z-index: 9;
+        }
+        &:nth-child(3) {
+            z-index: 8;
+        }
+        &:nth-child(4) {
+            z-index: 7;
+        }
+        &:nth-child(5) {
+            z-index: 6;
+        }
+        display: inline-block;
+        margin-left: -4px;
+        position: relative;
+        a {
+            display: inline-block;
+            position: relative;
+            min-width: 110px;
+            height: 42px;
+            font-height: 15px;
+            padding-left: 40px;
+            font-size: 15px;
+            padding-right: 5px;
+            padding-top: 9px;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            color: #737373;
+            background: #e0e0e0;
+            -webkit-transition: none 0 linear 0.0001s;
+            -moz-transition: none 0 linear 0.0001s;
+            -o-transition: none 0 linear 0.0001s;
+            -ms-transition: none 0 linear 0.0001s;
+            transition: none 0 linear 0.0001s;
+            &:before {
+                z-index: -1;
+                content: "";
+                display: block;
+                position: absolute;
+                top: -3px;
+                width: 44px;
+                height: 44px;
+                background: #e0e0e0;
+                -webkit-border-radius: 0 3px;
+                -moz-border-radius: 0 3px;
+                border-radius: 0 3px;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                left: auto;
+                right: -16px;
+                border: 4px solid white;
+                border-bottom: none;
+                border-left: none;
+            }
+            &:hover {
+                background: #d8d8d8;
+                &:before {
+                    background: #d8d8d8;
+                }
+            }
+        }
+        &.current a {
+            background-color: #db3a1b;
+            color: #fff;
+            &:before {
+                background-color: #db3a1b;
+                color: #fff;
+            }
+        }
+        &:first-child a {
+            padding-left: 10px;
+            -webkit-border-top-left-radius: 3px;
+            -webkit-border-bottom-left-radius: 3px;
+            -moz-border-radius-topleft: 3px;
+            -moz-border-radius-bottomleft: 3px;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        &:last-child a {
+            padding-right: 20px;
+            -webkit-border-top-right-radius: 3px;
+            -webkit-border-bottom-right-radius: 3px;
+            -moz-border-radius-topright: 3px;
+            -moz-border-radius-bottomright: 3px;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            &:before {
+                content: '';
+                display: none;
+            }
+        }
+    }
+}
+
+.dj_ie9 #progress-bar li {
+    margin-left: -44px;
+}

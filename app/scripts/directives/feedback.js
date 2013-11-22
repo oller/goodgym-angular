@@ -1,35 +1,23 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .directive('feedback', function () {
+  .directive('feedback', function(NotificationService) {
     return {
-      templateUrl: '/views/partials/feedback.html',
       restrict: 'E',
-      replace: true,
-      link: function postLink(scope, element, attrs) {
-        scope.feedback;
+      templateUrl: '/views/partials/feedback.html',
+
+      link: function($scope) {
+
+        // Hide Feedback until required
+        $scope.hideFeedback = true;
+
+        $scope.$watch(function() {
+          return NotificationService.getFeedback();
+        }, function() {
+          $scope.feedback = NotificationService.getFeedback();
+        }, true);
+
       }
+
     };
   });
-
-
-// directive('', ['', function(){
-// 	// Runs during compile
-// 	return {
-// 		// name: '',
-// 		// priority: 1,
-// 		// terminal: true,
-// 		// scope: {}, // {} = isolate, true = child, false/undefined = no change
-// 		// cont­rol­ler: function($scope, $element, $attrs, $transclue) {},
-// 		// require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
-// 		// restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
-// 		// template: '',
-// 		// templateUrl: '',
-// 		// replace: true,
-// 		// transclude: true,
-// 		// compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
-// 		link: function($scope, iElm, iAttrs, controller) {
-			
-// 		}
-// 	};
-// }]);

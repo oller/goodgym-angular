@@ -1,0 +1,163 @@
+/* ===================================
+ *
+ * Stat Block
+ *
+ *  <div class="line">
+ *    <div class="stat-block alignc unit size1of3">
+ *      <h2 class="nomargin"><a href="" title="">27</a> 
+ *      </h2>
+ *      <p class="fwb">
+ *        <span class="hide-phone">Opened</span>
+ *        <span class="show-phone ggicon icon-picture nomargin"></span>
+ *      </p>
+ *    </div>
+ *    <div class="stat-block alignc unit size1of3">
+ *      <h2 class="nomargin"> <a href="" title="">22</a> 
+ *      </h2>
+ *      <p class="fwb">
+ *        <span class="hide-phone">Clicked</span>
+ *        <span class="show-phone ggicon icon-box nomargin"></span>
+ *      </p>
+ *    </div>
+ *    <div class="stat-block alignc lastUnit size1of3 below48">
+ *      <h2 class="nomargin">0</h2>
+ *      <p class="fwb">
+ *        <span class="hide-phone">Unsubscribed</span>
+ *        <span class="show-phone ggicon icon-docs nomargin"></span>
+ *      </p>
+ *    </div>
+ *  </div>
+ *
+ * 
+ * ================================= */
+
+
+.stat-block {
+    padding-top: 1.8125em;
+    padding-bottom: 1.8125em;
+    border: 1px solid #d9d9d9;
+    border-left: 0 none;
+    &.no-border {
+        border: none;
+        &:first-child {
+            border: none;
+        }
+    }
+    &:first-child {
+        border-left: 1px solid #d9d9d9;
+        border-radius: 6px 0 0 6px;
+    }
+    &:last-child {
+        border-radius: 0 6px 6px 0;
+    }
+    &:only-child {
+        border-radius: 6px;
+    }
+    > .ggicon {
+        color: #d0d0d0;
+        display: block;
+        font-size: 55px;
+        margin: 0 auto 12px;
+    }
+    p {
+        max-width: 100%;
+        margin-bottom: 0;
+        .ggicon {
+            font-size: 30px;
+            color: #b7b7b7;
+        }
+    }
+    .hover-list > li > ul {
+        left: auto;
+        right: auto;
+        top: 42px;
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    .stat-block p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (max-width: 60em) {
+    .stat-block {
+        &:nth-child(2) {
+            border-radius: 0 6px 0 0;
+        }
+        &:nth-last-child(2) {
+            border-left: 1px solid #d9d9d9;
+            border-radius: 0 0 0 6px;
+            border-top: 0 none;
+        }
+        &:first-child {
+            border-radius: 6px 0 0 0;
+        }
+        &:last-child {
+            border-top: 0 none;
+            border-radius: 0 0 6px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 60em) {
+    .stat-block.size1of3 {
+        &:nth-last-child(2) {
+            border-left: 0 none;
+            border-radius: 0;
+            border-top: 1px solid #d9d9d9;
+        }
+        &:first-child {
+            border-radius: 6px 0 0 6px;
+        }
+        &:last-child {
+            border-top: 1px solid #d9d9d9;
+            border-radius: 0 6px 6px 0;
+        }
+        .button-small {
+            border-radius: 3px;
+        }
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    .stat-block.size1of3 {
+        border-left: 1px solid #d9d9d9;
+        border-top: 0 none;
+        &:nth-last-child(2) {
+            border-left: 1px solid #d9d9d9;
+            border-radius: 0;
+            border-top: 0 none;
+        }
+        &:first-child {
+            border-top: 1px solid #d9d9d9;
+            border-radius: 6px 6px 0 0;
+        }
+        &:last-child {
+            border-radius: 0 0 6px 6px;
+            border-top: 0 none;
+        }
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    .stat-block {
+        padding-top: .6875em;
+        padding-bottom: .75em;
+        border-left: 1px solid #d9d9d9;
+        border-top: 0 none;
+        &:nth-child(n) {
+            border-radius: 0;
+        }
+        &:first-child {
+            border-top: 1px solid #d9d9d9;
+            border-radius: 6px 6px 0 0;
+            padding-top: .625em;
+        }
+        &:last-child {
+            border-radius: 0 0 6px 6px;
+        }
+    }
+}

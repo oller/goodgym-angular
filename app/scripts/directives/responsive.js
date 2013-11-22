@@ -9,7 +9,9 @@ angular.module('angularGoodgymApp')
                   e.preventDefault;
                   // Only fire if in tablet/mobile responsive view
                   if ($window.innerWidth <= 1024) {
-                    $rootScope.showResponsiveMenu = !$rootScope.showResponsiveMenu;
+                    $scope.$apply(function () {
+                      $rootScope.showResponsiveMenu = !$rootScope.showResponsiveMenu;
+                    });
                   }
                 });
             }

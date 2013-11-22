@@ -1,0 +1,57 @@
+/* ===================================
+ *
+ * No Data Initial State
+ *
+ *  <div class="lastUnit size1of1">
+ *   <div class="no-data alignc">
+ *     <div class="ggicon icon-thumbs-down"></div>
+ *     <h2>Looks like you've not been on a run yet!</h2>
+ *     <p>No time like the present.</p>
+ *   </div>
+ *  </div> 
+ * 
+ * ================================= */
+
+.no-data {
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    padding: 24px 0 21px;
+    margin: 0 auto;
+    text-align: center;
+    h1, h2 {
+        font-size: 1.625em;
+        margin: 0.46154em auto;
+        max-width: 550px;
+    }
+    p {
+        margin: 0 auto;
+    }
+    .add-btn, .button {
+        float: none;
+        margin-top: 18px;
+    }
+    > .ggicon {
+        border: 5px solid #d0d0d0;
+        border-radius: 200px;
+        color: #d0d0d0;
+        display: block;
+        font-size: 90px;
+        height: 200px;
+        width: 200px;
+        margin: 0 auto 12px;
+        padding: 50px;
+        text-align: center;
+        line-height: 1;
+    }
+}
+
+.slats .no-data > .ggicon {
+    font-size: 90px;
+    color: #d0d0d0;
+}
+
+.no-data {
+    .button:last-child, .button-small:last-child {
+        margin-right: 0;
+    }
+}

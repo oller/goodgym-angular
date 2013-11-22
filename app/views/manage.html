@@ -1,11 +1,87 @@
 <!-- Header -->
 <div class="lastUnit size1of1 header">
-  <h1>{{ title }}</h1>
+  <h1 class="inline-block">{{ title }}</h1>
+  <a href="" class="new-list-button add-btn button p0">Primary Action</a>
 </div>
 <!-- /Header -->
 
 <div class="line main-section">
   <div class="size1of1 lastUnit">
+
+    <!-- <ul class="media-list rows">
+      <li>
+        <div class="media">
+          <div class="media-image">
+            <div class="onboarding create-campaigns"></div>
+          </div>
+          <div class="media-body">
+            <div class="line">
+              <div class="unit size3of4 below12">
+                <h4 class="">Create and send a campaign</h4>
+                <p>Campaigns are emails sent to subscribers in a list. Try your hand at email design by creating and sending a test campaign. <a href="http://kb.mailchimp.com/article/whats-the-best-way-to-get-started-with-mailchimp?t=1385033357&amp;v=175&amp;enc=61624c325527f3d36c17c77a55b2474d5fb413522bbb6bb40baffbc3eabde66e#campaign" target="_blank" onclick="_gaq.push(['_trackEvent', 'Onboarding Study 8.8', 'action', 'Dashboard New User Onboarding - Design campaign learn more']);">learn more</a>
+                </p>
+              </div>
+              <div class="size1of4 lastUnit nopadding alignr"> <a class="button nomargin full-width-mobile" href="/campaigns/create?type=regular" onclick="_gaq.push(['_trackEvent', 'Onboarding Study 8.8', 'action', 'Dashboard New User Onboarding - Create campaign']);">Create a campaign</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="media">
+          <div class="media-image">
+            <div class="onboarding create-lists"></div>
+          </div>
+          <div class="media-body">
+            <div class="line">
+              <div class="unit size3of4 below12">
+                <h4 class="">Create a list</h4>
+                <p>Lists are where you store your contacts (we call them subscribers). Create one master list, then use segments and groups to email select people. <a href="http://kb.mailchimp.com/article/whats-the-best-way-to-get-started-with-mailchimp?t=1385033357&amp;v=169&amp;enc=bb5da8476635689b6b24baa709e6d77e9567827ca7ea9feb11447a7af92b60b3#list" target="_blank" onclick="_gaq.push(['_trackEvent', 'Onboarding Study 8.8', 'action', 'Dashboard New User Onboarding - Create list learn more']);">learn more</a>
+                </p>
+              </div>
+              <div class="size1of4 lastUnit nopadding alignr"> <a class="button nomargin full-width-mobile" href="/lists/" onclick="_gaq.push(['_trackEvent', 'Onboarding Study 8.8', 'action', 'Dashboard New User Onboarding - Create list']);">Create a list</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="media">
+          <div class="media-image">
+            <div class="onboarding signup-forms"></div>
+          </div>
+          <div class="media-body">
+            <div class="line">
+              <div class="unit size3of4 below12">
+                <h4 class="">Start building your audience</h4>
+                <p>Signup forms let people subscribe to your list. When you create a list we'll automatically build a signup form to customize for your website, Facebook, iPad and more. <a href="http://kb.mailchimp.com/article/whats-the-best-way-to-get-started-with-mailchimp?t=1385033357&amp;v=139&amp;enc=e9f27d689506696499745c02fc318ebbfe8020f77cae53e0956521d806736fd7#forms" target="_blank" onclick="_gaq.push(['_trackEvent', 'Onboarding Study 8.8', 'action', 'Dashboard New User Onboarding - Signup forms learn more']);">learn more</a>
+                </p>
+              </div>
+              <div class="size1of4 lastUnit nopadding alignr"> <a class="button nomargin full-width-mobile" href="/lists/" onclick="_gaq.push(['_trackEvent', 'Onboarding Study 8.8', 'action', 'Dashboard New User Onboarding - Signup forms create list']);">Create a list</a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul> -->
+
+    <div id="progress-bar" class="below24">
+      <ul>
+        <li><a href="">Step x</a>
+        </li>
+        <li><a href="">Step x</a>
+        </li>
+        <li class="current"><a href="">Step x</a>
+        </li>
+        <li><a href="">Step x</a>
+        </li>
+        <li><a href="">Step x</a>
+        </li>
+        <li><a href="">Step x</a>
+        </li>
+      </ul>
+    </div>
+
     <h2>Main Section 2</h2>
   </div>
   <div class="sub-section">
@@ -345,7 +421,7 @@
               <a title="Add Subscriber" class="button-small" href="#">
                 <span class="ggicon icon-user add-sub mar-r0"></span>
               </a>
-              
+
             </div>
           </div>
         </li>
@@ -438,14 +514,14 @@
   </div>
 
 
-  
+
   <div class="example">
     <div class="section slats">
       <ul>
         <li class="relative selfclear">
           <div class="meta unit size3of4">
             <div class="unit size5of8 nopadding">
-              
+
               <h4><a href="#">MailChimp UX Issue 9 - Patterns</a>
               </h4>
               <p>
@@ -610,110 +686,7 @@
   </div>
 
 
-  <div class="example">
-    <div class="st block relative full-width selfclear">
-      <div class="thead float-left selfclear">
-        <div class="tr row-select">
-          <div class="th h-head">
-            <div class="profile-select">
-              <ul class="hover-list click-to-open inline-block">
-                <li>
-                  <a href="#"></a>
-                  <ul>
-                    <li> <a title="select all subscribers visible on this page" data-dojo-attach-point="selectVisible" id="bulk-action-selectall" href="#">Select Visible</a> 
-                    </li>
-                    <li> <a title="select all subscribers in all pages of this list or segment" data-dojo-attach-point="selectAll" id="select-all-link" href="#">Select All</a> 
-                    </li>
-                    <li class="hide"> <a data-dojo-attach-point="deselectAll" id="deselect-all-link" href="#">Deselect All</a> 
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="th">
-            <div class="profile-select">
-              <input type="checkbox" class="av-checkbox" id="cb1" name="cb1" dojotype="dijit.form.CheckBox">
-            </div>
-          </div>
-          <div class="th">
-            <div class="profile-select">
-              <input type="checkbox" class="av-checkbox" id="cb2" name="cb2" dojotype="dijit.form.CheckBox">
-            </div>
-          </div>
-          <div class="th">
-            <div class="profile-select">
-              <input type="checkbox" class="av-checkbox" id="cb3" name="cb3" dojotype="dijit.form.CheckBox">
-            </div>
-          </div>
-          <div class="th">
-            <div class="profile-select">
-              <input type="checkbox" class="av-checkbox" id="cb4" name="cb4" dojotype="dijit.form.CheckBox">
-            </div>
-          </div>
-        </div>
-        <div class="tr">
-          <div class="th h-head">Email Address</div>
-          <div class="th">
-            <div class="profile-view"> <a href="#">sterling@scdp.com</a> 
-            </div>
-          </div>
-          <div class="th">
-            <div class="profile-view"> <a href="#">cooper@scdp.com</a> 
-            </div>
-          </div>
-          <div class="th">
-            <div class="profile-view"> <a href="#">draper@scdp.com</a> 
-            </div>
-          </div>
-          <div class="th">
-            <div class="profile-view"> <a href="#">pryce@scdp.com</a> 
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tbody relative">
-        <div class="tr">
-          <div class="td h-head">First Name</div>
-          <div class="td">Roger</div>
-          <div class="td">Bert</div>
-          <div class="td">Don</div>
-          <div class="td">Lane</div>
-        </div>
-        <div class="tr">
-          <div class="td h-head">Last Name</div>
-          <div class="td">Sterling</div>
-          <div class="td">Cooper</div>
-          <div class="td">Draper</div>
-          <div class="td">Pryce</div>
-        </div>
-        <div class="tr">
-          <div class="td h-head">Im a …</div>
-          <div class="td">Partner</div>
-          <div class="td">Partner</div>
-          <div class="td">Partner</div>
-          <div class="td">Partner</div>
-        </div>
-        <div class="tr">
-          <div class="td h-head">Last Updated</div>
-          <div class="td">Two weeks ago</div>
-          <div class="td">Two weeks ago</div>
-          <div class="td">Two weeks ago</div>
-          <div class="td">Two weeks ago</div>
-        </div>
-        <div class="tr">
-          <div class="td h-head">Date Added</div>
-          <div class="td">3/20/2013 10:06AM</div>
-          <div class="td">3/20/2013 10:06AM</div>
-          <div class="td">3/20/2013 10:06AM</div>
-          <div class="td">3/20/2013 10:06AM</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <table class="mc-table scroll-small">
+  <table class="table scroll-small">
     <tbody>
       <tr class="odd">
         <th>Billed to</th>
@@ -742,7 +715,7 @@
     </tbody>
   </table>
 
-  <table class="mc-table scroll-small" id="saved-credit-card-info">
+  <table class="table scroll-small">
     <thead>
       <tr class="odd">
         <th>Credit card number</th>
@@ -768,8 +741,8 @@
     <div class="line section">
       <div class="lastUnit size1of1">
         <div class="no-data alignc">
-          <div class="freddicon autoresponder"></div>
-          <h2>Looks like you’ve never created an autoresponder</h2>
+          <div class="ggicon icon-thumbs-down"></div>
+          <h2>Looks like you’ve not been on a run yet!</h2>
           <p>No time like the present.</p>
         </div>
       </div>

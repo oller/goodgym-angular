@@ -1,0 +1,94 @@
+/* ===================================
+ *
+ * Media Object
+ *
+ * Requires Markup
+ * 
+ *  <ul class="media-list"> 
+ *  	<li>
+ *  	<div class="media some-other-class"> 
+ *  		<div class="media-image">
+ *  			<div class="ggicon icon-checkmark" style="font-size:58px;"></div>
+ *  		</div> 
+ *  		<div class="media-body">
+ *  			<h4>Title media object</h4> <p class="body"> Some content </p>
+ *  		</div>
+ *  	</div>
+ *  	</li>
+ *  </ul>
+ *  
+ * ================================= */
+
+.media {
+    .float-left {
+        padding-right: 15px;
+    }
+    .float-right {
+        padding-left: 15px;
+    }
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1;
+}
+
+.media-body {
+    overflow: hidden;
+    _overflow: visible;
+    zoom: 1;
+}
+
+.media .media-image {
+    float: left;
+    margin-right: 15px;
+    img {
+        display: block;
+    }
+}
+
+.media-heading {
+    margin-bottom: 6px;
+}
+
+.media-list {
+    font-size: inherit;
+    line-height: inherit;
+    list-style: none;
+    li {
+        display: list-item;
+        margin: 0 0 0.75em 0;
+        &.hide {
+            display: none;
+        }
+    }
+    &.rows {
+        h1, h2, h3, h4 {
+            margin: 0;
+        }
+        p {
+            margin: 0;
+            + {
+                button, .button, .button-small {
+                    margin-top: .75em;
+                }
+            }
+        }
+        > li {
+            margin: 0;
+            border-top: 1px dotted #c9c9c9;
+        }
+        .media {
+            padding: 23px 0 24px;
+            margin: 0;
+            .media-image .ggicon {
+                font-size: 50px;
+                padding-left: 2px;
+            }
+        }
+        &.slim .media {
+            padding: 12px;
+            .ggicon {
+                font-size: 36px;
+            }
+        }
+    }
+}

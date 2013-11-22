@@ -27,6 +27,8 @@ ul,ol{font-size:15px}
 code{font-size:14px;line-height:1.2857142857142858em;font-family:Consolas,"Lucida Console",Courier,monospace;word-spacing:normal;word-wrap:break-word;font-weight:700;border-radius:3px}code .tag{color:#6dc5dc}
 code .attr{color:#ee836e}
 code .num{opacity:.6;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+code.classname {color:#a11;font-weight:normal}
+code {max-width:inherit !important}
 pre{display:block;font-size:.875em;line-height:1.2857142857142858em;font-family:Consolas,"Lucida Console",Courier,monospace;white-space:pre-wrap;padding:12px 15px;max-width:550px}
 abbr,.smallcaps{border-bottom:none;font-variant:small-caps;text-transform:lowercase}
 abbr{font-weight:bold;font-variant:normal;text-transform:uppercase}
