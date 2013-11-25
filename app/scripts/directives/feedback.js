@@ -6,7 +6,7 @@ angular.module('angularGoodgymApp')
       restrict: 'E',
       templateUrl: '/views/partials/feedback.html',
 
-      link: function($scope, element) {
+      link: function($scope, element, attrs) {
 
         // Hide Feedback until required
         $scope.hideFeedback = NotificationService.hideNotice();
@@ -16,16 +16,6 @@ angular.module('angularGoodgymApp')
         }, function() {
           $scope.feedback = NotificationService.getNotice();
         }, true);
-
-
-
-        // $scope.$watch(function() {
-        //   return NotificationService.hideFeedback();
-        // }, function() {
-
-        //   $scope.hideFeedback = true;
-
-        // }, true);
 
 
       }

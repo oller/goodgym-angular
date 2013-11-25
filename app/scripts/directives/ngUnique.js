@@ -5,10 +5,10 @@ angular.module('angularGoodgymApp')
     function(async) {
       return {
         require: 'ngModel',
-        link: function(scope, elem, attrs, ctrl) {
-          elem.on('blur', function() {
-            scope.$apply(function() {
-              var val = elem.val();
+        link: function($scope, element, attrs, ctrl) {
+          element.on('blur', function() {
+            $scope.$apply(function() {
+              var val = element.val();
               var req = {
                 "email": val
               }
@@ -19,7 +19,6 @@ angular.module('angularGoodgymApp')
               };
               async(ajaxConfiguration)
                 .success(function(data, status, headers, config) {
-                	console.log('the email address has been verified...');
                   ctrl.$setValidity('unique', data.unique);
                 });
             });

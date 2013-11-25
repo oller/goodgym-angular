@@ -6,6 +6,6 @@ angular.module('angularGoodgymApp')
       strapline: 'Some introductory sentence...'
     };
 
-    $scope.token = AuthService.token;
+    $scope.token = AuthService.getToken();
 
   });

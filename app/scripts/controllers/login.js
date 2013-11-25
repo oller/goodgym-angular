@@ -1,12 +1,11 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .controller('LoginCtrl', function ($scope, $http, AuthService, NotificationService) {
+  .controller('LoginCtrl', function($scope, $http, AuthService, NotificationService) {
 
     $scope.login = function() {
-      console.log('logging in with user: ' + $scope.user.username + ' and password: ' + $scope.user.password);
-      $scope.user.client_id = AuthService.clientId;
-      $scope.user.client_secret = '4d90135d4a7177a8f712f4f6ab2434b91842817ca0759074469b93dacd3d412e';
+      $scope.user.client_id = AuthService.getClientId();
+      $scope.user.client_secret = AuthService.getClientSecret();
       $scope.user.grant_type = 'password',
       $scope.user.provider = 'identity';
 
@@ -23,8 +22,8 @@ angular.module('angularGoodgymApp')
         // success
         console.log('success: ');
         if (data) {
-          AuthService.isLogged = true;
-          AuthService.token = data.access_token;
+          AuthService.setLoggedIn(true);
+          AuthService.setToken(data.access_token);
           console.log(AuthService);
           feedback = {
             class: 'success',
@@ -36,8 +35,8 @@ angular.module('angularGoodgymApp')
           NotificationService.setNotice(feedback);
 
         } else {
-          AuthService.isLogged = false;
-          AuthService.token = '';
+          AuthService.setLoggedIn(false);
+          AuthService.setToken('');
           feedback = {
             class: 'error',
             title: data.error,
@@ -53,10 +52,8 @@ angular.module('angularGoodgymApp')
 
       }).error(function(data, status, headers, config) {
         // error
-        console.log('error: ')
-        console.log(data);
-        AuthService.isLogged = false;
-        AuthService.token = '';
+        AuthService.setLoggedIn(false);
+        AuthService.setToken('');
 
         feedback = {
           class: 'error',

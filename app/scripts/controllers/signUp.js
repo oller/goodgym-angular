@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .controller('SignupCtrl', function ($scope, $http, AuthService, NotificationService) {
+  .controller('SignupCtrl', function($scope, $http, AuthService, NotificationService) {
 
     $scope.loading = false;
 
@@ -9,7 +9,7 @@ angular.module('angularGoodgymApp')
       console.log('adding user:');
       console.log($scope.data);
 
-      $scope.data.client_id = AuthService.clientId;
+      $scope.data.client_id = AuthService.getClientId();
 
       // Toggle loading state of button
       $scope.loading = true;
@@ -24,8 +24,8 @@ angular.module('angularGoodgymApp')
         // success
         console.log('success: ');
         if (data) {
-          AuthService.isLogged = true;
-          AuthService.token = data.token;
+          AuthService.setLoggedIn(true);
+          AuthService.setToken(data.token);
           console.log(AuthService);
           feedback = {
             class: 'success',
@@ -37,8 +37,8 @@ angular.module('angularGoodgymApp')
           NotificationService.setNotice(feedback);
 
         } else {
-          AuthService.isLogged = false;
-          AuthService.token = '';
+          AuthService.setLoggedIn(false);
+          AuthService.setToken('');
           feedback = {
             class: 'error',
             title: data.error,
@@ -54,11 +54,8 @@ angular.module('angularGoodgymApp')
 
       }).error(function(data, status, headers, config) {
         // error
-        console.log('error: ')
-        console.log(data);
-        AuthService.isLogged = false;
-        AuthService.token = '';
-
+        AuthService.setLoggedIn(false);
+        AuthService.setToken('');
         feedback = {
           class: 'error',
           title: data.error,

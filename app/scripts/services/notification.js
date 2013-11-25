@@ -3,6 +3,7 @@
 angular.module('angularGoodgymApp')
   .service('NotificationService', function() {
 
+    // Set up Initialised Defaults
     var feedbackObj = {};
 
     return {

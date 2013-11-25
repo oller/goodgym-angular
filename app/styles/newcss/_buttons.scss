@@ -23,91 +23,36 @@
     user-select: none;
     color: #737373;
     background-color: #e0e0e0;
-}
-
-._button_base:hover, button:hover, .button-large:hover, .button-small:hover, .button:hover {
-    color: #737373;
-    background-color: #d3d3d3;
-}
-
-._button_base:visited, button:visited, .button-large:visited, .button-small:visited, .button:visited {
-    color: #737373;
-}
-
-._button_base {
+    display: inline-block;
     &:active, &.active {
         color: #616161;
         background-color: #c7c7c7;
     }
-}
-
-button {
-    &:active, &.active {
-        color: #616161;
-        background-color: #c7c7c7;
+    &:hover {
+        color: #737373;
+        background-color: #d3d3d3;
     }
-}
-
-.button-large {
-    &:active, &.active {
-        color: #616161;
-        background-color: #c7c7c7;
+    &:visited {
+        color: #737373;
     }
-}
-
-.button-small {
-    &:active, &.active {
-        color: #616161;
-        background-color: #c7c7c7;
-    }
-}
-
-.button {
-    &:active, &.active {
-        color: #616161;
-        background-color: #c7c7c7;
-    }
-}
-
-._button_disabled {
-    cursor: not-allowed;
-    opacity: .5;
-}
-
-._button_base {
     &.disabled, &[disabled] {
         cursor: not-allowed;
         opacity: .5;
     }
-}
-
-button {
-    &.disabled, &[disabled] {
-        cursor: not-allowed;
-        opacity: .5;
+    &.success {
+        background-color: #95d1c4;
+        color: #fff;
+    }
+    .ggicon {
+        font-size: inherit;
+        margin-right: 6px;
+        font-size: 20px;
+        vertical-align: middle;
     }
 }
 
-.button-large {
-    &.disabled, &[disabled] {
-        cursor: not-allowed;
-        opacity: .5;
-    }
-}
 
-.button-small {
-    &.disabled, &[disabled] {
-        cursor: not-allowed;
-        opacity: .5;
-    }
-}
 
-.button {
-    &.disabled, &[disabled] {
-        cursor: not-allowed;
-        opacity: .5;
-    }
-}
 
 ._button, button, .button-large {
     font-size: 15px;
@@ -121,16 +66,9 @@ button {
     line-height: 36px;
 }
 
-._button_success, button.success, .button-large.success, .button-small.success, .button.success {
-    background-color: #95d1c4;
-    color: #fff;
-}
 
 ._button_ggicon, button .ggicon, .button-large .ggicon, .button-small .ggicon, .button .ggicon {
-    font-size: inherit;
-    margin-right: 6px;
-    font-size: 20px;
-    vertical-align: middle;
+
 }
 
 ._button_ggicon.no-text, button .ggicon.no-text, .button-large .ggicon.no-text, .button-small .ggicon.no-text, .button .ggicon.no-text {
@@ -172,24 +110,23 @@ button {
     color: #737373;
     background-color: #e0e0e0;
     border: none;
+    &:hover {
+        background-color: #d3d3d3;
+    }
+    &:active, &.active {
+        color: #616161;
+        background-color: #c7c7c7;
+    }
 }
 
-.p1:hover, .p2:hover, .p3:hover {
-    background-color: #d3d3d3;
-}
-
-.p1:active, .p2:active, .p3:active, .p1.active, .p2.active, .p3.active {
-    color: #616161;
-    background-color: #c7c7c7;
-}
 
 .button-loading {
     background-image: url(/images/buttons/loading-gif-button-dark.png);
 }
 
-button, .button-large, .button-small, .button {
-    display: inline-block;
-}
+// button, .button-large, .button-small, .button {
+//     display: inline-block;
+// }
 
 .button-group {
     position: relative;
