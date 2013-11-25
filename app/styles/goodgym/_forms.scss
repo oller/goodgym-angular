@@ -13,7 +13,7 @@ legend {
     font-weight: 500;
     color: #484848;
     letter-spacing: .01em;
-    font-family: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
+    font-family: $ggFontFamilyPrimary;
     small {
         font-size: .8125em;
         line-height: 1.3846153846153846em;
@@ -21,7 +21,7 @@ legend {
 }
 
 label, input, select, textarea {
-    font-family: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
+    font-family: $ggFontFamilyPrimary;
     font-size: 15px;
     line-height: 18px;
     font-weight: normal;
@@ -177,17 +177,17 @@ input {
 }
 
 textarea.invalid {
-    border: 2px solid #db3a1b;
+    border: 2px solid $ggRedPrimary;
 }
 
 input {
     &[type="text"].invalid, &[type="password"].invalid, &[type="file"].invalid, &[type="datetime"].invalid, &[type="datetime-local"].invalid, &[type="date"].invalid, &[type="month"].invalid, &[type="time"].invalid, &[type="week"].invalid, &[type="number"].invalid, &[type="email"].invalid, &[type="url"].invalid, &[type="search"].invalid, &[type="tel"].invalid, &[type="color"].invalid {
-        border: 2px solid #db3a1b;
+        border: 2px solid $ggRedPrimary;
     }
 }
 
 .uneditable-input.invalid, .faux-file.invalid {
-    border: 2px solid #db3a1b;
+    border: 2px solid $ggRedPrimary;
 }
 
 input.inline-with-text {
@@ -445,7 +445,7 @@ input {
     color: #737373;
     letter-spacing: .01em;
     display: block;
-    color: #db3a1b;
+    color: $ggRedPrimary;
     max-height: 200px;
 }
 
@@ -719,7 +719,7 @@ select {
         background: #fff;
         font-style: normal;
         padding: 5px 8px;
-        font-family: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
+        font-family: $ggFontFamilyPrimary;
         option {
             padding: 3px;
         }

@@ -1,157 +1,148 @@
-/* --------------------------
- * Main Navigation Bar Styles
- * -------------------------- */
+/* ===================================
+ *
+ * Primary Nav
+ *
+ * Requires Markup
+ * 
+ * #optional class#
+ * 
+ * <ul class="primary-nav #narrow# nomargin">
+ *  <li>
+ *    <a href="" title="">
+ *      <span class="ggicon icon-house"></span> <span class="nav-label">Home</span> <span class="badge">X</span>
+ *    </a>
+ *  </li>
+ * </ul>
+ * ================================= */
 
-#menu {
-  margin-left: -$navColWidth;
-  /* "#menu" width */
-  width: $navColWidth;
-  position: fixed;
-  top: 0;
-  left: $navColWidth;
-  bottom: 0;
-  z-index: 1000;
-  /* so the menu or its navicon stays above all content */
-  background: #f2f2f2;
-  overflow-y: auto;
-  -webkit-overflow-scroll: touch;
-  a {
-    color: #959595;
-    border: none;
-    white-space: normal;
-    padding: 1em 0 1em 1em;
-    transition: all 0.15s ease-out;
-    vertical-align: middle;
-    font-weight: 500;
-    font-size: inherit;
-  }
-  .pure-menu-open {
-    background: transparent;
-    border: 0;
-  }
-  .pure-menu {
-    ul {
-      border: none;
-      background: transparent;
-      border-top: 1px solid #dddddd;
-    }
-    .menu-item-divided {
-      border-top: 1px solid #dddddd;
-    }
-    li a {
-      &.selected {
-        background: white;
-        color: #373737;
-      }
-      &:hover, &:focus {
-        color: #373737;
-      }
-    }
-  }
-}
-
-.menu-link-header {
-  background: hsla(0, 90%, 38%, 0.8);
-  position: fixed;
-  width: 100%;
-  transition: all 0.2s ease-out;
-  cursor: pointer;
-  &:hover, &:focus {
-    background: hsla(0, 90%, 38%, 1);
-  }
-}
-
-.pure-menu-link {
-  display: none;
-  /* show this only on small screens */
-  top: 0;
-  left: $navColWidth;
-  /* "#menu width" */
-  font-size: 10px;
-  /* change this value to increase/decrease button size */
-  z-index: 10;
-  width: 2em;
-  height: auto;
-  padding: 2.1em 1.6em;
-  background: $ggRed;
-  span {
-    position: relative;
+.primary-nav {
     display: block;
-    background-color: white;
-    width: 100%;
-    height: 0.2em;
-    -webkit-transition: all 0.8s;
-    -moz-transition: all 0.8s;
-    -ms-transition: all 0.8s;
-    -o-transition: all 0.8s;
-    transition: all 0.8s;
-    &:before, &:after {
-      background-color: white;
-      width: 100%;
-      height: 0.2em;
-      -webkit-transition: all 0.8s;
-      -moz-transition: all 0.8s;
-      -ms-transition: all 0.8s;
-      -o-transition: all 0.8s;
-      transition: all 0.8s;
+    position: fixed;
+    bottom: 0;
+    right: auto;
+    width: 250px;
+	font-family: $ggFontFamilyPrimary;
+    -webkit-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    -moz-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    -o-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    -ms-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    > li {
+        font-size: 1.2em;
+        line-height: 2.3333333333333335em;
     }
-    &:before {
-      position: absolute;
-      margin-top: -0.6em;
-      content: " ";
+    a {
+        color: #959595;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 14px 24px;
+        &:hover, &:focus {
+            color: #373737;
+        }
+        &.selected {
+            background-color: #fff;
+            color: #373737;
+        }
+        .ggicon {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
     }
-    &:after {
-      position: absolute;
-      margin-top: -0.6em;
-      content: " ";
-      margin-top: 0.6em;
+    left: 0;
+    border-radius: 6px 0 0 0;
+    background-color: #f2f2f2;
+    top: 180px;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    border-bottom: 60px solid transparent;
+    box-sizing: content-box;
+    .notifications {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 0;
+        width: 80px;
+        &.active {
+            .badge, &:hover .badge {
+                background-color: #fff;
+                color: #5b5c5d;
+            }
+        }
+        &:hover .badge {
+            background-color: #5b5c5d;
+            color: #fff;
+        }
     }
-  }
-  &.active span {
-    background: transparent;
-    &:before {
-      -webkit-transform: rotate(45deg) translate(0.5em, 0.4em);
-      -moz-transform: rotate(45deg) translate(0.5em, 0.4em);
-      -ms-transform: rotate(45deg) translate(0.5em, 0.4em);
-      -o-transform: rotate(45deg) translate(0.5em, 0.4em);
-      transform: rotate(45deg) translate(0.5em, 0.4em);
+    .badge {
+        margin: 0;
     }
-    &:after {
-      -webkit-transform: rotate(-45deg) translate(0.45em, -0.35em);
-      -moz-transform: rotate(-45deg) translate(0.45em, -0.35em);
-      -ms-transform: rotate(-45deg) translate(0.45em, -0.35em);
-      -o-transform: rotate(-45deg) translate(0.45em, -0.35em);
-      transform: rotate(-45deg) translate(0.45em, -0.35em);
+    > li:first-child a {
+        &.selected {
+            border-radius: 6px 0 0 0;
+        }
+        &.notifications {
+            border-radius: 0;
+        }
     }
-  }
+    .fade {
+        display: none;
+    }
+    a {
+        width: 250px;
+        padding: 8px 24px;
+    }
+    border-bottom: none;
 }
 
-#menu {
-  .pure-menu-heading {
-    font-size: 110%;
-    color: white;
-    background: $ggRed;
-    margin: 0;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    a {
-      display: block;
-      background-image: url(/images/logo_goodgym.svg);
-      width: 100%;
-      height: 74px;
-      background-size: 100% auto;
-      text-indent: -9999px;
-      padding: 0;
-      background-repeat: no-repeat;
+@media only screen and (max-width: 64em) {
+    .primary-nav > li {
+        line-height: 1.6666666666666667em;
     }
-  }
-  .pure-menu-selected {
-    background: white;
-    color: #373737;
-  }
-  li.pure-menu-selected a {
-    &:hover, &:focus {
-      background: none;
-    }
-  }
 }
+
+@media only screen and (max-width: 64em) {
+    .primary-nav a {
+        padding: 12px 24px;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+    .primary-nav {
+        top: 0;
+        border-radius: 0;
+    }
+}
+
+
+.sliding-nav,.wrap,.toggle-nav,.tablet-nav,.table-view,.grid-view{-webkit-transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s;-moz-transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s;-o-transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s;-ms-transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s;transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s}
+.nav-label{display:inline-block;vertical-align:middle;font-weight:500;font-size:inherit}
+.sliding-nav{width:250px}
+.sliding-nav.narrow{width:80px}
+@media only screen and (max-width:64em){.sliding-nav.narrow{width:250px}}
+@media only screen and (max-width:64em){.sliding-nav{z-index:auto;width:250px;background-color:#373737}}
+.primary-nav.narrow{width:80px}
+@media only screen and (max-width:64em){.primary-nav.narrow{width:250px;text-align:left}}
+.primary-nav.narrow .notifications{position:relative}
+.primary-nav.narrow .badge{margin:0 0 0 -3px}
+.primary-nav.narrow a{width:80px;padding:8px 24px}
+@media only screen and (max-width:64em){.primary-nav.narrow a{width:250px;padding:17px 24px}}
+.primary-nav.narrow .nav-label{text-indent:-600em;overflow:hidden;white-space:nowrap}
+@media only screen and (max-width:64em){.primary-nav.narrow .nav-label{text-indent:0}}
+.primary-nav.narrow .ggicon{margin:0}
+@media only screen and (max-width:64em){.primary-nav.narrow .ggicon{margin-right:12px}}
+.primary-nav.narrow .fade{display:block;top:0;left:0;right:0;bottom:0;background-image:-moz-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:-webkit-gradient(linear, left top, right top, color-stop(0, rgba(242,242,242,0)), color-stop(50%, #f2f2f2));background-image:-webkit-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:-o-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:-ms-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:linear-gradient(to right, rgba(242,242,242,0) 0, #f2f2f2 50%);position:absolute}
+.primary-nav.narrow .selected .fade{background-image:-moz-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:-webkit-gradient(linear, left top, right top, color-stop(0, rgba(255,255,255,0)), color-stop(50%, #fff));background-image:-webkit-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:-o-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:-ms-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:linear-gradient(to right, rgba(255,255,255,0) 0, #fff 50%)}
+// .primary-nav li.zero-notifications .acl-settings{width:auto}
+// .primary-nav li.zero-notifications .nav-label{width:170px}
+
+// Avatar
+.avatar{vertical-align:middle;margin-right:.75em;height:36px;width:36px;border-radius:4px;position:relative;z-index:1;margin-left:-2px}
+@media only screen and (max-width:40em){.avatar{margin:0;z-index:0}}
+
+// Toggle Narrow Nav Button
+.toggle-nav{position:fixed;bottom:0;width:250px}
+@media only screen and (max-width:64em){.toggle-nav{display:none}}
+.toggle-nav div{text-align:right;font-size:.9375em;display:block;color:#9e9e9e;cursor:pointer}
+.toggle-nav div:hover{background-color:#fff}
+.toggle-nav.narrow{width:80px}
+.toggle-nav.narrow div{text-align:center}

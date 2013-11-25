@@ -61,11 +61,8 @@ ul {
 }
 
 body {
-    background-color: #db3a1b;
+    background-color: $ggRedPrimary;
     height: inherit;
-    &.builder {
-        background-color: #fff;
-    }
 }
 
 @media only screen and (max-width: 64em) {

@@ -9,7 +9,7 @@
     cursor: pointer;
     overflow: hidden;
     font-weight: 700;
-    font-family: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif;
+    font-family: $ggFontFamilyPrimary;
     text-align: center;
     vertical-align: middle;
     text-transform: capitalize;
@@ -89,7 +89,7 @@
 
 .p0 {
     color: #fff;
-    background-color: #db3a1b;
+    background-color: $ggRedPrimary;
     &:hover {
         color: #fff;
         background-color: #cc351a;

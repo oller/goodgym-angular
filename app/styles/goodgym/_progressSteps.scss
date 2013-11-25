@@ -94,10 +94,10 @@
             }
         }
         &.current a {
-            background-color: #db3a1b;
+            background-color: $ggRedPrimary;
             color: #fff;
             &:before {
-                background-color: #db3a1b;
+                background-color: $ggRedPrimary;
                 color: #fff;
             }
         }

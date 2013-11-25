@@ -132,10 +132,10 @@
             }
             > li > {
                 a:hover {
-                    color: #db3a1b;
+                    color: $ggRedPrimary;
                 }
                 ul > li.current > a {
-                    color: #db3a1b;
+                    color: $ggRedPrimary;
                     &:hover {
                         color: #fff;
                     }
@@ -143,11 +143,11 @@
             }
         }
         > a:hover {
-            color: #db3a1b;
+            color: $ggRedPrimary;
         }
         &.current > {
             a, ul > li > a {
-                color: #db3a1b;
+                color: $ggRedPrimary;
             }
         }
     }
@@ -159,7 +159,7 @@
     //         color: #595959;
     //         margin: 0;
     //         &:hover {
-    //             color: #db3a1b;
+    //             color: $ggRedPrimary;
     //         }
     //     }
     //     li {
@@ -228,14 +228,14 @@
         > li {
             > a {
                 padding: 0.83333em 0.83333em 0.83333em 2em;
-                border-bottom: 1px solid #db3a1b;
+                border-bottom: 1px solid $ggRedPrimary;
                 background-color: #b1e0ec;
                 &:hover {
-                    background-color: #db3a1b;
+                    background-color: $ggRedPrimary;
                 }
             }
             &:first-child > a {
-                border-top: 1px solid #db3a1b;
+                border-top: 1px solid $ggRedPrimary;
             }
         }
     }
