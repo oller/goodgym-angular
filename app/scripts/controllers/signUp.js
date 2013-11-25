@@ -1,14 +1,15 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .controller('LoginCtrl', function ($scope, $http, AuthService, NotificationService) {
+  .controller('SignupCtrl', function ($scope, $http, AuthService, NotificationService) {
 
-    $scope.login = function() {
-      console.log('logging in with user: ' + $scope.user.username + ' and password: ' + $scope.user.password);
-      $scope.user.client_id = AuthService.clientId;
-      $scope.user.client_secret = '4d90135d4a7177a8f712f4f6ab2434b91842817ca0759074469b93dacd3d412e';
-      $scope.user.grant_type = 'password',
-      $scope.user.provider = 'identity';
+    $scope.loading = false;
+
+    $scope.signUp = function() {
+      console.log('adding user:');
+      console.log($scope.data);
+
+      $scope.data.client_id = AuthService.clientId;
 
       // Toggle loading state of button
       $scope.loading = true;
@@ -16,20 +17,20 @@ angular.module('angularGoodgymApp')
       var feedback = {};
 
       $http({
-        url: 'http://goodgym-api.herokuapp.com/oauth/token',
+        url: 'http://goodgym-api.herokuapp.com/api/v1/runners',
         method: 'POST',
-        data: $scope.user,
+        data: $scope.data,
       }).success(function(data, status, headers, config) {
         // success
         console.log('success: ');
         if (data) {
           AuthService.isLogged = true;
-          AuthService.token = data.access_token;
+          AuthService.token = data.token;
           console.log(AuthService);
           feedback = {
             class: 'success',
-            title: 'Logged in!',
-            message: 'You\'ve successfully logged in, well done!',
+            title: 'You\'re Registered!',
+            message: 'Welcome along, we look forward doing some exercise and good with you!',
             icon: 'checkmark',
             animation: 'fadeIn'
           };
@@ -71,5 +72,4 @@ angular.module('angularGoodgymApp')
         $scope.loading = false;
       });
     };
-
   });

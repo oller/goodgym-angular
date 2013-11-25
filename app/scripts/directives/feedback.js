@@ -1,21 +1,32 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .directive('feedback', function(NotificationService) {
+  .directive('feedback', function(NotificationService, $timeout) {
     return {
       restrict: 'E',
       templateUrl: '/views/partials/feedback.html',
 
-      link: function($scope) {
+      link: function($scope, element) {
 
         // Hide Feedback until required
-        $scope.hideFeedback = true;
+        $scope.hideFeedback = NotificationService.hideNotice();
 
         $scope.$watch(function() {
-          return NotificationService.getFeedback();
+          return NotificationService.getNotice();
         }, function() {
-          $scope.feedback = NotificationService.getFeedback();
+          $scope.feedback = NotificationService.getNotice();
         }, true);
+
+
+
+        // $scope.$watch(function() {
+        //   return NotificationService.hideFeedback();
+        // }, function() {
+
+        //   $scope.hideFeedback = true;
+
+        // }, true);
+
 
       }
 

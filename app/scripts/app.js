@@ -33,16 +33,9 @@ angular.module('angularGoodgymApp', [
       });
   });
 
-//   .config(['$httpProvider', function($httpProvider) {
-//         $httpProvider.defaults.useXDomain = true;
-//         delete $httpProvider.defaults.headers.common['X-Requested-With'];
-//       }
-// ]);
-
-  // .config(function($sceDelegateProvider) {
-  // $sceDelegateProvider.resourceUrlWhitelist([
-  //   // Allow same origin resource loads.
-  //   'self',
-  //   // Allow loading from our assets domain.  Notice the difference between * and **.
-  //   'http://goodgym-api.herokuapp.com/**']);
-  // });
+// .run( function($rootScope, $location, NotificationService) {
+//     // register listener to watch route changes
+//     $rootScope.$on( "$routeChangeStart", function() {
+//       NotificationService.destroyFeedback();
+//     });
+//  });

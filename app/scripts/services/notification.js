@@ -6,12 +6,17 @@ angular.module('angularGoodgymApp')
     var feedbackObj = {};
 
     return {
-
-      getFeedback: function() {
+      getNotice: function() {
         return feedbackObj;
       },
-      setFeedback: function(feedback) {
+      setNotice: function(feedback) {
         feedbackObj = feedback;
+      },
+      hideNotice: function () {
+          return true;
+      },
+      destroyNotice: function() {
+        feedbackObj = {};
       }
     };
 

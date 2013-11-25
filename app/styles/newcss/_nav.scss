@@ -36,7 +36,7 @@
         overflow: hidden;
         white-space: nowrap;
         padding: 14px 24px;
-        &:hover {
+        &:hover, &:focus {
             color: #373737;
         }
         &.selected {

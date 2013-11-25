@@ -160,19 +160,19 @@ input {
 }
 
 textarea:focus {
-    border: 2px solid #db3a1b;
+    border: 2px solid #999;
     outline: none;
 }
 
 input {
     &[type="text"]:focus, &[type="password"]:focus, &[type="file"]:focus, &[type="datetime"]:focus, &[type="datetime-local"]:focus, &[type="date"]:focus, &[type="month"]:focus, &[type="time"]:focus, &[type="week"]:focus, &[type="number"]:focus, &[type="email"]:focus, &[type="url"]:focus, &[type="search"]:focus, &[type="tel"]:focus, &[type="color"]:focus {
-        border: 2px solid #db3a1b;
+        border: 2px solid #999;
         outline: none;
     }
 }
 
 .uneditable-input:focus, .faux-file:focus {
-    border: 2px solid #db3a1b;
+    border: 2px solid #999;
     outline: none;
 }
 

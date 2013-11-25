@@ -5,31 +5,81 @@
 </div>
 <!-- /Header -->
 
+<div class="line local-nav-container">
+  <div class="lastUnit size1of2 ">
 
+    <p class="mobile-top-nav nomargin full-width fwb"><a href="" toggle-parent="active">Navigation</a> 
+    </p>
+    <ul class="local-nav local-tabs selfclear below36">
+      <li ng-class="{current: join.active.tab == 'login'}"><a href="" ng-click="join.active.tab = 'login'" >Login</a>
+      </li>
+      <li ng-class="{current: join.active.tab == 'signup'}"><a href="" ng-click="join.active.tab = 'signup'">Sign Up</a>
+      </li>
+    </ul>
+
+      <div ng-switch on="join.active.tab">
+
+        <div ng-controller="LoginCtrl" ng-switch-when="login" class="">
+          <h4>Login</h4>
+          <form accept-charset="utf-8" name="loginForm" ng-submit="login();">
+            <fieldset>
+              <div class="field-wrapper">
+                <label>Email
+                  <span class="float-right"> <a href="" class="login-forgot-toggle show-forgot-user nowrap" tabindex="4">I've forgotten!</a> 
+                  </span>
+                </label>
+                <input type="email" name="user" ng-model="user.username" ng-class="{invalid: loginForm.user.$dirty && loginForm.user.$invalid}" tabindex="1" required>
+              </div>
+              <div class="field-wrapper">
+                <label>Password
+                  <span class="float-right"> <a href="" class="login-forgot-toggle show-forgot-user nowrap" tabindex="5">I've forgotten!</a> 
+                  </span>
+                </label>
+                <input type="password" name="password" ng-model="user.password"  ng-class="{invalid: loginForm.password.$dirty && loginForm.password.$invalid}" tabindex="2" required>
+              </div>
+              <div class="field-wrapper">
+                <button class="p0 button" button-loading ng-disabled="loginForm.$invalid" tabindex="3">Login</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div ng-controller="SignupCtrl" ng-switch-when="signup" class="">
+          <h4>Sign Up</h4>
+          <form accept-charset="utf-8" name="signUpForm" ng-submit="signUp();" novalidate>
+            <fieldset>
+              <div class="field-wrapper">
+                <label>Email</label>
+                <input type="email" name="email" ng-model="data.runner.email" ng-class="{invalid: signUpForm.email.$dirty && signUpForm.email.$invalid}" ng-unique required>
+                <div class="invalid-error" ng-show="signUpForm.email.$dirty && signUpForm.email.$invalid">
+                  <span ng-show="signUpForm.email.$error.unique">This email is already ready registered with us. <a href=""> Forgotten your password?</a></span>
+                  <span ng-hide="signUpForm.email.$error.unique">Please enter a valid email address.</span>
+                </div>
+              </div>
+              <div class="field-wrapper">
+                <label>Password</label>
+                <input type="password" name="password" ng-model="data.runner.password" ng-class="{invalid: signUpForm.password.$dirty && signUpForm.password.$invalid}"  required>
+              </div>
+              <div class="field-wrapper">
+                <label>PostCode</label>
+                <input type="text" name="postcode" ng-model="data.runner.postcode" ng-class="{invalid: signUpForm.postcode.$dirty && signUpForm.postcode.$invalid}" required>
+              </div>
+              <div class="field-wrapper">
+                <label>Name</label>
+                <input type="text" name="name" ng-model="data.runner.name" ng-class="{invalid: signUpForm.name.$dirty && signUpForm.name.$invalid}" required>
+              </div>
+              <div class="field-wrapper">
+                <button class="p0 button" button-loading ng-disabled="signUpForm.$invalid">Sign Up</button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+
+
+  </div>
+</div>
 
 <div class="line main-section">
-  <div class="sub-section" ng-controller="LoginCtrl">
-
-    <div class="size1of1 lastUnit">
-
-      <form accept-charset="utf-8" name="auth" ng-submit="login();">
-        <fieldset>
-          <legend>Let's log you in!</legend>
-          <div class="field-wrapper">
-            <label>Username</label>
-            <input type="email" class="av-text" name="user" ng-model="user.username" required>
-          </div>
-          <div class="field-wrapper">
-            <label>Password</label>
-            <input type="password" class="av-text" name="password" ng-model="user.password" required>
-          </div>
-          <div class="field-wrapper">
-            <button class="p0 button" ng-class="{'button-loading': loading}">Login</button>
-          </div>
-        </fieldset>
-      </form>
-    </div>
-  </div>
   <div class="sub-section">
     <div class="lastUnit size1of1">
       <code>token: {{ token }}</code>
