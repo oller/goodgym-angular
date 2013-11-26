@@ -1,7 +1,7 @@
 /* ===================================
  *
  * Helpers
- * 
+ *
  * ================================= */
 
 .pad-lv1 {
@@ -430,6 +430,48 @@
     -webkit-filter: grayscale(100%);
 }
 
-.pulse {
-    width: 40px;
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fwn {
+    font-weight: normal !important;
+}
+
+.fwl {
+    font-weight: 300;
+}
+
+.fwb {
+    font-weight: 700;
+}
+
+.fsi {
+    font-style: italic;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.error-text {
+    color: #ee836e;
+}
+
+.dim2 {
+    opacity: .2;
+}
+
+.dim3 {
+    opacity: .3;
+}
+
+.dim6 {
+    opacity: .6;
+}
+
+.scroll-container {
+    max-height:600px;overflow-y:auto
 }

@@ -1,0 +1,224 @@
+/* ===================================
+ *
+ * Timeline
+ *
+ * <ul class="relative activity-timeline">
+      <li class="relative block pad-lv2 pad-lr0">
+        <div class="relative inline-block">
+          <div class="blob date fwb">Apr 25</div>
+          <div class="blob time fwb">15:40</div>
+          <div class="blob activity-icon inline-block info">
+            <div class="ggicon icon-checkmark"></div>
+          </div>
+        </div>
+        <div class="activity-content relative inline-block">
+          <h4 class="p full-width">Opened</h4>
+          <p class="nomargin"><a href="">MailChimp UX</a> · <a href="">View Results</a>
+          </p>
+        </div>
+      </li>
+      <li class="relative block pad-lv2 pad-lr0">
+        <div class="relative inline-block">
+          <div class="blob date fwb">May 22</div>
+          <div class="blob time fwb">14:00</div>
+          <div class="blob activity-icon inline-block success">
+            <div class="ggicon icon-location"></div>
+          </div>
+        </div>
+        <div class="activity-content relative inline-block">
+          <h4 class="p full-width">Inbox Inspection</h4>
+          <p class="nomargin"><a href="">Check your profile</a>
+          </p>
+        </div>
+      </li>
+      <li class="relative block pad-lv2 pad-lr0">
+        <div class="relative inline-block">
+          <div class="blob date fwb">Sep 10</div>
+          <div class="blob time fwb">3:15</div>
+          <div class="blob activity-icon inline-block error">
+            <div class="ggicon icon-rocket"></div>
+          </div>
+        </div>
+        <div class="activity-content relative inline-block">
+          <h4 class="p full-width">Unsubscribe</h4>
+          <p class="nomargin"><a href="">MailChimp UX</a> · <a href="">View Results</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+ *
+ * ================================= */
+
+.activity-timeline {
+    font-size: 15px;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 72px;
+        bottom: 108px;
+        width: 2px;
+        background: #e0e0e0;
+        left: 123px;
+    }
+    .blob {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        margin-right: 30px;
+        vertical-align: middle;
+        &.date {
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background-color: $blank;
+        }
+        &.time {
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background-color: $blank;
+            color: #b7b7b7;
+        }
+    }
+    .activity-icon {
+        border-radius: 50%;
+        &.success {
+            background-color: $ggColourSuccess;
+        }
+        &.error {
+            background-color: $ggColourError;
+        }
+        &.info {
+            background-color: $ggColourInfo;
+        }
+        &.warning {
+            background-color: $ggColourWarning;
+        }
+    }
+    .ggicon {
+        text-align: center;
+        margin: 14px auto;
+    }
+    .activity-content {
+        vertical-align: middle;
+        border: 2px solid #e0e0e0;
+        padding: 18px;
+        border-radius: 6px;
+        background-color: $blank;
+        width: 66.66666666666667%;
+        h4 {
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 18px;
+            padding-bottom: 18px;
+        }
+        &:after {
+            left: -19px;
+            top: 42%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-right-color: $blank;
+            border-width: 10px;
+        }
+        &:before {
+            left: -19px;
+            top: 42%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-right-color: $blank;
+            border-width: 10px;
+            border-right-color: #e0e0e0;
+            left: -22px;
+        }
+    }
+}
+
+@media screen and (max-width: 60em) {
+    .activity-timeline:before {
+        left: 29px;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .activity-timeline:before {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    .activity-timeline .blob {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .activity-timeline .blob {
+        &.date, &.time {
+            text-align: left;
+        }
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .activity-timeline .blobs {
+        display: block !important;
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .activity-timeline .activity-icon {
+        position: absolute;
+        right: 0;
+        margin: 0;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    .activity-timeline .activity-content {
+        width: 83%;
+        vertical-align: top;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .activity-timeline .activity-content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    .activity-timeline .activity-content {
+        &:after, &:before {
+            top: 77px;
+        }
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .activity-timeline .activity-content {
+        &:after, &:before {
+            border-right-color: transparent;
+            border-bottom-color: $blank;
+            left: 9px;
+            top: -17px;
+        }
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .activity-timeline .activity-content:before {
+        border-right-color: transparent;
+        border-bottom-color: #e0e0e0;
+        left: 9px;
+        top: -20px;
+    }
+}

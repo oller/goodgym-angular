@@ -1,7 +1,7 @@
 /* ===================================
  *
  * Lists - Horizontal
- * 
+ *
  * ================================= */
 
 .linear-list {
@@ -53,7 +53,7 @@
         padding-right: 15px;
         position: relative;
         &:after {
-            content: "aaa";
+            content: "\00b7";
             position: absolute;
             top: 0;
             right: 6px;
@@ -83,7 +83,7 @@
             line-height: inherit;
         }
         > span {
-            background-color: #fff;
+            background-color: $blank;
             &:first-child {
                 padding-right: 12px;
             }

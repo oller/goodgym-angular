@@ -1,7 +1,7 @@
 /* ===================================
  *
  * Print
- * 
+ *
  * ================================= */
 
 @media print {
@@ -11,7 +11,7 @@
     }
     body {
         font-size: .8em;
-        background: #fff;
+        background: $blank;
     }
     .header h1, .sliding-nav, .tablet-nav, .header + .local-nav-container {
         display: none;
@@ -88,5 +88,5 @@
 }
 
 .bg-r1 {
-    background-color: #f5b7ab;
+    background-color: $ggColourError;
 }

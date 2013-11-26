@@ -1,0 +1,77 @@
+/* ===================================
+ *
+ * Table Styles
+ *
+ *
+ * ================================= */
+
+.table {
+    table-layout: auto;
+    word-break: normal;
+    font-size: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+    th, td {
+        padding: 6px 15px;
+        vertical-align: middle;
+        text-align: left;
+    }
+    th {
+        word-break: normal;
+        background-color: #f2f2f2;
+        border-bottom: 1px solid #d0d0d0;
+        font-weight: 500;
+    }
+    td {
+        border-bottom: 1px dotted #d0d0d0;
+    }
+    .button-small, .button {
+        margin: 0 0 0 15px;
+    }
+    .button-small:first-child, .button:first-child, .button-small.float-right:last-child, .button.float-right:last-child {
+        margin-left: 0;
+    }
+    .button-small.float-right:first-child, .button.float-right:first-child {
+        margin-left: 15px;
+    }
+    .badge {
+        margin: 0;
+    }
+    strike {
+        opacity: .7;
+        font-weight: normal;
+        margin-right: 6px;
+    }
+    .no-header tr:first-child td {
+        border-top: dotted 1px #c9c9c9;
+    }
+    .wrap-cells td {
+        vertical-align: top;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+    .table {
+        overflow-x: auto;
+        overflow-y: hidden;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+    .scroll-small {
+        display: table;
+    }
+}
+
+@media only screen and (max-width: 31.25em) {
+    .scroll-small {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 64em) {
+    .nowrap-small {
+        white-space: nowrap;
+    }
+}

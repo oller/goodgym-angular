@@ -1,7 +1,7 @@
 /* ===================================
  *
  * Variables
- * 
+ *
  * ================================= */
 
 
@@ -9,11 +9,19 @@
  * ================================= */
 
  $ggFontFamilyPrimary: "Helvetica Neue",Arial,Helvetica,Verdana,sans-serif ;
+ $ggFontFamilyMono: Consolas,"Lucida Console",Courier,monospace;
 
 
  /* Colours
  * ================================= */
 
-$ggRedPrimary: #db3a1b;
-// $ggRedDarker: ;
-// ggRedDarkest: ;
+$ggPrimaryColour: #db3a1b;
+$ggPrimaryColourDarker: darken($ggPrimaryColour, 3%);
+$ggPrimaryColourDarkest: darken($ggPrimaryColour, 5%);
+$ggColourSuccess: #c5e5de;
+$ggColourWarning: #ffe8aa;
+$ggColourError: #f5b7ab;
+$ggColourInfo: #b1e0ec;
+
+
+$blank: #fff;

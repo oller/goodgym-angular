@@ -13,17 +13,17 @@ em {
 }
 
 a {
-    color: $ggRedPrimary;
+    color: $ggPrimaryColour;
     text-decoration: none;
     &:visited {
-        color: $ggRedPrimary;
+        color: $ggPrimaryColour;
         text-decoration: none;
     }
     .nolink, &:visited .nolink {
         color: #595959;
     }
     &:hover {
-        color: #cc351a;
+        color: $ggPrimaryColourDarker;
     }
 }
 
@@ -40,7 +40,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 }
 
 h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h1 a:visited, .h1 a:visited, h2 a:visited, .h2 a:visited, h3 a:visited, .h3 a:visited, h4 a:visited, .h4 a:visited, h1 a:hover, .h1 a:hover, h2 a:hover, .h2 a:hover, h3 a:hover, .h3 a:hover, h4 a:hover, .h4 a:hover {
-    color: $ggRedPrimary;
+    color: $ggPrimaryColour;
 }
 
 h1, .h1 {
@@ -70,7 +70,7 @@ p, .p {
 
 p > a, .button ~ a:not(.button), .link-underline a:not(.button) {
     line-height: normal;
-    border-bottom: 1px dotted $ggRedPrimary;
+    border-bottom: 1px dotted $ggPrimaryColour;
 }
 
 h3 + {
@@ -103,7 +103,7 @@ ul, ol {
 code {
     font-size: 14px;
     line-height: 1.2857142857142858em;
-    font-family: Consolas,"Lucida Console",Courier,monospace;
+    font-family: $ggFontFamilyMono;
     word-spacing: normal;
     word-wrap: break-word;
     font-weight: 700;
@@ -132,7 +132,7 @@ pre {
     display: block;
     font-size: .875em;
     line-height: 1.2857142857142858em;
-    font-family: Consolas,"Lucida Console",Courier,monospace;
+    font-family: $ggFontFamilyMono;
     white-space: pre-wrap;
     padding: 12px 15px;
     max-width: 550px;
@@ -204,46 +204,4 @@ blockquote, q {
         margin-top: 6px;
         display: inline-block;
     }
-}
-
-.ellipsis {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.fwn {
-    font-weight: normal !important;
-}
-
-.fwl {
-    font-weight: 300;
-}
-
-.fwb {
-    font-weight: 700;
-}
-
-.fsi {
-    font-style: italic;
-}
-
-.capitalize {
-    text-transform: capitalize;
-}
-
-.error-text {
-    color: #ee836e;
-}
-
-.dim2 {
-    opacity: .2;
-}
-
-.dim3 {
-    opacity: .3;
-}
-
-.dim6 {
-    opacity: .6;
 }

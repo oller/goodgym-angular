@@ -2,10 +2,12 @@
  *
  * Sub Navigation
  *
+ *  *optional class*
+ *
  * <div class="lastUnit size1of1 below36">
- *    <p class="mobile-top-nav nomargin full-width fwb"><a href="" toggle-parent="active">Navigation</a> 
+ *    <p class="mobile-top-nav nomargin full-width fwb"><a href="" toggle-parent="active">Navigation</a>
  *    </p>
- *    <ul class="local-nav selfclear">
+ *    <ul class="local-nav *local-tabs* selfclear">
  *      <li><a href="" scroll-to="view">View Team</a>
  *      </li>
  *      <li><a href="" scroll-to="join">Join Team</a>
@@ -26,7 +28,7 @@
  *      </li>
  *    </ul>
  *  </div>
- * 
+ *
  * ================================= */
 
 
@@ -62,7 +64,7 @@
         > a {
             padding-bottom: .6666666666666666em;
             border: 0 none;
-            color: #fff;
+            color: $blank;
             &:after {
                 -webkit-transform: rotate(180deg);
                 -moz-transform: rotate(180deg);
@@ -132,22 +134,22 @@
             }
             > li > {
                 a:hover {
-                    color: $ggRedPrimary;
+                    color: $ggPrimaryColour;
                 }
                 ul > li.current > a {
-                    color: $ggRedPrimary;
+                    color: $ggPrimaryColour;
                     &:hover {
-                        color: #fff;
+                        color: $blank;
                     }
                 }
             }
         }
         > a:hover {
-            color: $ggRedPrimary;
+            color: $ggPrimaryColour;
         }
         &.current > {
             a, ul > li > a {
-                color: $ggRedPrimary;
+                color: $ggPrimaryColour;
             }
         }
     }
@@ -159,7 +161,7 @@
     //         color: #595959;
     //         margin: 0;
     //         &:hover {
-    //             color: $ggRedPrimary;
+    //             color: $ggPrimaryColour;
     //         }
     //     }
     //     li {
@@ -228,14 +230,14 @@
         > li {
             > a {
                 padding: 0.83333em 0.83333em 0.83333em 2em;
-                border-bottom: 1px solid $ggRedPrimary;
-                background-color: #b1e0ec;
+                border-bottom: 1px solid $ggPrimaryColour;
+                background-color: $ggColourInfo;
                 &:hover {
-                    background-color: $ggRedPrimary;
+                    background-color: $ggPrimaryColour;
                 }
             }
             &:first-child > a {
-                border-top: 1px solid $ggRedPrimary;
+                border-top: 1px solid $ggPrimaryColour;
             }
         }
     }

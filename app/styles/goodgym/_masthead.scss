@@ -1,7 +1,7 @@
 /* ===================================
  *
  * Fixed Masthead Image
- * 
+ *
  * ================================= */
 .masthead {
   background: url(/images/bg_goodgym2_bw.jpeg) no-repeat fixed center center / cover  rgba(0, 0, 0, 0);
@@ -15,7 +15,7 @@
   }
   h1 {
 
-    color: #FFF;
+    color: $blank;
     padding: 0 1em;
     font-size: 3.6em;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);

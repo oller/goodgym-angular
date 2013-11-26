@@ -3,9 +3,9 @@
  * Primary Nav
  *
  * Requires Markup
- * 
+ *
  * #optional class#
- * 
+ *
  * <ul class="primary-nav #narrow# nomargin">
  *  <li>
  *    <a href="" title="">
@@ -40,7 +40,7 @@
             color: #373737;
         }
         &.selected {
-            background-color: #fff;
+            background-color: $blank;
             color: #373737;
         }
         .ggicon {
@@ -64,13 +64,13 @@
         width: 80px;
         &.active {
             .badge, &:hover .badge {
-                background-color: #fff;
+                background-color: $blank;
                 color: #5b5c5d;
             }
         }
         &:hover .badge {
             background-color: #5b5c5d;
-            color: #fff;
+            color: $blank;
         }
     }
     .badge {
@@ -131,7 +131,7 @@
 .primary-nav.narrow .ggicon{margin:0}
 @media only screen and (max-width:64em){.primary-nav.narrow .ggicon{margin-right:12px}}
 .primary-nav.narrow .fade{display:block;top:0;left:0;right:0;bottom:0;background-image:-moz-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:-webkit-gradient(linear, left top, right top, color-stop(0, rgba(242,242,242,0)), color-stop(50%, #f2f2f2));background-image:-webkit-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:-o-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:-ms-linear-gradient(left, rgba(242,242,242,0) 0, #f2f2f2 50%);background-image:linear-gradient(to right, rgba(242,242,242,0) 0, #f2f2f2 50%);position:absolute}
-.primary-nav.narrow .selected .fade{background-image:-moz-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:-webkit-gradient(linear, left top, right top, color-stop(0, rgba(255,255,255,0)), color-stop(50%, #fff));background-image:-webkit-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:-o-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:-ms-linear-gradient(left, rgba(255,255,255,0) 0, #fff 50%);background-image:linear-gradient(to right, rgba(255,255,255,0) 0, #fff 50%)}
+.primary-nav.narrow .selected .fade{background-image:-moz-linear-gradient(left, rgba(255,255,255,0) 0, $blank 50%);background-image:-webkit-gradient(linear, left top, right top, color-stop(0, rgba(255,255,255,0)), color-stop(50%, $blank));background-image:-webkit-linear-gradient(left, rgba(255,255,255,0) 0, $blank 50%);background-image:-o-linear-gradient(left, rgba(255,255,255,0) 0, $blank 50%);background-image:-ms-linear-gradient(left, rgba(255,255,255,0) 0, $blank 50%);background-image:linear-gradient(to right, rgba(255,255,255,0) 0, $blank 50%)}
 // .primary-nav li.zero-notifications .acl-settings{width:auto}
 // .primary-nav li.zero-notifications .nav-label{width:170px}
 
@@ -143,6 +143,6 @@
 .toggle-nav{position:fixed;bottom:0;width:250px}
 @media only screen and (max-width:64em){.toggle-nav{display:none}}
 .toggle-nav div{text-align:right;font-size:.9375em;display:block;color:#9e9e9e;cursor:pointer}
-.toggle-nav div:hover{background-color:#fff}
+.toggle-nav div:hover{background-color:$blank}
 .toggle-nav.narrow{width:80px}
 .toggle-nav.narrow div{text-align:center}

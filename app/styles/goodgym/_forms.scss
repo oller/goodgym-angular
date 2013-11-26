@@ -1,7 +1,7 @@
 /* ===================================
  *
  * Forms
- * 
+ *
  * ================================= */
 
 legend {
@@ -119,7 +119,7 @@ input {
 textarea {
     width: 100%;
     min-height: 36px;
-    background-color: #fff;
+    background-color: $blank;
     border: 2px solid #c8c8c8;
     margin: 0 0 24px 0;
 }
@@ -128,7 +128,7 @@ input {
     &[type="text"], &[type="password"], &[type="file"], &[type="datetime"], &[type="datetime-local"], &[type="date"], &[type="month"], &[type="time"], &[type="week"], &[type="number"], &[type="email"], &[type="url"], &[type="search"], &[type="tel"], &[type="color"] {
         width: 100%;
         min-height: 36px;
-        background-color: #fff;
+        background-color: $blank;
         border: 2px solid #c8c8c8;
         margin: 0 0 24px 0;
     }
@@ -137,7 +137,7 @@ input {
 .uneditable-input, .faux-file {
     width: 100%;
     min-height: 36px;
-    background-color: #fff;
+    background-color: $blank;
     border: 2px solid #c8c8c8;
     margin: 0 0 24px 0;
 }
@@ -177,17 +177,17 @@ input {
 }
 
 textarea.invalid {
-    border: 2px solid $ggRedPrimary;
+    border: 2px solid $ggPrimaryColour;
 }
 
 input {
     &[type="text"].invalid, &[type="password"].invalid, &[type="file"].invalid, &[type="datetime"].invalid, &[type="datetime-local"].invalid, &[type="date"].invalid, &[type="month"].invalid, &[type="time"].invalid, &[type="week"].invalid, &[type="number"].invalid, &[type="email"].invalid, &[type="url"].invalid, &[type="search"].invalid, &[type="tel"].invalid, &[type="color"].invalid {
-        border: 2px solid $ggRedPrimary;
+        border: 2px solid $ggPrimaryColour;
     }
 }
 
 .uneditable-input.invalid, .faux-file.invalid {
-    border: 2px solid $ggRedPrimary;
+    border: 2px solid $ggPrimaryColour;
 }
 
 input.inline-with-text {
@@ -197,7 +197,7 @@ input.inline-with-text {
 textarea {
     padding: 6px 0 0 6px;
     &.code {
-        font-family: Consolas,"Lucida Console",Courier,monospace;
+        font-family: $ggFontFamilyMono;
         font-size: 15px;
     }
 }
@@ -445,7 +445,7 @@ input {
     color: #737373;
     letter-spacing: .01em;
     display: block;
-    color: $ggRedPrimary;
+    color: $ggPrimaryColour;
     max-height: 200px;
 }
 
@@ -716,7 +716,7 @@ select {
     width: 100%;
     max-width: 550px;
     optgroup {
-        background: #fff;
+        background: $blank;
         font-style: normal;
         padding: 5px 8px;
         font-family: $ggFontFamilyPrimary;
@@ -743,7 +743,7 @@ select {
         padding: 0;
         height: auto;
         background-image: none;
-        background-color: #fff;
+        background-color: $blank;
         border: 1px solid #c8c8c8;
     }
     &[multiple] > option, &[size] > option {
@@ -752,7 +752,7 @@ select {
     > option {
         padding: 3px 8px;
         cursor: pointer;
-        background-color: #fff;
+        background-color: $blank;
     }
 }
 

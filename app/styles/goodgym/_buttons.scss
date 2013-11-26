@@ -1,7 +1,7 @@
 /* ===================================
  *
  * Buttons
- * 
+ *
  * ================================= */
 
 ._button_base, button, .button-large, .button-small, .button {
@@ -41,7 +41,7 @@
     }
     &.success {
         background-color: #95d1c4;
-        color: #fff;
+        color: $blank;
     }
     .ggicon {
         font-size: inherit;
@@ -88,18 +88,18 @@
 }
 
 .p0 {
-    color: #fff;
-    background-color: $ggRedPrimary;
+    color: $blank;
+    background-color: $ggPrimaryColour;
     &:hover {
-        color: #fff;
-        background-color: #cc351a;
+        color: $blank;
+        background-color: $ggPrimaryColourDarker;
     }
     &:visited {
-        color: #fff;
+        color: $blank;
     }
     &:active, &.active {
         color: #ededed;
-        background-color: #bc290f;
+        background-color: $ggPrimaryColourDarkest;
     }
     &.button-loading {
         background-image: url(/images/buttons/loading-gif-button-white.png);
@@ -139,7 +139,7 @@
     }
     .button, .button-small {
         position: relative;
-        background: #fff;
+        background: $blank;
         border: 1px solid #6dc6dd;
         border-radius: 0;
         color: #787975;
@@ -181,16 +181,16 @@
     }
     &.dark {
         .button, .button-small {
-            color: #fff;
+            color: $blank;
             background-color: #737373;
             border: 0 none;
         }
         .button:hover, .button-small:hover {
-            color: #fff;
+            color: $blank;
             background-color: #616161;
         }
         .button:visited, .button-small:visited {
-            color: #fff;
+            color: $blank;
             background-color: #737373;
         }
         .button:active, .button-small:active, .button.active, .button-small.active {
@@ -238,7 +238,7 @@ ul.button-nav {
         float: none;
     }
     a.button-small {
-        background: #fff;
+        background: $blank;
         border: 1px solid #6dc6dd;
         border-left-width: 0;
         color: #787975;

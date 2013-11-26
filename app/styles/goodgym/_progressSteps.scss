@@ -1,7 +1,7 @@
 /* ===================================
  *
  * Progress Steps
- * 
+ *
  * <div id="progress-bar">
  *       <ul>
  *           <li><a href="">Step x</a></li>
@@ -12,7 +12,7 @@
  *           <li><a href="">Step x</a></li>
  *       </ul>
  *   </div>
- *  
+ *
  * ================================= */
 
 
@@ -94,11 +94,11 @@
             }
         }
         &.current a {
-            background-color: $ggRedPrimary;
-            color: #fff;
+            background-color: $ggPrimaryColour;
+            color: $blank;
             &:before {
-                background-color: $ggRedPrimary;
-                color: #fff;
+                background-color: $ggPrimaryColour;
+                color: $blank;
             }
         }
         &:first-child a {

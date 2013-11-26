@@ -1,19 +1,27 @@
 /* ===================================
  *
  * Colour Helpers
- * 
+ *
  * ================================= */
+
+.bg-r1 {
+    background-color: $ggColourError;
+}
 
 .bg-r2 {
     background-color: #ee836e;
 }
 
-.bg-r3, .bg-r4 {
-    background-color: $ggRedPrimary;
+.bg-r3 {
+    background-color: #e85c41;
+}
+
+.bg-r4 {
+    background-color: #db3a1b;
 }
 
 .bg-y1 {
-    background-color: #ffe8aa;
+    background-color: $ggColourWarning;
 }
 
 .bg-y2 {
@@ -29,7 +37,7 @@
 }
 
 .bg-g1 {
-    background-color: #c5e5de;
+    background-color: $ggColourSuccess;
 }
 
 .bg-g2 {
@@ -45,7 +53,7 @@
 }
 
 .bg-b1 {
-    background-color: #b1e0ec;
+    background-color: $ggColourInfo;
 }
 
 .bg-b2 {
@@ -53,7 +61,7 @@
 }
 
 .bg-b3 {
-    background-color: $ggRedPrimary;
+    background-color: #52bad5;
 }
 
 .bg-b4 {
@@ -85,5 +93,5 @@
 }
 
 .bg-white {
-    background-color: #fff;
+    background-color: $blank;
 }

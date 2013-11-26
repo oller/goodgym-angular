@@ -1,7 +1,9 @@
 /* ===================================
  *
  * Icons
- * 
+ *
+ * http://www.entypo.com/
+ *
  * ================================= */
 @font-face {
     font-family: 'entypo';
@@ -1056,15 +1058,15 @@
 // Icon Colours
 
 .ggicon.success-fill {
-    color: #95d1c4;
+    color: $ggColourSuccess;
 }
 
 .ggicon.warn-fill {
-    color: #fede88;
+    color: $ggColourWarning;
 }
 
 .ggicon.error-fill {
-    color: #ee836e;
+    color: $ggColourError;
 }
 
 .ggicon.info {
@@ -1101,7 +1103,7 @@
 // .freddicon.c-add:before{content:'z'}
 // .freddicon.share:before{content:'A'}
 // .freddicon.info:before{content:'B'}
-// .freddicon.paused:before{content:'C';color:$ggRedPrimary}
+// .freddicon.paused:before{content:'C';color:$ggPrimaryColour}
 // .freddicon.graystar:before{content:'x';color:#e0e0e0}
 // .freddicon.analytics:after{content:'E'}
 // .freddicon.segment:after{content:'F'}
