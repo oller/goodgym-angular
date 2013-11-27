@@ -1,7 +1,7 @@
 // 'use strict';
 
-// angular.module('angularGoodgymApp')
-//   .controller('SignupCtrl', function($scope, $http, AuthService, NotificationService) {
+angular.module('angularGoodgymApp')
+// .controller('SignupCtrl', function($scope, $http, AuthService, NotificationService) {
 
 //     $scope.loading = false;
 
@@ -69,4 +69,32 @@
 //         $scope.loading = false;
 //       });
 //     };
-//   });
+// });
+//
+
+.controller('SignupCtrl', ['$rootScope', '$scope', '$location', 'AuthService',
+  function($rootScope, $scope, $location, AuthService) {
+    $scope.role = AuthService.userRoles.user;
+    $scope.userRoles = AuthService.userRoles;
+
+    $scope.register = function() {
+
+      // Toggle loading state of button
+      $scope.loading = true;
+
+      AuthService.register(
+        // {
+        //         username: $scope.username,
+        //         password: $scope.password,
+        //         role: $scope.role
+        //     }
+        $scope.data,
+        function() {
+          $location.path('/');
+        },
+        function(err) {
+          $rootScope.error = err;
+        });
+    };
+  }
+]);

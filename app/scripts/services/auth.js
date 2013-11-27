@@ -74,6 +74,10 @@ angular.module('angularGoodgymApp')
       return user.role.title === userRoles.user.title || user.role.title === userRoles.admin.title;
     },
     register: function(user, success, error) {
+
+       // Add Client ID to Query
+       user.data.client_id = clientId;
+
       $http.post(urlApiRegister, user).success(function(res) {
         changeUser(res);
         success();
