@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .controller('MainCtrl', function($scope, AuthService) {
+  .controller('MainCtrl', function($scope) {
     $scope.text = {
       strapline: 'Some introductory sentence...'
     };
 
-    $scope.token = AuthService.getToken();
+    // $scope.token = AuthService.getToken();
 
   });
