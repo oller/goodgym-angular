@@ -77,7 +77,7 @@ angular.module('angularGoodgymApp')
     $scope.role = AuthService.userRoles.user;
     $scope.userRoles = AuthService.userRoles;
 
-    $scope.register = function() {
+    $scope.signUp = function() {
 
       // Toggle loading state of button
       $scope.loading = true;
@@ -90,7 +90,8 @@ angular.module('angularGoodgymApp')
         //     }
         $scope.data,
         function() {
-          $location.path('/');
+          $scope.loading = false;
+          // $location.path('/');
         },
         function(err) {
           $rootScope.error = err;

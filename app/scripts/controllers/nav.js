@@ -20,17 +20,17 @@ angular.module('angularGoodgymApp')
     $scope.nav = [{
       title: 'Home',
       slug: '',
-      access: 'anon',
+      access: 'public', //anon, public, user or admin
       icon: 'house'
     }, {
       title: 'View Runs',
       slug: 'view',
-      access: 'admin',
+      access: 'public',
       icon: 'user'
     }, {
       title: 'Manage Runs',
       slug: 'manage',
-      access: 'user',
+      access: 'public',
       icon: 'clipboard'
     }, {
       title: 'View Team',
@@ -40,7 +40,7 @@ angular.module('angularGoodgymApp')
     }, {
       title: 'My Account',
       slug: 'account',
-      access: 'user',
+      access: 'public',
       icon: 'cog'
     }];
 

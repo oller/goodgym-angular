@@ -7,7 +7,7 @@
 // use this if you want to recursively match all subfolders:
 // 'test/spec/**/*.js'
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   require('time-grunt')(grunt);
 
@@ -62,7 +62,14 @@ module.exports = function (grunt) {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
-        livereload: 35729
+        livereload: 35729,
+        middleware: function(connect, options) {
+          var optBase = (typeof options.base === 'string') ? [options.base] : options.base;
+          return [require('connect-modrewrite')(['!(\\..+)$ / [L]'])].concat(
+            optBase.map(function(path) {
+              return connect.static(path);
+            }));
+        }
       },
       livereload: {
         options: {
@@ -157,7 +164,7 @@ module.exports = function (grunt) {
           debugInfo: true
         }
       }
-    },    // not used since Uglify task does concat,
+    }, // not used since Uglify task does concat,
     // but still available if needed
     /*concat: {
       dist: {}
@@ -324,7 +331,7 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('server', function (target) {
+  grunt.registerTask('server', function(target) {
     if (target === 'dist') {
       return grunt.task.run(['build', 'connect:dist:keepalive']);
     }

@@ -81,17 +81,14 @@ angular.module('angularGoodgymApp')
       $scope.loading = true;
 
       AuthService.login(
-          $scope.user
-          // {
-          // username: $scope.username,
-          // password: $scope.password,
-          // rememberme: $scope.rememberme
-          // }
+        $scope.user
         ,
         function(res) {
+          $scope.loading = false;
           $location.path('/');
         },
         function(err) {
+          $scope.loading = false;
           $rootScope.error = "Failed to login";
         });
     };

@@ -47,7 +47,7 @@ angular.module('angularGoodgymApp')
       role: userRoles.public
     };
 
-  // Set up API Defaults
+  // GG API Vars
   var token = '';
   var clientId = '0253c003d6cf3ad1a37d71510632c9a88ba22cfdd7a0d21b6b772561cd515884';
   var clientSecret = '4d90135d4a7177a8f712f4f6ab2434b91842817ca0759074469b93dacd3d412e';
@@ -59,6 +59,10 @@ angular.module('angularGoodgymApp')
 
   function changeUser(user) {
     _.extend(currentUser, user);
+  };
+
+  function setToken(userSessionToken) {
+    token = userSessionToken;
   };
 
   return {
@@ -74,18 +78,26 @@ angular.module('angularGoodgymApp')
       return user.role.title === userRoles.user.title || user.role.title === userRoles.admin.title;
     },
     register: function(user, success, error) {
-
-       // Add Client ID to Query
-       user.data.client_id = clientId;
+      // Additional vars for Register Query
+      user.client_id = clientId;
 
       $http.post(urlApiRegister, user).success(function(res) {
+        console.log('Register success');
+        setToken(user.token);
         changeUser(res);
         success();
       }).error(error);
     },
     login: function(user, success, error) {
+      // Additional vars for Login Query
+      user.client_id = clientId;
+      user.client_secret = clientSecret;
+      user.grant_type = 'password',
+      user.provider = 'identity';
+
       $http.post(urlApiLogin, user).success(function(user) {
-        console.log(user);
+        console.log('Login success');
+        setToken(user.token);
         changeUser(user);
         success(user);
       }).error(error);
@@ -99,6 +111,7 @@ angular.module('angularGoodgymApp')
         success();
       }).error(error);
     },
+
     accessLevels: accessLevels,
     userRoles: userRoles,
     user: currentUser

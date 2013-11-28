@@ -3,7 +3,7 @@
 angular.module('angularGoodgymApp', [
   'ngCookies',
   'ngResource',
-  'ngSanitize',
+  // 'ngSanitize',
   'ngRoute'
 ])
   .config(['$routeProvider', '$locationProvider', '$httpProvider',
@@ -15,7 +15,7 @@ angular.module('angularGoodgymApp', [
         .when('/', {
           templateUrl: 'views/main.html',
           controller: 'MainCtrl',
-          access: access.user
+          access: access.user //user, anon, admin or public
         })
         .when('/login', {
           templateUrl: 'views/login.html',
@@ -25,7 +25,7 @@ angular.module('angularGoodgymApp', [
         .when('/view', {
           templateUrl: 'views/view.html',
           controller: 'ViewCtrl',
-          access: access.user
+          access: access.anon
         })
         .when('/manage', {
           templateUrl: 'views/manage.html',
@@ -35,15 +35,19 @@ angular.module('angularGoodgymApp', [
         .when('/account', {
           templateUrl: 'views/account.html',
           controller: 'AccountCtrl',
-          access: access.public
+          access: access.anon
         })
         .when('/team', {
           templateUrl: 'views/team.html',
           controller: 'TeamCtrl',
-          access: access.user
+          access: access.anon
+        })
+        .when('/404', {
+          templateUrl: 'views/404.html',
+          access: access.public
         })
         .otherwise({
-          redirectTo: '/',
+          redirectTo: '/404',
         });
 
       $locationProvider.html5Mode(true);
@@ -55,6 +59,7 @@ angular.module('angularGoodgymApp', [
           }
 
           function error(response) {
+
             if (response.status === 401) {
               $location.path('/login');
               return $q.reject(response);
@@ -65,7 +70,7 @@ angular.module('angularGoodgymApp', [
 
           return function(promise) {
             return promise.then(success, error);
-          };
+          }
         }
       ];
 
