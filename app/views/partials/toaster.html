@@ -1,0 +1,15 @@
+<div id="toast-container" ng-class="config.position">
+  <div class="feedback-block {{toaster.animation}}" ng-class="toaster.type" ng-click="remove(toaster.id)" ng-mouseover="stopTimer(toaster)" ng-repeat="toaster in toasters">
+    <div class="lastUnit size1of1">
+      <div class="media">
+        <div class="media-image">
+          <span class="ggicon icon-{{ toaster.icon }}"></span>
+        </div>
+        <div class="media-body">
+          <h4>{{toaster.title}}</h4>
+          <p>{{toaster.body}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

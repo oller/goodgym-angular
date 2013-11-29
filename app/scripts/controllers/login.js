@@ -1,100 +1,33 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-// .controller('LoginCtrl', function($scope, $http, AuthService, NotificationService) {
+  .controller('LoginCtrl', ['$rootScope', '$scope', '$location', '$window', 'AuthService',
+    function($rootScope, $scope, $location, $window, AuthService) {
 
-// $scope.login = function() {
-//   $scope.user.client_id = AuthService.getClientId();
-//   $scope.user.client_secret = AuthService.getClientSecret();
-//   $scope.user.grant_type = 'password',
-//   $scope.user.provider = 'identity';
+      // Set initial tab state
+      $scope.join.active.tab = 'login';
 
-//   // Toggle loading state of button
-//   $scope.loading = true;
+      $scope.rememberme = true;
+      $scope.login = function() {
 
-//   var feedback = {};
+        // Toggle loading state of button
+        $scope.loading = true;
 
-//   $http({
-//     url: 'http://goodgym-api.herokuapp.com/oauth/token',
-//     method: 'POST',
-//     data: $scope.user,
-//   }).success(function(data, status, headers, config) {
-//     // success
-//     console.log('success: ');
-//     if (data) {
-//       AuthService.setLoggedIn(true);
-//       AuthService.setToken(data.access_token);
-//       console.log(AuthService);
-//       feedback = {
-//         class: 'success',
-//         title: 'Logged in!',
-//         message: 'You\'ve successfully logged in, well done!',
-//         icon: 'checkmark',
-//         animation: 'fadeIn'
-//       };
-//       NotificationService.setNotice(feedback);
+        AuthService.login(
+          $scope.user,
+          function(res) {
+            console.log('login success callback?');
+            $scope.loading = false;
+            $location.path('/');
+          },
+          function(err) {
+            console.log('login error callback?');
+            $scope.loading = false;
+          });
+      };
 
-//     } else {
-//       AuthService.setLoggedIn(false);
-//       AuthService.setToken('');
-//       feedback = {
-//         class: 'error',
-//         title: data.error,
-//         message: data.error_description,
-//         icon: 'cross',
-//         animation: 'pullDown'
-//       };
-//       NotificationService.setNotice(feedback);
-
-//     }
-
-//     $scope.loading = false;
-
-//   }).error(function(data, status, headers, config) {
-//     // error
-//     AuthService.setLoggedIn(false);
-//     AuthService.setToken('');
-
-//     feedback = {
-//       class: 'error',
-//       title: data.error,
-//       message: data.error_description,
-//       icon: 'cross',
-//       animation: 'pullDown'
-//     };
-
-//     NotificationService.setNotice(feedback);
-
-//     $scope.loading = false;
-//   });
-// };
-
-// });
-
-.controller('LoginCtrl', ['$rootScope', '$scope', '$location', '$window', 'AuthService',
-  function($rootScope, $scope, $location, $window, AuthService) {
-
-    $scope.rememberme = true;
-    $scope.login = function() {
-
-      // Toggle loading state of button
-      $scope.loading = true;
-
-      AuthService.login(
-        $scope.user
-        ,
-        function(res) {
-          $scope.loading = false;
-          $location.path('/');
-        },
-        function(err) {
-          $scope.loading = false;
-          $rootScope.error = "Failed to login";
-        });
-    };
-
-    $scope.loginOauth = function(provider) {
-      $window.location.href = '/auth/' + provider;
-    };
-  }
-]);
+      $scope.loginOauth = function(provider) {
+        $window.location.href = '/auth/' + provider;
+      };
+    }
+  ]);

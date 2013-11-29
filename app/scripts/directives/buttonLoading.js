@@ -3,22 +3,17 @@
 angular.module('angularGoodgymApp')
   .directive('buttonLoading', function() {
     return {
-      // template: '<div></div>',
       restrict: 'A',
       terminal: true,
       link: function($scope, element, attrs) {
         $scope.$watch('loading', function() {
-
           var loadingIcon = '<span class="progress"></span>';
-
-          if ($scope.loading == true) {
+          if ($scope.loading === true) {
             element.prepend(loadingIcon);
           } else {
             element.children().remove();
           }
-
         }, true);
-
       }
     };
   });

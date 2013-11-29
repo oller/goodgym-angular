@@ -38,7 +38,10 @@ angular.module('angularGoodgymApp')
 
 // });
 
-.factory('AuthService', function($http, $cookieStore) {
+.factory('AuthService', function($http, $cookieStore, toaster) {
+
+  toaster.pop('success', 'Register Success', 'You\'ve registered, nice one!');
+
 
   var accessLevels = routingConfig.accessLevels,
     userRoles = routingConfig.userRoles,
@@ -82,11 +85,13 @@ angular.module('angularGoodgymApp')
       user.client_id = clientId;
 
       $http.post(urlApiRegister, user).success(function(res) {
-        console.log('Register success');
+        toaster.pop('success', 'Register Success', 'You\'ve registered, nice one!');
         setToken(user.token);
         changeUser(res);
         success();
-      }).error(error);
+      }).error(function(error) {
+        toaster.pop('error', error.error, error.error_description);
+      });
     },
     login: function(user, success, error) {
       // Additional vars for Login Query
@@ -97,10 +102,13 @@ angular.module('angularGoodgymApp')
 
       $http.post(urlApiLogin, user).success(function(user) {
         console.log('Login success');
+        toaster.pop('success', 'Logged In', 'Now, book that next run!');
         setToken(user.token);
         changeUser(user);
         success(user);
-      }).error(error);
+      }).error(function(error) {
+        toaster.pop('error', error.error, error.error_description);
+      });
     },
     logout: function(success, error) {
       $http.post(urlApiLogout).success(function() {

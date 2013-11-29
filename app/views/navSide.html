@@ -4,7 +4,7 @@
   </div>
   <ul class="primary-nav nomargin" ng-class="{narrow: showNarrowNav}">
     <li ng-repeat="link in nav">
-      <a href="/#/{{link.slug | lowercase}}" title="{{ link.title }}" data-access-level="accessLevels.{{ link.access }}" active-nav="selected" responsive>
+      <a href="/{{link.slug | lowercase}}" title="{{ link.title }}" data-access-level="accessLevels.{{ link.access }}" active-nav="selected" responsive>
         <span class="ggicon icon-{{ link.icon }}"></span>
         <span class="nav-label">{{ link.title }}</span>
       </a>

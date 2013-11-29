@@ -4,6 +4,8 @@ angular.module('angularGoodgymApp', [
   'ngCookies',
   'ngResource',
   // 'ngSanitize',
+  'ngAnimate',
+  'toaster',
   'ngRoute'
 ])
   .config(['$routeProvider', '$locationProvider', '$httpProvider',
