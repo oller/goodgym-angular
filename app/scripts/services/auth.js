@@ -42,16 +42,12 @@ angular.module('angularGoodgymApp')
 
   toaster.pop('success', 'Register Success', 'You\'ve registered, nice one!');
 
-
-  var accessLevels = routingConfig.accessLevels,
-    userRoles = routingConfig.userRoles,
-    currentUser = $cookieStore.get('user') || {
-      username: '',
-      role: userRoles.public
-    };
+  var accessLevels = routingConfig.accessLevels;
+  var userRoles = routingConfig.userRoles;
+  var currentUser = $cookieStore.get('user') || { username: '', role: userRoles.public };
 
   // GG API Vars
-  var token = '';
+  var token;
   var clientId = '0253c003d6cf3ad1a37d71510632c9a88ba22cfdd7a0d21b6b772561cd515884';
   var clientSecret = '4d90135d4a7177a8f712f4f6ab2434b91842817ca0759074469b93dacd3d412e';
   var urlApiLogin = 'http://goodgym-api.herokuapp.com/oauth/token';
@@ -66,6 +62,7 @@ angular.module('angularGoodgymApp')
 
   function setToken(userSessionToken) {
     token = userSessionToken;
+    console.log('token is set to ' + token);
   };
 
   return {
@@ -84,10 +81,10 @@ angular.module('angularGoodgymApp')
       // Additional vars for Register Query
       user.client_id = clientId;
 
-      $http.post(urlApiRegister, user).success(function(res) {
+      $http.post(urlApiRegister, user).success(function(user) {
         toaster.pop('success', 'Register Success', 'You\'ve registered, nice one!');
-        setToken(user.token);
-        changeUser(res);
+        setToken(user.access_token);
+        changeUser(user.scope);
         success();
       }).error(function(error) {
         toaster.pop('error', error.error, error.error_description);
@@ -103,8 +100,8 @@ angular.module('angularGoodgymApp')
       $http.post(urlApiLogin, user).success(function(user) {
         console.log('Login success');
         toaster.pop('success', 'Logged In', 'Now, book that next run!');
-        setToken(user.token);
-        changeUser(user);
+        setToken(user.access_token);
+        changeUser(user.scope);
         success(user);
       }).error(function(error) {
         toaster.pop('error', error.error, error.error_description);
@@ -118,6 +115,9 @@ angular.module('angularGoodgymApp')
         });
         success();
       }).error(error);
+    },
+    getToken: function() {
+      return token;
     },
 
     accessLevels: accessLevels,

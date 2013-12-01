@@ -1,7 +1,7 @@
 /* ===================================
  *
  * Animations
- * 
+ *
  * ================================= */
 
 .slideDown {
@@ -1047,7 +1047,7 @@
 @for $i from 1 through 3 {
 	.delay#{$i}s {
 		animation-delay: #{$i}s;
-		-moz-animation-delay: #{$i}s; 
+		-moz-animation-delay: #{$i}s;
 		-webkit-animation-delay: #{$i}s;
 	}
 }

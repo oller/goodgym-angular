@@ -1,6 +1,11 @@
 'use strict';
 
 angular.module('angularGoodgymApp')
-  .controller('TeamCtrl', function ($scope) {
-    $scope.title = 'My Team';
-  });
+    .controller('TeamCtrl', ['$scope', 'AuthService',
+        function($scope, AuthService) {
+            $scope.title = 'My Team';
+
+            $scope.tokenIntro = 'tkn:';
+            $scope.token = AuthService.getToken();
+        }
+    ]);

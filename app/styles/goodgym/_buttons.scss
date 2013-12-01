@@ -43,21 +43,28 @@
         background-color: #95d1c4;
         color: $blank;
     }
+    &.button-loading {
+        padding-left: 36px;
+    }
     .ggicon {
         font-size: inherit;
         margin-right: 6px;
         font-size: 20px;
         vertical-align: middle;
+        &.no-text {
+            margin-right: 0;
+        }
+        &.on-right {
+            margin-left: 6px;
+            margin-right: 0;
+        }
     }
     .progress {
-        // position: absolute;
-        // top: 33%;
-        // left: 2%;
+        position: absolute;
+        top: 24%;
+        left: 2%;
     }
 }
-
-
-
 
 ._button, button, .button-large {
     font-size: 15px;
@@ -71,26 +78,9 @@
     line-height: 36px;
 }
 
-
-._button_ggicon, button .ggicon, .button-large .ggicon, .button-small .ggicon, .button .ggicon {
-
-}
-
-._button_ggicon.no-text, button .ggicon.no-text, .button-large .ggicon.no-text, .button-small .ggicon.no-text, .button .ggicon.no-text {
-    margin-right: 0;
-}
-
-._button_ggicon.on-right, button .ggicon.on-right, .button-large .ggicon.on-right, .button-small .ggicon.on-right, .button .ggicon.on-right {
-    margin-left: 6px;
-    margin-right: 0;
-}
-
-._button_loading, .button-loading {
-    background-size: 30px;
-    background-position: 15px center;
-    background-repeat: no-repeat;
-    padding-left: 55px;
-}
+// ._button_loading, .button-loading {
+//     // padding-left: 36px;
+// }
 
 .p0 {
     color: $blank;
@@ -106,9 +96,9 @@
         color: #ededed;
         background-color: $ggPrimaryColourDarkest;
     }
-    &.button-loading {
-        background-image: url(/images/buttons/loading-gif-button-white.png);
-    }
+    // &.button-loading {
+    //     background-image: url(/images/buttons/loading-gif-button-white.png);
+    // }
 }
 
 .p1, .p2, .p3 {
@@ -125,9 +115,9 @@
 }
 
 
-.button-loading {
-    background-image: url(/images/buttons/loading-gif-button-dark.png);
-}
+// .button-loading {
+//     background-image: url(/images/buttons/loading-gif-button-dark.png);
+// }
 
 // button, .button-large, .button-small, .button {
 //     display: inline-block;

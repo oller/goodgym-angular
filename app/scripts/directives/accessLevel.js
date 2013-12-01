@@ -6,13 +6,14 @@ angular.module('angularGoodgymApp')
       return {
         restrict: 'A',
         link: function($scope, element, attrs) {
-          var prevDisp = element.css('display'),
-            userRole, accessLevel;
+          var prevDisp = element.css('display');
+          var userRole, accessLevel;
 
           $scope.user = AuthService.user;
           $scope.$watch('user', function(user) {
-            if (user.role)
+            if (user.role) {
               userRole = user.role;
+            }
             updateCSS();
           }, true);
 

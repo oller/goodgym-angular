@@ -38,7 +38,7 @@
               <input type="password" name="password" ng-model="user.password" ng-class="{invalid: loginForm.password.$dirty && loginForm.password.$invalid}" tabindex="2" required>
             </div>
             <div class="field-wrapper">
-              <button class="p0 button" button-loading ng-disabled="loginForm.$invalid" tabindex="3">Login</button>
+              <button class="p0 button" button-loading="button-loading" ng-disabled="loginForm.$invalid" tabindex="3">Login</button>
             </div>
           </fieldset>
         </form>
@@ -71,7 +71,7 @@
               <input type="text" name="name" ng-model="data.runner.name" ng-class="{invalid: signUpForm.name.$dirty && signUpForm.name.$invalid}" required>
             </div>
             <div class="field-wrapper">
-              <button class="p0 button" button-loading ng-disabled="signUpForm.$invalid">Sign Up</button>
+              <button class="p0 button" button-loading="button-loading" ng-disabled="signUpForm.$invalid">Sign Up</button>
             </div>
           </fieldset>
         </form>

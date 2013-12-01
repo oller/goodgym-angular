@@ -1,17 +1,17 @@
 <div class="sliding-nav relative overflow-hidden" ng-class="{narrow: showNarrowNav}" ng-controller="NavCtrl">
-  <div class="brand-icon" ng-class="{narrow: showNarrowNav}">
-    <a href="/" class="block"></a>
-  </div>
-  <ul class="primary-nav nomargin" ng-class="{narrow: showNarrowNav}">
-    <li ng-repeat="link in nav">
-      <a href="/{{link.slug | lowercase}}" title="{{ link.title }}" data-access-level="accessLevels.{{ link.access }}" active-nav="selected" responsive>
-        <span class="ggicon icon-{{ link.icon }}"></span>
-        <span class="nav-label">{{ link.title }}</span>
-      </a>
-    </li>
-  </ul>
+    <div class="brand-icon" ng-class="{narrow: showNarrowNav}">
+        <a href="/" class="block"></a>
+    </div>
+    <ul class="primary-nav nomargin" ng-class="{narrow: showNarrowNav}">
+        <li ng-repeat="link in nav">
+            <a href="/{{link.slug | lowercase}}" title="{{ link.title }}" data-access-level="accessLevels.{{ link.access }}" active-nav="selected" responsive>
+                <span class="ggicon icon-{{ link.icon }}"></span>
+                <span class="nav-label">{{ link.title }}</span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 <div class="toggle-nav hide-mobile navtoggle" narrow-nav ng-class="{narrow: showNarrowNav}" title="Toggle slim navigation">
-  <div class="toggle-nav-btn pad-lv3 dim-el ggicon icon-arrow-left2" ng-class="{false: 'icon-arrow-left2', true:'icon-arrow-right2'}[showNarrowNav]"></div>
+    <div class="toggle-nav-btn pad-lv3 dim-el ggicon icon-arrow-left2" ng-class="{false: 'icon-arrow-left2', true:'icon-arrow-right2'}[showNarrowNav]"></div>
 </div>
