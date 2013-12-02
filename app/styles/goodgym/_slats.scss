@@ -1,0 +1,148 @@
+.action-bar {
+    .button, .button-small, .dijitSelect, .dijitCheckBox {
+        margin: 0 15px 0 0;
+    }
+    .filter-btn, .folders-btn {
+        display: inline-block;
+    }
+    .filter-status {
+        background: $ggColourInfo;
+        a {
+            color: #595959;
+        }
+    }
+}
+
+// @media screen and (max-width: 40em) {
+//     .action-bar {
+//         .filter-btn, .folders-btn {
+//             width: 48%;
+//         }
+//         .filter-btn .dijitDropDownButton, .folders-btn .dijitDropDownButton {
+//             width: 100%;
+//         }
+//         .filter-btn .dijitDropDownButton .dijitButtonNode, .folders-btn .dijitDropDownButton .dijitButtonNode {
+//             display: block;
+//         }
+//     }
+// }
+
+// @media screen and (max-width: 40em) {
+//     .action-bar .filter-btn {
+//         float: right;
+//         margin: 0;
+//     }
+// }
+
+// @media screen and (max-width: 40em) {
+//     .action-bar .download-campaigns-csv {
+//         display: none;
+//     }
+// }
+
+
+.slats {
+    &.notopborder > ul > li:first-child {
+        border-top: none;
+    }
+    > ul {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
+        backface-visibility: hidden;
+        padding: 0 15px;
+        > li {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 11px 0;
+            &:first-child {
+                border-top: 1px solid #e0e0e0;
+            }
+        }
+    }
+    form {
+        padding-left: 54px;
+        label {
+            line-height: 1.6em;
+        }
+        .dijitCheckBox {
+            margin: 0 12px 0 0;
+        }
+        .button {
+            margin-right: 11px;
+        }
+        .feedback-block {
+            padding: 15px;
+        }
+        > * {
+            font-size: inherit;
+            line-height: 1.6em;
+        }
+    }
+    .form-wrapper {
+        padding: 0;
+        h2 {
+            padding-left: 54px;
+        }
+    }
+    // .move-handle {
+    //     width: 0;
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     color: #959595;
+    //     -webkit-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    //     -moz-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    //     -o-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    //     -ms-transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    //     transition: all 0.2s cubic-bezier(0.7, 0, 0.175, 1) 0s;
+    //     margin-top: 5px;
+    // }
+    // .drag-mode {
+    //     .move-handle {
+    //         opacity: 1;
+    //         visibility: visible;
+    //         cursor: move;
+    //         width: 42px;
+    //         + .dijitCheckBox {
+    //             margin-right: 18px;
+    //         }
+    //     }
+    //     .list-meta-container {
+    //         p, h4 {
+    //             padding-left: 96px;
+    //         }
+    //     }
+    // }
+}
+
+@media screen and (max-width: 40em) {
+    .slats form {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .slats .form-wrapper h2 {
+        padding-left: 0;
+    }
+}
+
+// @media screen and (max-width: 60em) {
+//     .slats .drag-mode .move-handle {
+//         width: 54px;
+//     }
+// }
+
+// @media screen and (max-width: 40em) {
+//     .slats .drag-mode .move-handle {
+//         display: none;
+//     }
+// }
+
+// @media screen and (max-width: 40em) {
+//     .slats .drag-mode .list-meta-container {
+//         p, h4 {
+//             padding-left: 0;
+//         }
+//     }
+// }

@@ -16,7 +16,7 @@
  *      </li>
  *      <li>
  *        <ul class="hover-list">
- *          <li toggle-menu="stayopen"><a href="">Create Team</a>
+ *          <li toggle-parent="stayopen"><a href="">Create Team</a>
  *            <ul>
  *              <li><a href="" scroll-to="leave">Hover 1</a>
  *              </li>
@@ -200,6 +200,14 @@
     }
 }
 
+/* ===================================
+ *
+ * Hover State Sub Navigation
+ *
+ * Uses toggleParent Directive
+ *
+ * ================================= */
+
 .hover-list {
     position: relative;
     > li > {
@@ -228,11 +236,6 @@
             }
         }
     }
-}
-
-.dj_ie8 .hover-list > li > a:after {
-    content: "\25bc";
-    font-size: 12px;
 }
 
 .field-wrapper .field-help .hover-list > li > ul {
