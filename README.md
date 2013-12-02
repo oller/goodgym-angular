@@ -1,1 +1,5 @@
-# A lightweight, responsive single-page app for interacting with the GoodGym API
+=======
+goodgym-angular
+===============
+
+A single-page app to interact with the GoodGym API.  Built using AngularJS
