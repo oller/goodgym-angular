@@ -10,6 +10,8 @@
  * Project: https://github.com/CodeSeven/toastr
  */
 
+$toasterAnimation: 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
+
 .toast-top-full-width {
     top: 0px;
     right: 0;
@@ -61,6 +63,11 @@
             opacity: 0.8;
             -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
             filter: alpha(opacity = 80);
+            -webkit-transition: $toasterAnimation;
+            -moz-transition: $toasterAnimation;
+            -ms-transition: $toasterAnimation;
+            -o-transition: $toasterAnimation;
+            transition: $toasterAnimation;
         }
         :hover {
             opacity: 1;
@@ -77,14 +84,6 @@
     }
 }
 
-/* Responsive Design */
-@media all and (max-width: 1024px) {
-    #toast-container {
-        &.toast-top-full-width, &.toast-top-right, &.toast-top-left {
-            padding-top: 64px;
-        }
-    }
-}
 
 /*
  * AngularJS-Toaster
@@ -92,7 +91,6 @@
  * Version 0.3
 */
 
-$toasterAnimation: 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
 
 #toast-container > div {
     &.ng-enter, &.ng-leave {
