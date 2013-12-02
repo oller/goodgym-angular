@@ -61,18 +61,16 @@ body {
 #topmsg .badge{background-color:$blank;line-height:1.6em;padding-bottom:.1875em}
 
 
-.badge{background-color:#e0e0e0;padding:.23076923076923078em 1.0769230769230769em .38461538461538464em 1.0769230769230769em;margin:0 .46153846153846156em 0 .46153846153846156em;color:#626262;font-weight:500;letter-spacing:.01em;text-align:center;font-size:13px;line-height:18px;white-space:no-wrap;border-radius:200px}.badge.success{background-color:$ggColourSuccess}
-.badge.error{background-color:$ggColourError}
-.badge.warning{background-color:$ggColourWarning}
-.badge.info{background-color:$ggColourInfo}
-.badge.dot{font-size:6px;margin-right:18px}
-.co.create-campaign-help{position:absolute;right:15px;top:95px}@media screen and (max-width:40em){.create-campaign-help{z-index:5;top:175px}}
-.create-autoresponder{position:absolute;right:75px;top:70px}@media screen and (max-width:40em){.create-autoresponder{z-index:5;top:150px;right:43%}}
-.create-list{position:absolute;top:70px;right:55px}@media screen and (max-width:40em){.create-list{top:165px;right:43%}}
-.campaign-help{position:absolute;right:370px;top:6px}@media screen and (max-width:40em){.campaign-help{right:60%;top:143px}}
-.list-help{position:fixed;top:325px;left:172px}.list-help.narrow{top:360px;left:62px}
-@media screen and (max-width:64em){.list-help{top:127px;z-index:5}.list-help.narrow{top:152px;left:172px}}
-.create-segment{position:absolute;right:80px;top:100px}@media screen and (max-width:31.25em){.create-segment{right:auto;left:30px}}
+@import "goodgym/badge";
+
+
+// .co.create-campaign-help{position:absolute;right:15px;top:95px}@media screen and (max-width:40em){.create-campaign-help{z-index:5;top:175px}}
+// .create-autoresponder{position:absolute;right:75px;top:70px}@media screen and (max-width:40em){.create-autoresponder{z-index:5;top:150px;right:43%}}
+// .create-list{position:absolute;top:70px;right:55px}@media screen and (max-width:40em){.create-list{top:165px;right:43%}}
+// .campaign-help{position:absolute;right:370px;top:6px}@media screen and (max-width:40em){.campaign-help{right:60%;top:143px}}
+// .list-help{position:fixed;top:325px;left:172px}.list-help.narrow{top:360px;left:62px}
+// @media screen and (max-width:64em){.list-help{top:127px;z-index:5}.list-help.narrow{top:152px;left:172px}}
+// .create-segment{position:absolute;right:80px;top:100px}@media screen and (max-width:31.25em){.create-segment{right:auto;left:30px}}
 
 
 
