@@ -15,22 +15,22 @@ angular.module('angularGoodgymApp')
       }, {
         title: 'View Runs',
         slug: 'view',
-        access: 'user',
+        access: 'public',
         icon: 'user'
       }, {
         title: 'Manage Runs',
         slug: 'manage',
-        access: 'user',
+        access: 'public',
         icon: 'clipboard'
       }, {
         title: 'View Team',
         slug: 'team',
-        access: 'user',
+        access: 'public',
         icon: 'users'
       }, {
         title: 'My Account',
         slug: 'account',
-        access: 'user',
+        access: 'public',
         icon: 'cog'
       }];
 

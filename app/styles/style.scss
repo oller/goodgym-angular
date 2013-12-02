@@ -6,11 +6,7 @@
  * -------------------------- */
 
 @import "vars";
-
-
 @import "goodgym/reset";
-
-
 @import "goodgym/masthead";
 
 
@@ -79,75 +75,15 @@ body {
 .create-segment{position:absolute;right:80px;top:100px}@media screen and (max-width:31.25em){.create-segment{right:auto;left:30px}}
 
 
-/* ===================================
- *
- * Feedback Alerts
- *
- * ================================= */
-.feedback-block{padding:.75em 0 .75em 0;background-color:$ggColourInfo;border-radius:6px;color:#626262;overflow:hidden}.feedback-block a.ggicon{border:0 none}
-.feedback-block a.ggicon{border:none}
-.feedback-block h1,.feedback-block h2,.feedback-block h3,.feedback-block h4{font-size:1.125em;color:#595959;margin-bottom:0}
-.feedback-block p{font-size:.9375em}.feedback-block p:last-child{margin-bottom:0}
-.feedback-block.readable-max-width{max-width:550px}
-.feedback-block ol,.feedback-block ul{max-width:500px}
-.feedback-block .badge{background-color:$blank;line-height:1.6em;padding-bottom:.1875em}
-.feedback-block .media p:last-child{margin:0}
-.feedback-block .ggicon {line-height: 1.7em;}
-@media screen and (max-width:40em){.feedback-block .media-image,.feedback-block .media-body{float:none;text-align:center;margin:0}}
-.panel-block{background-color:#eee;padding:.75em .75em .75em .75em;border-radius:6px}.panel-block>*:last-child{margin-bottom:0}
-div.success .ggicon,div.error .ggicon,div.warning .ggicon,div.info .ggicon{font-size:2em; }
-div.success{background-color:$ggColourSuccess}
-div.error{background-color:$ggColourError}
-div.warning{background-color:$ggColourWarning}
-div.info{background-color:$ggColourInfo}
 
+
+@import "goodgym/feedback";
 
 @import "goodgym/noData";
 
 @import "goodgym/forms";
 
 @import "goodgym/table";
-
-
-.hover-list{position:relative}
-.hover-list>li>ul{display:none;position:absolute;z-index:999;top:30px;right:auto;left:0;border:1px solid #e0e0e0;background-color:$blank;white-space:nowrap;-webkit-box-shadow:0 6px 18px 0 rgba(0, 0, 0, 0.1);box-shadow:0 6px 18px 0 rgba(0, 0, 0, 0.1);border-radius:6px;padding:6px 0;font-size:15px}
-.hover-list>li>a{padding-bottom:6px}.hover-list>li>a:after{content:"\25be";margin-left:6px;vertical-align:top}
-.dj_ie8 .hover-list>li>a:after{content:"\25bc";font-size:12px}
-.field-wrapper .field-help .hover-list>li>ul{width:450px}
-.field-wrapper .field-help .hover-list>li>ul li{-ms-word-wrap:break-word;word-wrap:break-word;white-space:normal}
-.hover-list .right-edge{left:auto;right:0 !important}
-.hover-list.stayopen>li>ul{display:block !important}
-.hover-list.click-to-open>li>ul{display:none}
-.hover-list>li:hover .hover-trigger{color:#101010;background-position:right -15px}
-.hover-list>li>ul>li.divider{display:block;border-top:1px solid #ccc;margin:5px 0}
-.hover-list>li>ul>li>a,.hover-list>li>ul>li>ul>li>a{color:#5b5c5d;padding:12px 18px;font-weight:500}
-.hover-list>li>ul>li>a:hover,.hover-list>li>ul>li>ul>li>a:hover{background:$ggPrimaryColour;color:$blank}
-.hover-list .section-head{color:#3f3f38;font-weight:bold;font-size:13px;margin-top:12px}
-.hover-list ul li:first-child .section-head{margin-top:0;line-height:1em}
-.alignc .hover-list ul{left:40%}
-.hover-list-side-bar,.hover-list-side-bar-dash{min-width:220px;width:auto !important}
-.hover-list-side-bar-dash{min-width:320px}
-.hover-list>li>ul>li{padding:0}
-.hover-list .right-edge:after{right:15px;left:auto}
-.hover-list .right-edge:before{right:13px;left:auto}
-.hover-list .fixed-width{width:250px;white-space:normal}
-.hover-list.inline-block>li>ul{right:auto}
-
-
-.mc-dropdown a,.mc-dropdown a:link,.mc-dropdown a:visited{display:block;font-size:15px;padding:12px 18px;background:transparent;color:#5b5c5d;font-weight:500}
-.mc-dropdown a:hover,.mc-dropdown a:focus,.mc-dropdown a:active{background:$ggPrimaryColour;color:$blank}
-.mc-dropdown div:first-child a{border-radius:3px 3px 0 0}
-.mc-dropdown div:last-child a{border-radius:0 0 3px 3px}
-.dj_ie9 .mc-dropdown tbody{display:block;width:100%;float:left;clear:left}
-.dotted-list{margin-bottom:.8em}.dotted-list>li{line-height:1.6em;padding:.8em 0 .7333333333333333em 0;border-bottom:1px dotted #d9d9d9}.dotted-list>li>div{padding:0}.dotted-list>li>div>a{display:block}
-.topborder>li:first-child{border-top:1px dotted #d9d9d9}
-
-.thick{margin-bottom:1.6em}
-.thick>li{padding:1.2em 0 1.1333333333333333em 0}
-.slim>li{padding:.4em 0 .3333333333333333em 0}
-
-
-
 
 @import "goodgym/statBlock";
 
@@ -159,13 +95,7 @@ div.info{background-color:$ggColourInfo}
 
 @import "goodgym/listHorizontal";
 
-
-
-
 @import "goodgym/nav";
-
-
-
 
 
 

@@ -1,0 +1,82 @@
+/* ===================================
+ *
+ * Feedback Block
+ *
+ * <div class="feedback-block success section">
+ *   <div class="lastUnit size1of1">
+ *     <div class="media">
+ *       <div class="media-image">
+ *         <span class="ggicon icon-checkmark"></span>
+ *       </div>
+ *       <div class="media-body ">
+ *         <h4>Account Status</h4>
+ *         <p>All good!</p>
+ *       </div>
+ *     </div>
+ *   </div>
+ * </div>
+ *
+ * ================================= */
+
+.feedback-block {
+    padding: 0.75em 0 0.75em 0;
+    border-radius: 6px;
+    background-color: $ggColourInfo;
+    color: #626262;
+    overflow: hidden;
+    a.ggicon {
+        border: 0 none;
+        border: none;
+    }
+    h1, h2, h3, h4 {
+        font-size: 1.125em;
+        color: #595959;
+        margin-bottom: 0;
+    }
+    p {
+        font-size: .9375em;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &.readable-max-width {
+        max-width: 550px;
+    }
+    ol, ul {
+        max-width: 500px;
+    }
+    .badge {
+        background-color: #fff;
+        line-height: 1.6em;
+        padding-bottom: .1875em;
+    }
+    .media p:last-child {
+        margin: 0;
+    }
+    .ggicon {
+        line-height: 1.7em;
+        font-size: 2em;
+    }
+    &.success {
+        background-color: $ggColourSuccess;
+    }
+    &.error {
+        background-color: $ggColourError;
+    }
+    &.warning {
+        background-color: $ggColourWarning;
+    }
+    &.info {
+        background-color: $ggColourInfo;
+    }
+}
+
+@media screen and (max-width: 40em) {
+    .feedback-block {
+        .media-image, .media-body {
+            float: none;
+            text-align: center;
+            margin: 0;
+        }
+    }
+}

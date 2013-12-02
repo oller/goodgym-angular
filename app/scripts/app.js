@@ -4,7 +4,7 @@ angular.module('angularGoodgymApp', [
     'ngCookies',
     'ngResource',
     // 'ngSanitize',
-    'ngAnimate',
+    // 'ngAnimate',
     'toaster',
     'ngRoute'
 ])
@@ -27,22 +27,22 @@ angular.module('angularGoodgymApp', [
                 .when('/view', {
                     templateUrl: 'views/view.html',
                     controller: 'ViewCtrl',
-                    access: access.user
+                    access: access.anon
                 })
                 .when('/manage', {
                     templateUrl: 'views/manage.html',
                     controller: 'ManageCtrl',
-                    access: access.user
+                    access: access.anon
                 })
                 .when('/account', {
                     templateUrl: 'views/account.html',
                     controller: 'AccountCtrl',
-                    access: access.user
+                    access: access.anon
                 })
                 .when('/team', {
                     templateUrl: 'views/team.html',
                     controller: 'TeamCtrl',
-                    access: access.user
+                    access: access.anon
                 })
                 .when('/404', {
                     templateUrl: 'views/404.html',
@@ -97,10 +97,3 @@ angular.module('angularGoodgymApp', [
 
     }
 ]);
-
-// .run( function($rootScope, $location, NotificationService) {
-//     // register listener to watch route changes
-//     $rootScope.$on( "$routeChangeStart", function() {
-//       NotificationService.destroyFeedback();
-//     });
-//  });

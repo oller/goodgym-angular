@@ -31,7 +31,6 @@
  *
  * ================================= */
 
-
 .local-nav-container {
     position: relative;
     z-index: 3;
@@ -114,7 +113,7 @@
             -ms-transition: none;
             transition: none;
             &.active {
-            	border-bottom: solid 1px #c0c0c0;
+                border-bottom: solid 1px silver;
             }
         }
         .hover-list {
@@ -200,6 +199,136 @@
         }
     }
 }
+
+.hover-list {
+    position: relative;
+    > li > {
+        ul {
+            display: none;
+            position: absolute;
+            z-index: 999;
+            top: 30px;
+            right: auto;
+            left: 0;
+            border: 1px solid #e0e0e0;
+            background-color: $blank;
+            white-space: nowrap;
+            -webkit-box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+            padding: 6px 0;
+            font-size: 15px;
+        }
+        a {
+            padding-bottom: 6px;
+            &:after {
+                content: "\25be";
+                margin-left: 6px;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
+.dj_ie8 .hover-list > li > a:after {
+    content: "\25bc";
+    font-size: 12px;
+}
+
+.field-wrapper .field-help .hover-list > li > ul {
+    width: 450px;
+    li {
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+}
+
+.hover-list {
+    .right-edge {
+        left: auto;
+        right: 0 !important;
+    }
+    &.stayopen > li > ul {
+        display: block !important;
+    }
+    &.click-to-open > li > ul {
+        display: none;
+    }
+    > li {
+        &:hover .hover-trigger {
+            color: #101010;
+            background-position: right -15px;
+        }
+        > ul > li {
+            &.divider {
+                display: block;
+                border-top: 1px solid #cccccc;
+                margin: 5px 0;
+            }
+            > {
+                a, ul > li > a {
+                    color: #5b5c5d;
+                    padding: 12px 18px;
+                    font-weight: 500;
+                }
+                a:hover, ul > li > a:hover {
+                    background: $ggPrimaryColour;
+                    color: $blank;
+                }
+            }
+        }
+    }
+    .section-head {
+        color: #3f3f38;
+        font-weight: bold;
+        font-size: 13px;
+        margin-top: 12px;
+    }
+    ul li:first-child .section-head {
+        margin-top: 0;
+        line-height: 1em;
+    }
+}
+
+.alignc .hover-list ul {
+    left: 40%;
+}
+
+.hover-list-side-bar {
+    min-width: 220px;
+    width: auto !important;
+}
+
+.hover-list-side-bar-dash {
+    min-width: 220px;
+    width: auto !important;
+    min-width: 320px;
+}
+
+.hover-list {
+    > li > ul > li {
+        padding: 0;
+    }
+    .right-edge {
+        &:after {
+            right: 15px;
+            left: auto;
+        }
+        &:before {
+            right: 13px;
+            left: auto;
+        }
+    }
+    .fixed-width {
+        width: 250px;
+        white-space: normal;
+    }
+    &.inline-block > li > ul {
+        right: auto;
+    }
+}
+
 
 @media only screen and (max-width: 40em) {
     .local-nav {
