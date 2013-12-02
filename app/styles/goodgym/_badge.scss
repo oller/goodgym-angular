@@ -1,0 +1,42 @@
+/* ===================================
+ *
+ * Badge
+ *
+ * <span class="badge *error*">12</span>
+ *
+ * ================================= */
+
+.badge {
+    background-color: #e0e0e0;
+    padding: 0.23077em 1.07692em 0.38462em 1.07692em;
+    margin: 0 0.46154em 0 0.46154em;
+    color: #626262;
+    font-weight: 500;
+    letter-spacing: .01em;
+    text-align: center;
+    font-size: 13px;
+    line-height: 18px;
+    white-space: no-wrap;
+    border-radius: 200px;
+	&.success {
+	    background-color: $ggColourSuccess;
+	}
+
+	&.error {
+	    background-color: $ggColourError;
+	}
+
+	&.warning {
+	    background-color: $ggColourWarning;
+	}
+
+	&.info {
+	    background-color: $ggColourInfo;
+	}
+
+	&.dot {
+	    font-size: 6px;
+	    margin-right: 18px;
+	}
+}
+

@@ -48,32 +48,7 @@ body {
 
 @import "goodgym/media";
 
-
-.roadblock.noheader .roadblock-header{display:none}
-.toaster{position:fixed;top:0;width:100%}
-#av-flash-block{position:relative;top:12px;color:#626262;font-size:.9375em}#av-flash-block h1,#av-flash-block .h1,#av-flash-block h2,#av-flash-block .h2,#av-flash-block h3,#av-flash-block .h3,#av-flash-block h4,#av-flash-block .h4{font-size:1.125em}
-#av-content #av-flash-block{top:0}
-#av-flash-block .av-flash{position:relative;top:0;display:block;clear:both;list-style:none;padding:1.5em .9375em 1.5em .9375em;font-size:18px;text-align:left;margin-bottom:24px !important}#av-flash-block .av-flash a{display:inline-block}
-#av-flash-info,#av-flash-errors,#av-flash-success{border-radius:6px;background-color:$ggColourInfo}@media only screen and (max-width:64em){#av-flash-info,#av-flash-errors,#av-flash-success{top:15px}}
-#av-flash-errors{background-color:$ggColourError}
-#av-flash-success{background-color:$ggColourSuccess}
-#topmsg{color:#626262;font-size:.9375em;padding:1.5em 0 .75em 0;border-radius:0 0 6px 6px}@media only screen and (max-width:64em){#topmsg{margin-top:4.5em;margin-bottom:-4.5em}}#topmsg.warning{background-color:$ggColourWarning}
-#topmsg .badge{background-color:$blank;line-height:1.6em;padding-bottom:.1875em}
-
-
 @import "goodgym/badge";
-
-
-// .co.create-campaign-help{position:absolute;right:15px;top:95px}@media screen and (max-width:40em){.create-campaign-help{z-index:5;top:175px}}
-// .create-autoresponder{position:absolute;right:75px;top:70px}@media screen and (max-width:40em){.create-autoresponder{z-index:5;top:150px;right:43%}}
-// .create-list{position:absolute;top:70px;right:55px}@media screen and (max-width:40em){.create-list{top:165px;right:43%}}
-// .campaign-help{position:absolute;right:370px;top:6px}@media screen and (max-width:40em){.campaign-help{right:60%;top:143px}}
-// .list-help{position:fixed;top:325px;left:172px}.list-help.narrow{top:360px;left:62px}
-// @media screen and (max-width:64em){.list-help{top:127px;z-index:5}.list-help.narrow{top:152px;left:172px}}
-// .create-segment{position:absolute;right:80px;top:100px}@media screen and (max-width:31.25em){.create-segment{right:auto;left:30px}}
-
-
-
 
 @import "goodgym/feedback";
 
