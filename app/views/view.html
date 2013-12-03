@@ -1,8 +1,28 @@
 <!-- Header -->
 <div class="lastUnit size1of1 header">
-    <h1>{{ title }}</h1>
+  <h1 class="inline-block">{{ title }}</h1>
+  <a href="" class="new-list-button add-btn button p0"><span class="ggicon icon-add-to-list"></span> Create a Run</a>
 </div>
 <!-- /Header -->
+
+<div class="line main-section" ng-show="runs">
+	<table class="table">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Run</th>
+				<th>Signed Up?</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="run in runs.group_runs">
+				<td>{{run.id}}</td>
+				<td>{{run.name}}</td>
+				<td><span ng-bind-html="run.signed_up | iconify"></span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
 
 <div class="line main-section">
     <div class="sub-section">

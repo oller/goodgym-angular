@@ -62,6 +62,7 @@ angular.module('angularGoodgymApp')
 
   function setToken(userSessionToken) {
     token = userSessionToken;
+    $http.defaults.headers.common['Authorization'] = 'Bearer '+token;
     console.log('token is set to ' + token);
   };
 

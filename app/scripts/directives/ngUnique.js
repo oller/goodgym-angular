@@ -11,8 +11,8 @@ angular.module('angularGoodgymApp')
             $scope.$apply(function() {
               var val = element.val();
               var req = {
-                "email": val
-              }
+                'email': val
+              };
               var ajaxConfiguration = {
                 method: 'POST',
                 url: 'http://goodgym-api.herokuapp.com/api/v1/verify_unique_email',
@@ -25,6 +25,6 @@ angular.module('angularGoodgymApp')
             });
           });
         }
-      }
+      };
     }
   ]);
