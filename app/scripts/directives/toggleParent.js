@@ -1,7 +1,6 @@
 'use strict';
 
 // Set the defined class on the parent element on click.
-
 angular.module('angularGoodgymApp')
   .directive('toggleParent', function() {
     return {

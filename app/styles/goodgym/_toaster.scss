@@ -87,10 +87,8 @@ $toasterAnimation: 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
 
 /*
  * AngularJS-Toaster
- * Requires ng-animate
+ * Requires ng-animate for fade in and out
  * Version 0.3
-*/
-
 
 #toast-container > div {
     &.ng-enter, &.ng-leave {
@@ -113,3 +111,5 @@ $toasterAnimation: 300ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
         opacity: 0;
     }
 }
+
+ */

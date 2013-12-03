@@ -1,5 +1,90 @@
+/* ===================================
+ *
+ * Stat Block
+ *
+ *  <div class="example">
+ *    <div class="section slats">
+ *      <ul>
+ *        <li class="relative selfclear">
+ *          <div class="meta unit size3of4">
+ *            <div class="unit size5of8 nopadding">
+ *              <h4><a href="#">MailChimp UX Issue 9 - Patterns</a>
+ *              </h4>
+ *              <p>
+ *                <span class="msg dim-el capitalize">regular ·</span>
+ *                <span class="msg dim-el">Sent Jul 25, 2013 05:03 pm</span>
+ *              </p>
+ *            </div>
+ *            <div class="lastUnit size3of8 nopadding stats-container hide-phone">
+ *              <div class="data inline-block float-left">
+ *                <h4>2,065</h4>
+ *                <p class="dim-el">Subscribers</p>
+ *              </div>
+ *              <div class="data inline-block float-left">
+ *                <div class="percentage-container">
+ *                  <h4>55.8%</h4>
+ *                  <p class="dim-el">
+ *                    <span class="hide-mobile">Open Rate</span>
+ *                    <span class="show-mobile">Opens</span>
+ *                  </p>
+ *                </div>
+ *                <div class="number-container">
+ *                  <h4>1,147</h4>
+ *                  <p class="dim-el">
+ *                    <span class="hide-mobile">Open Rate</span>
+ *                    <span class="show-mobile">Opens</span>
+ *                  </p>
+ *                </div>
+ *              </div>
+ *              <div class="data inline-block float-left">
+ *                <div class="percentage-container">
+ *                  <h4>13.7%</h4>
+ *                  <p class="dim-el">
+ *                    <span class="hide-mobile">Click Rate</span>
+ *                    <span class="show-mobile">Clicks</span>
+ *                  </p>
+ *                </div>
+ *                <div class="number-container">
+ *                  <h4>281</h4>
+ *                  <p class="dim-el">
+ *                    <span class="hide-mobile">Click Rate</span>
+ *                    <span class="show-mobile">Clicks</span>
+ *                  </p>
+ *                </div>
+ *              </div>
+ *            </div>
+ *            <div class="lastUnit size3of8 nopadding stats-container show-phone">
+ *              <ul class="dotted-list nomargin">
+ *                <li>
+ *                  <span>Subscribers</span>
+ *                  <span class="fwb float-right">2,065</span>
+ *                </li>
+ *                <li>
+ *                  <span>Open Rate</span>
+ *                  <span class="fwb float-right">55.8%</span>
+ *                </li>
+ *                <li>
+ *                  <span>Click Rate</span>
+ *                  <span class="fwb float-right">13.7%</span>
+ *                </li>
+ *              </ul>
+ *            </div>
+ *          </div>
+ *          <div class="meta-actions lastUnit size1of4 alignr">
+ *              <a title="Add Subscriber" class="button-small" href="#">
+ *                <span class="ggicon icon-user add-sub mar-r0"></span>
+ *              </a>
+ *          </div>
+ *        </li>
+ *      </ul>
+ *    </div>
+ *  </div>
+ *
+ * ================================= */
+
+
 .action-bar {
-    .button, .button-small, .dijitSelect, .dijitCheckBox {
+    .button, .button-small {
         margin: 0 15px 0 0;
     }
     .filter-btn, .folders-btn {
@@ -12,33 +97,6 @@
         }
     }
 }
-
-// @media screen and (max-width: 40em) {
-//     .action-bar {
-//         .filter-btn, .folders-btn {
-//             width: 48%;
-//         }
-//         .filter-btn .dijitDropDownButton, .folders-btn .dijitDropDownButton {
-//             width: 100%;
-//         }
-//         .filter-btn .dijitDropDownButton .dijitButtonNode, .folders-btn .dijitDropDownButton .dijitButtonNode {
-//             display: block;
-//         }
-//     }
-// }
-
-// @media screen and (max-width: 40em) {
-//     .action-bar .filter-btn {
-//         float: right;
-//         margin: 0;
-//     }
-// }
-
-// @media screen and (max-width: 40em) {
-//     .action-bar .download-campaigns-csv {
-//         display: none;
-//     }
-// }
 
 
 .slats {
@@ -64,9 +122,6 @@
         padding-left: 54px;
         label {
             line-height: 1.6em;
-        }
-        .dijitCheckBox {
-            margin: 0 12px 0 0;
         }
         .button {
             margin-right: 11px;
@@ -116,33 +171,12 @@
 }
 
 @media screen and (max-width: 40em) {
-    .slats form {
-        padding-left: 0;
+    .slats {
+        .form-wrapper h2 {
+            padding-left: 0;
+        }
+        form {
+            padding-left: 0;
+        }
     }
 }
-
-@media screen and (max-width: 40em) {
-    .slats .form-wrapper h2 {
-        padding-left: 0;
-    }
-}
-
-// @media screen and (max-width: 60em) {
-//     .slats .drag-mode .move-handle {
-//         width: 54px;
-//     }
-// }
-
-// @media screen and (max-width: 40em) {
-//     .slats .drag-mode .move-handle {
-//         display: none;
-//     }
-// }
-
-// @media screen and (max-width: 40em) {
-//     .slats .drag-mode .list-meta-container {
-//         p, h4 {
-//             padding-left: 0;
-//         }
-//     }
-// }

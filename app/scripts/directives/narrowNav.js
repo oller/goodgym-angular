@@ -1,5 +1,6 @@
 'use strict';
 
+// Toggle the narrow/slim navigation side panel
 angular.module('angularGoodgymApp')
   .directive('narrowNav', function($rootScope) {
     // Runs during compile

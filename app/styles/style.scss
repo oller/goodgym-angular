@@ -8,13 +8,34 @@
 @import "vars";
 @import "goodgym/reset";
 @import "goodgym/masthead";
+@import "goodgym/buttons";
+@import "goodgym/grid";
+@import "goodgym/media";
+@import "goodgym/badge";
+@import "goodgym/feedback";
+@import "goodgym/noData";
+@import "goodgym/forms";
+@import "goodgym/table";
+@import "goodgym/statBlock";
+@import "goodgym/helpers";
+@import "goodgym/animations";
+@import "goodgym/typography";
+@import "goodgym/listHorizontal";
+@import "goodgym/nav";
+@import "goodgym/navLocal";
+@import "goodgym/header";
+@import "goodgym/icons";
+@import "goodgym/progressMeter";
+@import "goodgym/slats";
+@import "goodgym/timeline";
+@import "goodgym/progressSteps";
+@import "goodgym/print";
+@import "goodgym/colours";
+@import "goodgym/toaster";
 
 
 
 ._avatar-bg,.avatar,.img-overlay,.avatar-notes{background-size:cover;background-repeat:no-repeat;background-position:50% 50%}
-
-
-@import "goodgym/buttons";
 
 ._feedback_link,#av-flash-block a,.feedback-block a,.panel-block a{color:#595959;border-bottom:1px solid #595959}._feedback_link.button,._feedback_link.button-small,#av-flash-block a.button,#av-flash-block a.button-small,.feedback-block a.button,.feedback-block a.button-small,.panel-block a.button,.panel-block a.button-small{color:#737373;border-bottom:0 none}._feedback_link.button.p0,._feedback_link.button-small.p0,#av-flash-block a.button.p0,#av-flash-block a.button-small.p0,.feedback-block a.button.p0,.feedback-block a.button-small.p0,.panel-block a.button.p0,.panel-block a.button-small.p0{color:$blank}
 ._feedback_link.button:hover,._feedback_link.button-small:hover,._feedback_link.button:visited,._feedback_link.button-small:visited,#av-flash-block a.button:hover,#av-flash-block a.button-small:hover,#av-flash-block a.button:visited,#av-flash-block a.button-small:visited,.feedback-block a.button:hover,.feedback-block a.button-small:hover,.feedback-block a.button:visited,.feedback-block a.button-small:visited,.panel-block a.button:hover,.panel-block a.button-small:hover,.panel-block a.button:visited,.panel-block a.button-small:visited{border-bottom:0 none}
@@ -29,7 +50,6 @@
 ._definition-list .title,.campaign-data .title{width:6em}
 ._swatch,.swatch,.growth-chart .swatch{width:12px;height:12px;display:inline-block;vertical-align:middle;border-radius:50%}
 
-@import "goodgym/grid";
 
 body {
     font-size: 100%;
@@ -45,30 +65,6 @@ body {
     font-size: 1em;
 }
 
-
-@import "goodgym/media";
-
-@import "goodgym/badge";
-
-@import "goodgym/feedback";
-
-@import "goodgym/noData";
-
-@import "goodgym/forms";
-
-@import "goodgym/table";
-
-@import "goodgym/statBlock";
-
-@import "goodgym/helpers";
-
-@import "goodgym/animations";
-
-@import "goodgym/typography";
-
-@import "goodgym/listHorizontal";
-
-@import "goodgym/nav";
 
 
 
@@ -104,23 +100,7 @@ body {
 .menu-left{background:url(/images/logo_goodgym.svg) no-repeat scroll right center transparent;background-size:42px auto;width:90px}
 .menu-left a,.menu-left span{height:inherit;display:block}
 .menu-left a{padding-left:18px}
-// .search-container{bottom:0;left:0;top:0;right:0;overflow-y:auto;overflow-x:hidden;position:absolute;background-color:$blank;padding:3.75em 1.875em 2.25em 1.875em;z-index:-1;visibility:hidden;opacity:0}.search-container.active{z-index:99;visibility:visible;opacity:1;overflow-y:auto}
-// @media only screen and (max-width:64em){.search-container.active{top:54px}}@media only screen and (max-width:40em){.search-container{padding-top:1.875em}}
-// .notify-bubble{top:132px;left:-10px}.notify-bubble.wide .arrow,.notify-bubble.wide .arrow-border{top:77px}@media only screen and (max-width:64em){.notify-bubble.wide .arrow,.notify-bubble.wide .arrow-border{top:-19px}}
-// @media only screen and (max-width:64em){.notify-bubble{display:none;top:57px;left:auto;right:5%}.notify-bubble.wide{top:57px} .notify-bubble.active{display:block;left:auto}}@media only screen and (max-width:40em){.notify-bubble{width:94%}}.notify-bubble .notify-header{padding:6px 6px 0;border-radius:6px 6px 0 0}
-// .notify-bubble .button{margin:12px 0}
-// .notify-bubble h3{border-radius:4px 4px 0 0}
-// .notify-bubble h4,.notify-bubble .message,.notify-bubble .message-time{font-size:.9375em;line-height:1.2em;margin-bottom:.4em}
-// .notify-bubble p{max-width:99%}
-// .notify-bubble .no-notifications{color:#d0d0d0}.notify-bubble .no-notifications .nocomments{font-size:5.25em;line-height:1.5}
-// .notify-bubble .no-notifications p{font-size:1.625em}
-// .notify-bubble li{padding:18px;border-top:1px dotted #d0d0d0}.notify-bubble li:first-child{border-top:0 none}
-// .notify-bubble .message-time{opacity:.7}
-// .notify-bubble .notifications-all{max-height:32em;overflow-y:auto;border-radius:0 0 6px 6px;padding:0 6px}
-// .notify-bubble .notifications-compliance div{padding:12px}
-// .notify-bubble .notifications-common li:first-child{border-top:1px dotted #d0d0d0}
-// .notify-bubble .arrow,.notify-bubble .arrow-border{width:0;height:0;border-color:transparent #d0d0d0 transparent transparent;border-width:10px;border-style:solid;position:absolute;top:129px;left:-19px}@media only screen and (max-width:64em){.notify-bubble .arrow,.notify-bubble .arrow-border{display:none}}
-// .notify-bubble .arrow-border{border-color:transparent $blank transparent transparent;left:-18px}@media only screen and (max-width:64em){.notify-bubble .arrow-border{display:none}}
+
 .acl-popover{padding:6px;top:57px;right:12px;left:auto;border:1px solid #d0d0d0}
 @media only screen and (max-width:40em){.acl-popover{width:94%}}
 @media only screen and (max-width:60em) and (max-height:31.25em){.acl-popover{max-height:23em;overflow-y:auto;font-size:13px}}
@@ -134,16 +114,6 @@ body {
 .acl-mobile a{font-weight:500}
 .acl-mobile .account-users{max-height:18em;overflow-y:auto}@media only screen and (max-width:64em){.acl-mobile .account-users{max-height:11em}}@media only screen and (max-width:60em) and (max-height:31.25em){.acl-mobile .account-users{max-height:inherit}}
 @media only screen and (max-width:64em){.main-content{top:54px} .main,.main-content,.notifications-all,.account-users,.primary-nav,.search-container{-webkit-overflow-scrolling:touch} .notofications-all{max-height:20em}}.first-login{position:absolute;top:0;left:0;right:0;bottom:0;z-index:50;background-color:rgba(55,55,55,0.8)}.first-login.nobg{background-color:transparent;display:none}
-
-
-@import "goodgym/navLocal";
-
-
-@import "goodgym/header";
-
-
-@import "goodgym/icons";
-
 
 
 #login{background-color:#f9f9f9;overflow:auto}
@@ -194,7 +164,6 @@ body {
 .challenge-panel{margin:1em 0 0 30px}
 
 
-@import "goodgym/progressMeter";
 
 
 #list-or-group{-webkit-transition:all .25s cubic-bezier(.7, 0, .175, 1) 0;-moz-transition:all .25s cubic-bezier(.7, 0, .175, 1) 0;-o-transition:all .25s cubic-bezier(.7, 0, .175, 1) 0;-ms-transition:all .25s cubic-bezier(.7, 0, .175, 1) 0;transition:all .25s cubic-bezier(.7, 0, .175, 1) 0}
@@ -292,6 +261,7 @@ a.form-pathway-icon.embeddable-form{background-position:0 -500px}a.form-pathway-
 #import-map.hide-skipped .map-deleted,#import-map.hide-skipped .map-deleted-cell{display:none}
 
 
+
 #add-member-form .interestgroup_row,#edit-profile .interestgroup_row{list-style:none}
 #add-member-form label,#edit-profile label{margin-right:.9375em;line-height:1.6em}
 #add-member-form label:last-child,#edit-profile label:last-child{margin-right:0}
@@ -311,47 +281,24 @@ a.form-pathway-icon.embeddable-form{background-position:0 -500px}a.form-pathway-
 .form-integrations ol ul,.form-integrations ul ul{margin:6px 0 0}
 
 
-@import "goodgym/slats";
-
-
-// .slats li.dojoDndItemAnchor{background:$blank !important}
-// .slats li.dojoDndItemOver{border-top:none}
-// .slats li .drop-target,.slats li .drop-target-last{visibility:hidden;height:0;opacity:0;text-align:center;color:#c9c9c9;padding:0;margin:0;border-radius:3px;background:$ggColourWarning;color:#666}
-// .slats li.dojoDndItemOver.dojoDndItemBefore,.slats li.dojoDndItemAfter+.dojoDndItem{border-top:none}.slats li.dojoDndItemOver.dojoDndItemBefore .slat-dnd-display-container,.slats li.dojoDndItemAfter+.dojoDndItem .slat-dnd-display-container{border-top:solid 1px #eee;padding-top:15px}
-// .slats li.dojoDndItemOver.dojoDndItemBefore:before,.slats li.dojoDndItemAfter+.dojoDndItem:before{text-align:center;color:#c9c9c9;border-radius:3px;background:$ggColourWarning;color:#666;content:"DROP HERE";display:block !important;height:34px;opacity:1;visibility:visible;padding:15px 5px 5px !important;margin:-8px 0 10px 0}
-// .slats li:last-of-type.dojoDndItemAfter .slat-dnd-display-container{border-bottom:solid 1px #eee;padding-bottom:5px !important}
-// .slats li:last-of-type.dojoDndItemAfter:after{content:"DROP HERE";text-align:center;color:#c9c9c9;border-radius:3px;background:$ggColourWarning;color:#666;display:block !important;height:34px;opacity:1;visibility:visible;padding:15px 5px 5px !important;margin:10px 0 -10px 0}
-// .slats li:last-of-type.dojoDndItemAfter .drop-target-last{margin-top:10px}
-// .action-bar .button,.action-bar .button-small,.action-bar .dijitSelect,.action-bar .dijitCheckBox{margin:0 15px 0 0}
-// .action-bar .filter-btn,.action-bar .folders-btn{display:inline-block}@media screen and (max-width:40em){.action-bar .filter-btn,.action-bar .folders-btn{width:48%}.action-bar .filter-btn .dijitDropDownButton,.action-bar .folders-btn .dijitDropDownButton{width:100%}.action-bar .filter-btn .dijitDropDownButton .dijitButtonNode,.action-bar .folders-btn .dijitDropDownButton .dijitButtonNode{display:block}}
-// @media screen and (max-width:40em){.action-bar .filter-btn{float:right;margin:0}}
-// .action-bar .filter-status{background:$ggColourInfo}.action-bar .filter-status a{color:#595959}
-// @media screen and (max-width:40em){.action-bar .download-campaigns-csv{display:none}}
-// .slats>ul{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;backface-visibility:hidden;padding:0 15px}.slats>ul>li{border-bottom:1px solid #e0e0e0;padding:11px 0}.slats>ul>li:first-child{border-top:1px solid #e0e0e0}.inspection-tab .slats>ul>li:first-child{border-top:0 none}
-// .slats.notopborder>ul>li:first-child{border-top:none}
-// .slats form{padding-left:54px}@media screen and (max-width:40em){.slats form{padding-left:0}}.slats form label{line-height:1.6em}
-// .slats form .dijitCheckBox{margin:0 12px 0 0}
-// .slats form .button{margin-right:11px}
-// .slats form .feedback-block{padding:15px}
-// .slats form>*{font-size:inherit;line-height:1.6em}
-// .slats .form-wrapper{padding:0}.slats .form-wrapper .dijitContentPane{margin-top:18px}
-// .slats .form-wrapper h2{padding-left:54px}@media screen and (max-width:40em){.slats .form-wrapper h2{padding-left:0}}
-// .slats .move-handle{width:0;opacity:0;visibility:hidden;color:#959595;-webkit-transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s;-moz-transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s;-o-transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s;-ms-transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s;transition:all 0.2s cubic-bezier(.7, 0, .175, 1) 0s;margin-top:5px}
-// .slats .drag-mode .move-handle{opacity:1;visibility:visible;cursor:move;width:42px}
-// .slats .drag-mode .move-handle+.dijitCheckBox{margin-right:18px}
-// @media screen and (max-width:60em){.slats .drag-mode .move-handle{width:54px}}@media screen and (max-width:40em){.slats .drag-mode .move-handle{display:none}}
-// .slats .drag-mode .list-meta-container p,.slats .drag-mode .list-meta-container h4{padding-left:96px}@media screen and (max-width:40em){.slats .drag-mode .list-meta-container p,.slats .drag-mode .list-meta-container h4{padding-left:0}}
-
-
-.meta{padding:0}.meta .size1of2:first-child{max-width:100%}
-@media screen and (max-width:60em){.meta{width:100%;float:none}}.meta .dijitCheckBox{float:left;margin:6px 30px 0 0;position:relative;z-index:1}.meta .dijitCheckBox+.ggicon{float:left;font-size:36px}
-@media screen and (max-width:60em){.meta .dijitCheckBox{margin-right:18px}}@media screen and (max-width:40em){.meta .dijitCheckBox{display:none}}
-.meta .ggicon{color:#959595;font-size:20px}.meta .ggicon.star:before,.meta .ggicon.graystar:before{margin-right:-5px}
+.meta{padding:0}
+.meta .size1of2:first-child{max-width:100%}
+@media screen and (max-width:60em){.meta{width:100%;float:none}}
+.meta .dijitCheckBox{float:left;margin:6px 30px 0 0;position:relative;z-index:1}
+.meta .dijitCheckBox+.ggicon{float:left;font-size:36px}
+@media screen and (max-width:60em){.meta .dijitCheckBox{margin-right:18px}}
+@media screen and (max-width:40em){.meta .dijitCheckBox{display:none}}
+.meta .ggicon{color:#959595;font-size:20px}
+.meta .ggicon.star:before,.meta .ggicon.graystar:before{margin-right:-5px}
 .meta h4{font-size:1.2em;line-height:1.6666666666666667em;margin:0}
-.meta p{margin:0;font-size:1em;line-height:1.6em}@media screen and (max-width:40em){.meta p+p{margin-top:6px}}
-.meta h4,.meta p{padding-left:54px}@media screen and (max-width:40em){.meta h4,.meta p{padding-left:0}}
-.meta .member-rating{margin-top:0}@media screen and (max-width:40em){.meta .member-rating{margin-right:12px}.meta .member-rating .ggicon{font-size:15px;vertical-align:baseline}}
-.cp-meta h4,.cp-meta p{padding-left:122px}@media screen and (max-width:60em){.cp-meta h4,.cp-meta p{padding-left:96px}}@media screen and (max-width:40em){.cp-meta h4,.cp-meta p{padding-left:0}}.rss-children-list .cp-meta h4,.rss-children-list .cp-meta p,.conversations-list .cp-meta h4,.conversations-list .cp-meta p{padding-left:0}
+.meta p{margin:0;font-size:1em;line-height:1.6em}
+@media screen and (max-width:40em){.meta p+p{margin-top:6px}}
+.meta h4,.meta p{padding-left:54px}
+@media screen and (max-width:40em){.meta h4,.meta p{padding-left:0}}
+.meta .member-rating{margin-top:0}
+@media screen and (max-width:40em){.meta .member-rating{margin-right:12px}.meta .member-rating .ggicon{font-size:15px;vertical-align:baseline}}
+.cp-meta h4,.cp-meta p{padding-left:122px}@media screen and (max-width:60em){.cp-meta h4,.cp-meta p{padding-left:96px}}
+@media screen and (max-width:40em){.cp-meta h4,.cp-meta p{padding-left:0}}.rss-children-list .cp-meta h4,.rss-children-list .cp-meta p,.conversations-list .cp-meta h4,.conversations-list .cp-meta p{padding-left:0}
 @media screen and (max-width:60em){.cp-meta p{margin-bottom:6px}}
 @media screen and (max-width:40em){.cp-meta+.meta-actions .dijitComboButton{display:block} .cp-meta+.meta-actions .dijitStretch{width:93%}}.unread .cp-meta:after{content:"";position:absolute;top:15px;left:30px;background:#60b5c5;height:12px;width:12px;border-radius:14px}
 .cp-meta .dijitCheckBox{position:relative;z-index:1}
@@ -420,64 +367,9 @@ table.dojoDndAvatar{width:89%;height:auto;overflow:hidden}.dojoDndMove table.doj
 #new-mailchimp_underlay{background:#000;opacity:.6}
 
 
-@import "goodgym/timeline";
-
-@import "goodgym/progressSteps";
-
-
-// #preview-test,#layout-preview{position:absolute;z-index:95;top:0;left:0;right:0;bottom:0;background:#eee;overflow:hidden}
-// #preview-test .drag-split{top:12px}
-// .builder .viewcol{position:absolute;top:0;bottom:0}
-// .viewcolheader,.viewcolheader h4{position:relative;height:60px;line-height:60px;background:#444;color:$blank}
-// .viewcolheader .button-small{margin-top:12px}
-// #alt-close,#mobile-toggle{display:none}
-// .viewcolheader strong{color:#eee;font-size:14px}
-// .desktop-view-inner{background:$blank;position:absolute;top:60px;left:0;bottom:35px;right:0;border-right:1px solid #ccc;transition:top .2s;-moz-transition:top .2s;-webkit-transition:top .2s}
-// .desktop-view-inner .iframe-wrapper{display:inline}
-// iframe#preview-content,iframe#layout-content{width:100%;height:100%}
-// #header-info{background:$blank;position:relative;height:173px;border-right:1px solid #ccc;border-bottom:1px solid #ccc;overflow:hidden}#header-info.split-subject{height:215px}
-// .show-headers .desktop-view-inner{top:232px}.show-headers .desktop-view-inner.split-subject{top:275px}
-// #header-merge{position:absolute;top:5px;right:0;padding:15px 17px 2px 15px;background:$blank}
-// .hidemobile{display:none}
-// a.close-preview{color:$blank;padding:0 10px;font-size:22px;line-height:56px}
-// .editcontact{position:absolute;bottom:0;left:0;right:0;height:60px;padding:12px 6px;overflow:hidden;background:#eee;border:1px solid #bbb;border-width:1px 1px 0 0;line-height:37px}
-
-// ul.mc-container-ghost{display:none;border:2px solid #999;position:absolute}
-// ul.mc-container-ghost.active{display:block}
-// ul.mc-container-ghost.dojoDndContainerOver{border-color:#3ebcd4}
-// ul.mc-container-ghost lh{display:inline-block;text-transform:capitalize;padding:3px 8px;height:24px;margin:-24px 0 0 -2px;background:#999;color:$blank;font-size:11px;line-height:18px;position:absolute;top:0;left:0}
-// ul.mc-container-ghost.dojoDndContainerOver lh{background:#3ebcd4}
-// ul.mc-container-ghost.dojoDndContainerOver li.dojoDndItemOver{border:none;padding:0;position:relative}
-// ul.mc-container-ghost .mojoDropFlag{position:absolute;top:0;left:0;right:4px;text-align:center;display:block;padding-top:10px;padding-bottom:10px;font-weight:bold;font-size:14px;background:#e3f3f5;border-top:2px solid $ggPrimaryColour;border-bottom:2px solid $ggPrimaryColour;color:#005664}
-// ul.mc-container-ghost.dojoDndContainerOver li.dojoDndItemAfter .mojoDropFlag{top:auto;bottom:0;margin-bottom:-40px}
-// .viewer-list ul:after{content:" ";position:absolute;border:8px solid transparent;width:0;height:0;bottom:100%;left:50%;border-bottom-color:#000}
-// .viewer-list ul:before{content:" ";position:absolute;top:10px;right:15px !important;width:16px;height:16px;background:url(/release/8.8.61/images/icons/icons16-compressed.png) no-repeat center -3216px;opacity:.6}
-// .viewer-list ul:hover:before{opacity:.8}
-// .viewer-list a.viewer-status{display:inline-block;padding:0 10px;margin:0 -10px;background-color:transparent;transition:background-color .3s ease-out}
-// .viewer-list a.viewer-status.highlight{background-color:#ffd24f}
-// .viewer-list>li>ul{border:3px solid #000}
-// .viewer-list li.title{padding:0 10px}
-// .viewer-list li.viewer{padding:5px 15px 5px 40px;position:relative;overflow:hidden;text-overflow:ellipsis}
-// .userColor{position:absolute;top:9px;left:10px;width:18px;height:18px}
-// #hotkey-help-pane{display:none;position:absolute;top:24px;left:24px;background-color:#111;background:rgba(0,0,0,0.85);color:#eee;z-index:9999;padding:10px 10px 20px 20px;width:350px;line-height:25px}#hotkey-help-pane *{color:$blank}
-// #hotkey-help-pane code{display:inline-block;width:60px}
-// .ios-iframe-scroll{-webkit-overflow-scrolling:touch;overflow:auto;position:relative;width:100%;height:100%;display:block !important}
-// @media only screen and (min-width:64em){.split-left{right:415px} .split-right{width:415px} .contentEditorScrolled td.cke_top{width:415px}}@media only screen and (min-width:85.375em){.split-left{right:665px} .split-right{width:665px} .contentEditorScrolled td.cke_top{width:665px}}@media only screen and (max-width:64em){#avpw_holder.avpw_is_fullscreen #avpw_control_cancel_pane,#avpw_holder.avpw_is_fullscreen #avpw_controls{left:1% !important;right:1% !important;width:auto !important;margin:0 auto;min-width:0} .drag-split{display:none} .split-left{right:0 !important} .split-right{width:415px !important;right:-416px;background:$blank;border-left:1px solid #ccc;-webkit-transition:right .25s cubic-bezier(.7, 0, .175, 1) 0;-moz-transition:right .25s cubic-bezier(.7, 0, .175, 1) 0;-o-transition:right .25s cubic-bezier(.7, 0, .175, 1) 0;-ms-transition:right .25s cubic-bezier(.7, 0, .175, 1) 0;transition:right .25s cubic-bezier(.7, 0, .175, 1) 0} .drawer-tab{position:absolute;top:21px;left:-40px} .drawer-tab:after{content:"U";font-family:'ggicons';display:block;font-size:30px;width:39px;height:40px;line-height:40px;background:$blank;border:1px solid #ccc;border-right:none;border-radius:6px 0 0 6px;text-align:center} body.open-drawer .split-right{right:0} body.open-drawer .drawer-tab:after{content:"M"} .contentEditorScrolled td.cke_top{width:415px} #alt-close{display:block} #mobile-toggle{display:block} #mobile-preview{top:60px;left:100%;right:0;border-left:0;width:100% !important;overflow:auto}#mobile-preview .viewcolheader{display:none} #mobile-preview.show{left:0} #neapolitan-coachmark-step2{right:275px;top:22px}}@media only screen and (max-width:31.25em){span.step-details{display:none} .split-right{width:320px !important;right:-321px} .contentEditorScrolled td.cke_top{width:320px}}.dj_ie8 a:hover .nav-sprite.c,.dj_ie8 .selected .nav-sprite.c{background-position:-31px 1px}
-
-@import "goodgym/print";
-
-@import "goodgym/colours";
-
-@import "goodgym/toaster";
-
-
 .code-heading{padding-left:25px;font-size:.8125em;font-weight:bold}
 .example{padding:18px 15px;margin:54px 0 48px;border-bottom:1px dashed $ggColourInfo}
 .example:before{content:"Example";top:-30px; font-weight: bold;}
-
-// .notes{padding:30px 0 0}
-// .notes:before{content:"Notes";top:0}
-// .notes li{font-size:.9375em;margin-bottom:.8em}
 
 
 // .toggle-nav{display:none}
