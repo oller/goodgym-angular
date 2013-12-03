@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
     .controller('TeamCtrl', ['$scope', 'AuthService',
         function($scope, AuthService) {
             $scope.title = 'My Team';

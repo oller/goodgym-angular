@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp', [
+angular.module('goodgymApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',

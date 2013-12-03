@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .controller('AccountCtrl', function ($scope) {
     $scope.title = 'My Account';
   });

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .controller('ViewCtrl', function ($scope, Run) {
     $scope.title = 'My Runs';
 

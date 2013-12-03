@@ -1,7 +1,7 @@
 'use strict';
 
 // Watch for $scope.loading and set the button loading state accordingly
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .directive('buttonLoading', function() {
     return {
       restrict: 'A',

@@ -1,7 +1,7 @@
 'use strict';
 
 // Depending on user's access level, show or hide the respective navigation links
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .directive('accessLevel', ['AuthService',
     function(AuthService) {
       return {

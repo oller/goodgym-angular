@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .directive('responsive', function($rootScope, $window) {
     // Runs during compile
     return {

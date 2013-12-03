@@ -1,7 +1,7 @@
 'use strict';
 
 //On registering, asynchronously check whether the user's email is already registered
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .directive('ngUnique', ['$http',
     function(async) {
       return {

@@ -1,7 +1,7 @@
 'use strict';
 
 // Set active state of current page in nav menu, based out location.path (url)
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .directive('activeNav', ['$location',
     function($location) {
       return {

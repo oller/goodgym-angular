@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .factory('UsersService', function($http) {
     return {
       getAll: function(success, error) {

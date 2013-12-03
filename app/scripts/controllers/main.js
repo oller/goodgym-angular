@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .controller('MainCtrl', function($scope) {
     $scope.text = {
       strapline: 'Some introductory sentence...'

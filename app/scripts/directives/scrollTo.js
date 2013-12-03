@@ -1,7 +1,7 @@
 'use strict';
 
 // Have an element scroll to the passed in .class or #id on click.
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .directive('scrollTo', ['$window',
     function($window) {
       return {

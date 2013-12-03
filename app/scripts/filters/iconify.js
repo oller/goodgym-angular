@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .filter('iconify', function() {
     return function(input) {
       var icon = input ? 'checkmark' : 'cross';

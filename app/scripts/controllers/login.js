@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .controller('LoginCtrl', ['$rootScope', '$scope', '$location', '$window', 'AuthService',
     function($rootScope, $scope, $location, $window, AuthService) {
 

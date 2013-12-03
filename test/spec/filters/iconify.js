@@ -1,19 +1,19 @@
 'use strict';
 
-describe('Filter: tickOrCross', function () {
+describe('Filter: iconify', function () {
 
   // load the filter's module
-  beforeEach(module('angularGoodgymApp'));
+  beforeEach(module('goodgymApp'));
 
   // initialize a new instance of the filter before each test
-  var tickOrCross;
+  var iconify;
   beforeEach(inject(function ($filter) {
-    tickOrCross = $filter('tickOrCross');
+    iconify = $filter('iconify');
   }));
 
-  it('should return the input prefixed with "tickOrCross filter:"', function () {
+  it('should return the input prefixed with "iconify filter:"', function () {
     var text = 'angularjs';
-    expect(tickOrCross(text)).toBe('tickOrCross filter: ' + text);
+    expect(iconify(text)).toBe('iconify filter: ' + text);
   });
 
 });

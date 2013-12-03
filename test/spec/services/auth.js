@@ -3,7 +3,7 @@
 describe('Service: Auth', function () {
 
   // load the service's module
-  beforeEach(module('angularGoodgymApp'));
+  beforeEach(module('goodgymApp'));
 
   // instantiate service
   var Auth;

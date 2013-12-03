@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('angularGoodgymApp')
+angular.module('goodgymApp')
   .controller('NavCtrl', ['$rootScope', '$scope', '$location', 'AuthService',
     function($rootScope, $scope, $location, AuthService) {
       $scope.user = AuthService.user;

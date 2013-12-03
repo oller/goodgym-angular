@@ -3,7 +3,7 @@
 describe('Service: Run', function () {
 
   // load the service's module
-  beforeEach(module('angularGoodgymApp'));
+  beforeEach(module('goodgymApp'));
 
   // instantiate service
   var Run;

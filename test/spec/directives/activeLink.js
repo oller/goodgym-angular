@@ -3,7 +3,7 @@
 describe('Directive: activeLink', function () {
 
   // load the directive's module
-  beforeEach(module('angularGoodgymApp'));
+  beforeEach(module('goodgymApp'));
 
   var element,
     scope;
