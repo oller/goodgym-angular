@@ -1,1 +1,11 @@
-<p>This is the runDetail view.</p>
+<!-- Header -->
+<div class="lastUnit size1of1 header">
+    <h1 class="inline-block">{{ title }}</h1>
+    <h2>{{run.name}}</h2>
+</div>
+<!-- /Header -->
+<ul>
+	<li ng-repeat="photo in run.photos">
+		<img ng-src="{{photo.photo.image_url}}">
+	</li>
+</ul>

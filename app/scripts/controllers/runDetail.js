@@ -1,10 +1,13 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .controller('RunDetailCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('RunDetailCtrl', ['$scope', '$routeParams', 'Run',
+    function($scope, $routeParams, Run) {
+      var run = Run.get({
+        runId: $routeParams.runId
+      }, function(run) {
+        // $scope.mainImageUrl = phone.images[0];
+        $scope.run = run.group_run;
+      });
+    }
+  ]);
