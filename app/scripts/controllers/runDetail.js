@@ -1,12 +1,14 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .controller('RunDetailCtrl', ['$scope', '$routeParams', 'Run',
-    function($scope, $routeParams, Run) {
+  .controller('RunDetailCtrl', ['$scope', '$routeParams', 'Run', 'toaster',
+    function($scope, $routeParams, Run, toaster) {
       var run = Run.get({
         runId: $routeParams.runId
-      }, function(run) {
+      }, function success() {
         $scope.run = run.group_run;
+      }, function error() {
+        toaster.pop('error', 'Uh-oh', 'There was an error in trying to retrieve the list of runs');
       });
     }
   ]);

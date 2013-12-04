@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: RundetailCtrl', function () {
+describe('Controller: RunDetailCtrl', function () {
 
   // load the controller's module
   beforeEach(module('goodgymApp'));
 
-  var RundetailCtrl,
+  var RunDetailCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    RundetailCtrl = $controller('RundetailCtrl', {
+    RunDetailCtrl = $controller('RunDetailCtrl', {
       $scope: scope
     });
   }));
