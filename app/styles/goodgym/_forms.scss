@@ -341,14 +341,6 @@ input {
         display: inline-block;
         margin-right: .4em;
     }
-}
-
-.inline-label {
-    display: inline-block;
-    margin-right: .4em;
-}
-
-.form-inline {
     .radio, .checkbox {
         padding-left: 0;
         margin-bottom: 0;
@@ -383,6 +375,12 @@ input {
         }
     }
 }
+
+.inline-label {
+    display: inline-block;
+    margin-right: .4em;
+}
+
 
 @media only screen and (max-width: 31.25em) {
     .form-inline.with-button input {
@@ -768,11 +766,4 @@ select {
         padding: 10px 8px 8px;
         background-image: none;
     }
-}
-
-
-.dj_ie8 select, .dj_ie9 select, .dj_ie10 select {
-    background-image: none;
-    padding: 12px;
-    height: auto;
 }

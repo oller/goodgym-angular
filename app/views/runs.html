@@ -6,19 +6,22 @@
 <!-- /Header -->
 
 <div class="line main-section" ng-show="runs">
+
+	<div class="size1of3 float-right lastunit">
+		<input type="search" placeholder="Search Runs" ng-model="query">
+	</div>
+
 	<table class="table">
 		<thead>
 			<tr>
-				<th>ID</th>
 				<th>Run</th>
 				<th>Attending?</th>
 				<th></th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="run in runs.group_runs">
-				<td>{{run.id}}</td>
-				<td>{{run.name}}</td>
+			<tr ng-repeat="run in runs.group_runs | filter: query">
+				<td><a href="/runs/{{run.id}}">{{run.name}}</a></td>
 				<td><span ng-bind-html="run.signed_up | iconify"></span></td>
 				<td><a href="" class="button"><span class="ggicon icon-user-add"></span> Join Run</a></td>
 			</tr>

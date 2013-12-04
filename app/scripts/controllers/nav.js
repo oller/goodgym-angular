@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .controller('NavCtrl', ['$rootScope', '$scope', '$location', 'AuthService',
-    function($rootScope, $scope, $location, AuthService) {
+  .controller('NavCtrl', ['$rootScope', '$scope', '$location', 'AuthService', 'toaster',
+    function($rootScope, $scope, $location, AuthService, toaster) {
       $scope.user = AuthService.user;
       $scope.userRoles = AuthService.userRoles;
       $scope.accessLevels = AuthService.accessLevels;
@@ -14,9 +14,9 @@ angular.module('goodgymApp')
         icon: 'house'
       }, {
         title: 'View Runs',
-        slug: 'view',
+        slug: 'runs',
         access: 'public',
-        icon: 'user'
+        icon: 'users'
       }, {
         title: 'Manage Runs',
         slug: 'manage',
@@ -38,7 +38,8 @@ angular.module('goodgymApp')
         AuthService.logout(function() {
           $location.path('/login');
         }, function() {
-          $rootScope.error = 'Failed to logout';
+          // $rootScope.error = 'Failed to logout';
+          toaster.pop('error', 'Failed to logout', 'There was an error when trying to log you out.');
         });
       };
     }

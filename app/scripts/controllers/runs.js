@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .controller('ViewCtrl', function ($scope, Run) {
-    $scope.title = 'My Runs';
+  .controller('RunsCtrl', function ($scope, Run) {
+    $scope.title = 'Group Runs';
 
     // Get All runs
     $scope.runs = Run.query();

@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .controller('SignupCtrl', ['$rootScope', '$scope', '$location', 'AuthService',
-    function($rootScope, $scope, $location, AuthService) {
+  .controller('SignupCtrl', ['$rootScope', '$scope', '$location', 'AuthService', 'toaster',
+    function($rootScope, $scope, $location, AuthService, toaster) {
 
       $scope.role = AuthService.userRoles.user;
       $scope.userRoles = AuthService.userRoles;
@@ -16,7 +16,7 @@ angular.module('goodgymApp')
           $scope.data,
           function() {
             $scope.loading = false;
-            // $location.path('/');
+            $location.path('/');
           },
           function(err) {
             $rootScope.error = err;

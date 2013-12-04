@@ -14,6 +14,9 @@ angular.module('goodgymApp', [
 
       var access = routingConfig.accessLevels;
 
+      console.log('access details:');
+      console.log(access);
+
       $routeProvider
         .when('/', {
           templateUrl: 'views/main.html',
@@ -25,9 +28,14 @@ angular.module('goodgymApp', [
           controller: 'LoginCtrl',
           access: access.anon
         })
-        .when('/view', {
-          templateUrl: 'views/view.html',
-          controller: 'ViewCtrl',
+        .when('/runs', {
+          templateUrl: 'views/runs.html',
+          controller: 'RunsCtrl',
+          access: access.anon
+        })
+        .when('/runs/:runId', {
+          templateUrl: 'views/runDetail.html',
+          controller: 'RunDetailCtrl',
           access: access.anon
         })
         .when('/manage', {
@@ -86,7 +94,7 @@ angular.module('goodgymApp', [
   function($rootScope, $location, AuthService) {
 
     $rootScope.$on('$routeChangeStart', function(event, next, current) {
-      $rootScope.error = null;
+      // $rootScope.error = null;
       if (!AuthService.authorize(next.access)) {
         if (AuthService.isLoggedIn()) {
           $location.path('/');
