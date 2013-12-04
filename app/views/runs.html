@@ -8,7 +8,7 @@
 
 <div class="line main-section" ng-show="runs">
     <div class="size2of3 unit">
-        <h3>Previous Runs</h3>
+        <h3>Upcoming Runs</h3>
     </div>
     <div class="size1of3 lastUnit">
         <input type="search" placeholder="Search Runs" ng-model="query">
@@ -30,7 +30,7 @@
                     <span ng-bind-html="run.signed_up | iconify"></span>
                 </td>
                 <td>
-                    <a href="" class="button">
+                    <a href="" class="button" button-loading="button-loading" button-register="{{run.id}}">
                         <span class="ggicon icon-user-add"></span>Join Run</a>
                 </td>
             </tr>
