@@ -754,7 +754,7 @@ select {
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dppx) {
     select {
         background-image: url(/images/forms/select-arrows-2x.png);
         background-size: 27px 11px;
