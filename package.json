@@ -1,5 +1,5 @@
 {
-  "name": "angulargoodgym",
+  "name": "goodgymApp",
   "version": "0.0.0",
   "description": " A lightweight, responsive single-page app for interacting with the GoodGym API",
   "dependencies": {
