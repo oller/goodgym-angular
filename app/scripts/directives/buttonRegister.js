@@ -1,41 +1,57 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .directive('buttonRegister', ['Run',
-    function(Run) {
+  .directive('buttonRegister', ['Run', 'toaster',
+    function(Run, toaster) {
       return {
         restrict: 'A',
         link: function postLink(scope, element, attrs) {
-          element.on('click', function() {
-            $scope.loading = true;
+
+          var registered = scope.run.signed_up;
+
+          if (registered) {
+            element.text('Leave the run');
+          } else {
+            element.text('Join the run');
+          }
+
+          function register() {
+            scope.loading = true;
             Run.register({
               runId: attrs.buttonRegister
-            }, function(run) {
-              $scope.loading = false;
+            }, function success() {
+              scope.loading = false;
+              scope.run.signed_up = true;
+              toaster.pop('success', 'Registered!', 'You\'re registered on the run.  See you at date and time!');
+            }, function error() {
+              scope.loading = false;
+              toaster.pop('error', 'Uh-oh', 'There was an error in trying to update your registration');
             });
+          }
+
+          function deregister() {
+            scope.loading = true;
+            Run.deregister({
+              runId: attrs.buttonRegister,
+              // regId: attrs  // Needs to be populated from the API
+            }, function success() {
+              scope.loading = false;
+              scope.run.signed_up = false;
+              toaster.pop('warning', 'Deregistered!', 'You\'re no longer attending this run!');
+            }, function error() {
+              scope.loading = false;
+              toaster.pop('error', 'Uh-oh', 'There was an error in trying to update your registration');
+            });
+          }
+
+          element.on('click', function() {
+            if (registered) {
+              deregister();
+            } else {
+              register();
+            }
           });
         }
       };
     }
   ]);
-
-// directive('', ['', function(){
-//  // Runs during compile
-//  return {
-//    // name: '',
-//    // priority: 1,
-//    // terminal: true,
-//    // scope: {}, // {} = isolate, true = child, false/undefined = no change
-//    // cont­rol­ler: function($scope, $element, $attrs, $transclue) {},
-//    // require: 'ngModel', // Array = multiple requires, ? = optional, ^ = check parent elements
-//    // restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
-//    // template: '',
-//    // templateUrl: '',
-//    // replace: true,
-//    // transclude: true,
-//    // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
-//    link: function($scope, iElm, iAttrs, controller) {
-
-//    }
-//  };
-// }]);
