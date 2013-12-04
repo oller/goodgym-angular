@@ -65,6 +65,14 @@ angular.module('angularGoodgymApp')
     console.log('token is set to ' + token);
   };
 
+  function matchScopeToRole(user, scope) {
+    if(user.scope == "user"){
+      currentUser.role = userRoles.user;
+    }else if(user.scope == "admin"){
+      currentUser.role = userRoles.admin;
+    }
+  }
+
   return {
     authorize: function(accessLevel, role) {
       if (role === undefined)
@@ -97,17 +105,10 @@ angular.module('angularGoodgymApp')
       user.grant_type = 'password',
       user.provider = 'identity';
       $http.post(urlApiLogin, user).success(function(user) {
-        function match_scope_to_role(scope) {
-          if(user.scope == "user"){
-            currentUser.role = userRoles.user;
-          }else if(user.scope == "admin"){
-            currentUser.role = userRoles.admin;
-          }
-        }
         console.log('Login success');
         toaster.pop('success', 'Logged In', 'Now, book that next run!');
         setToken(user.access_token);
-        match_scope_to_role(user.scope);
+        matchScopeToRole(user, user.scope);
         changeUser(user.scope);
         success(user);
       }).error(function(error) {
