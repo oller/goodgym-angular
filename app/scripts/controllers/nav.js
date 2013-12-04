@@ -20,17 +20,17 @@ angular.module('goodgymApp')
       }, {
         title: 'Manage Runs',
         slug: 'manage',
-        access: 'public',
+        access: 'user',
         icon: 'clipboard'
       }, {
         title: 'View Team',
         slug: 'team',
-        access: 'public',
+        access: 'user',
         icon: 'users'
       }, {
         title: 'My Account',
         slug: 'account',
-        access: 'public',
+        access: 'user',
         icon: 'cog'
       }];
 
