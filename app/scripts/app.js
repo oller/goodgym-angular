@@ -21,7 +21,7 @@ angular.module('goodgymApp', [
         .when('/', {
           templateUrl: 'views/main.html',
           controller: 'MainCtrl',
-          access: access.user //user, anon, admin or public
+          access: access.anon //user, anon, admin or public
         })
         .when('/login', {
           templateUrl: 'views/login.html',
@@ -86,6 +86,10 @@ angular.module('goodgymApp', [
       ];
 
       $httpProvider.responseInterceptors.push(interceptor);
+
+      //Support for Cross Domain Requests
+      $httpProvider.defaults.useXDomain = true;
+      delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
     }
   ])
