@@ -37,13 +37,19 @@
             </tr>
         </tbody>
     </table> -->
+
     <ul class="media-list rows">
         <li ng-repeat="run in runs.group_runs | filter: query">
             <div class="media">
-                <div class="media-image">
-                    <div class="grayscale"><img ng-src="{{run.photos[0].photo.thumbnail}}" alt="{{run.name}}"></div>
+                <div class="size1of4 unit">
+                    <div class="size1of1 lastUnit">
+                        <div class="grayscale below12">
+                            <img ng-src="{{run.photos[0].photo.thumbnail}}" alt="{{run.name}}">
+                        </div>
+                    </div>
+
                 </div>
-                <div class="media-body">
+                <div class="size3of4 lastUnit">
                     <div class="line">
                         <div class="unit size3of4 below12">
                             <h4><a href="/runs/{{run.id}}">{{run.name}}</a>
@@ -59,7 +65,6 @@
             </div>
         </li>
     </ul>
-
 
 </div>
 

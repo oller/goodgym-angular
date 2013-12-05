@@ -10,9 +10,9 @@ angular.module('goodgymApp')
           var registered = scope.run.signed_up;
 
           if (registered) {
-            element.text('Leave the run');
+            element.text('Leave run');
           } else {
-            element.text('Join the run');
+            element.text('Join run');
           }
 
           function register() {
