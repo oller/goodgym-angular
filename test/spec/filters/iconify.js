@@ -11,9 +11,14 @@ describe('Filter: iconify', function () {
     iconify = $filter('iconify');
   }));
 
-  it('should return the input prefixed with "iconify filter:"', function () {
-    var text = 'angularjs';
-    expect(iconify(text)).toBe('iconify filter: ' + text);
+  it('should return a tick icon depending if input is true"', function () {
+    var booleanIcon = true;
+    expect(iconify(booleanIcon)).toBe('<span class="ggicon icon-checkmark"></span>');
+  });
+
+  it('should return a cross icon depending if input is false"', function () {
+    var booleanIcon = false;
+    expect(iconify(booleanIcon)).toBe('<span class="ggicon icon-cross"></span>');
   });
 
 });
