@@ -4,17 +4,17 @@
  *
  * Text Input with Helper
  *
- *  <div class="line"> 
- * 	  <fieldset> 
+ *  <div class="line">
+ * 	  <fieldset>
  *      <legend>Personal Information</legend>
- *      <div class="field-wrapper"> 
- *        <label>First name</label> 
- *        <input type="text" name="fname" id="fname"> 
+ *      <div class="field-wrapper">
+ *        <label>First name</label>
+ *        <input type="text" name="fname" id="fname">
  *        <div class="field-help">Don't forget to use your real name please.</div>
- *      </div> 
+ *      </div>
  *    </fieldset>
  *  </div>
- * 
+ *
  * ================================= */
 
 .group {
@@ -151,6 +151,39 @@
     }
 }
 
+.section {
+    margin-bottom: 1.5em;
+}
+
+.main-section {
+    margin-bottom: 66px;
+}
+
+.sub-section {
+    margin-bottom: 42px;
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    &:before {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    &:last-child, *:last-child {
+        margin-bottom: 0;
+    }
+}
+
 @media screen and (max-width: 60em) {
     .size1of4, .size2of4, .size3of4, .size2of8, .size4of8, .size6of8 {
         width: 50%;
@@ -201,46 +234,12 @@
     }
 }
 
-.main-section {
-    margin-bottom: 66px;
-}
+
 
 @media only screen and (max-width: 64em) {
     .main-section {
         margin-bottom: 42px;
     }
-}
-
-.section {
-    margin-bottom: 1.5em;
-}
-
-.sub-section {
-    margin-bottom: 42px;
-    &:before {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        content: " ";
-        display: table;
-        clear: both;
-    }
-    &:before {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        content: " ";
-        display: table;
-        clear: both;
-    }
-    &:last-child, *:last-child {
-        margin-bottom: 0;
-    }
-}
-
-@media only screen and (max-width: 64em) {
     .sub-section {
         margin-bottom: 30px;
         > {
@@ -250,3 +249,6 @@
         }
     }
 }
+
+
+
