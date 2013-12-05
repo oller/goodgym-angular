@@ -14,7 +14,7 @@
         <input type="search" placeholder="Search Runs" ng-model="query">
     </div>
 
-    <table class="table">
+    <!--     <table class="table">
         <thead>
             <tr>
                 <th>Run</th>
@@ -36,7 +36,31 @@
                 </td>
             </tr>
         </tbody>
-    </table>
+    </table> -->
+    <ul class="media-list rows">
+        <li ng-repeat="run in runs.group_runs | filter: query">
+            <div class="media">
+                <div class="media-image">
+                    <div class="grayscale"><img ng-src="{{run.photos[0].photo.thumbnail}}" alt="{{run.name}}"></div>
+                </div>
+                <div class="media-body">
+                    <div class="line">
+                        <div class="unit size3of4 below12">
+                            <h4><a href="/runs/{{run.id}}">{{run.name}}</a>
+                            </h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, dicta, aliquam nostrum vel velit ut reiciendis odit dolorum vero molestiae voluptatum sint unde tempora dignissimos pariatur vitae tenetur mollitia.
+                            </p>
+                        </div>
+                        <div class="size1of4 lastUnit nopadding alignr">
+                            <a class="button nomargin full-width-mobile relative" href="" button-loading="button-loading" button-register="{{run.id}}">Join Run</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
 </div>
 
 <div class="line main-section">
