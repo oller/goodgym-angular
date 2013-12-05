@@ -32,6 +32,11 @@
     .media-image {
         float: left;
         margin-right: 15px;
+        .thumbnail {
+            width: 140px;
+            height: 140px;
+            overflow: hidden;
+        }
         img {
             display: block;
         }
