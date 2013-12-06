@@ -14,8 +14,8 @@ angular.module('goodgymApp', [
 
       var access = routingConfig.accessLevels;
 
-      console.log('access details:');
-      console.log(access);
+      // console.log('access details:');
+      // console.log(access);
 
       $routeProvider
         .when('/', {
@@ -86,10 +86,6 @@ angular.module('goodgymApp', [
       ];
 
       $httpProvider.responseInterceptors.push(interceptor);
-
-      //Support for Cross Domain Requests
-      $httpProvider.defaults.useXDomain = true;
-      delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
     }
   ])
