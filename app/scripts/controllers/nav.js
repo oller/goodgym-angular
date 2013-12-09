@@ -38,7 +38,6 @@ angular.module('goodgymApp')
         AuthService.logout(function() {
           $location.path('/login');
         }, function() {
-          // $rootScope.error = 'Failed to logout';
           toaster.pop('error', 'Failed to logout', 'There was an error when trying to log you out.');
         });
       };

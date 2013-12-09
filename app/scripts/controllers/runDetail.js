@@ -8,7 +8,7 @@ angular.module('goodgymApp')
       }, function success() {
         $scope.run = run.group_run;
       }, function error() {
-        toaster.pop('error', 'Uh-oh', 'There was an error in trying to retrieve the list of runs');
+        toaster.pop('error', 'Uh-oh', 'There was an error in trying to retrieve the run details');
       });
     }
   ]);
