@@ -188,7 +188,7 @@
     float: none !important;
 }
 
-.centered, .animation-container #animation-icon {
+.centered {
     float: none;
     margin-left: auto;
     margin-right: auto;
@@ -303,10 +303,6 @@
 
 .cursor-pointer {
     cursor: pointer;
-}
-
-.cb-text {
-    margin-left: 37px;
 }
 
 .tab-nopadding {
