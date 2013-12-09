@@ -34,7 +34,7 @@ angular.module('goodgymApp')
 
           return function(scope, element, attrs) {
             element.on('click', function() {
-              scrollInto(attr.scrollTo);
+              scrollInto(attrs.scrollTo);
             });
           };
         }
