@@ -81,7 +81,7 @@ angular.module('goodgymApp', [
 
           return function(promise) {
             return promise.then(success, error);
-          }
+          };
         }
       ];
 
