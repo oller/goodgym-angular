@@ -8,13 +8,14 @@ angular.module('goodgymApp')
       terminal: true,
       link: function($scope, element, attrs) {
         $scope.$watch('loading', function() {
-          var loadingIcon = '<span class="progress"></span>';
+          var loadingIconClass = 'progress'
+          var loadingIcon = '<span class="'+loadingIconClass+'"></span>';
           if ($scope.loading === true) {
             element.addClass(attrs.buttonLoading)
             element.prepend(loadingIcon);
           } else {
             element.removeClass(attrs.buttonLoading)
-            element.children().remove();
+            element.children().remove(loadingIconClass);
           }
         }, true);
       }
