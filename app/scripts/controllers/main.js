@@ -1,9 +1,12 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .controller('MainCtrl', function($scope) {
+  .controller('MainCtrl', ['$rootScope', '$scope',
+  	function($rootScope, $scope) {
     $scope.text = {
       strapline: 'Some introductory sentence...'
     };
 
-  });
+    $rootScope.masthead = true;
+
+  }]);
