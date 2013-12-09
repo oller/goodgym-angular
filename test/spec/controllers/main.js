@@ -17,6 +17,6 @@ describe('Controller: MainCtrl', function () {
   }));
 
   it('should import the title', function () {
-    expect(scope.text.strapline).toContain('Good');
+    expect(scope.text.strapline).toContain('Some introductory sentence...');
   });
 });
