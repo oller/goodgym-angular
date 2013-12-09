@@ -1,90 +1,69 @@
 <!-- Header -->
 <div class="lastUnit size1of1 header">
     <h1 class="inline-block">{{ title }}</h1>
-    <a href="" class="add-btn button p0">
+    <a href="" class="add-btn button p0" ng-click="toggleCreate = !toggleCreate">
         <span class="ggicon icon-add-to-list"></span>Create a Run</a>
 </div>
 <!-- /Header -->
+<div class="lastUnit size1of1 main-section fadeIn" ng-show="toggleCreate">
 
-<div class="line main-section" ng-show="runs">
-    <div class="size2of3 unit">
+    <div class="sub-section">
+        <div class="size1of3 unit">
+            <h4>Form Col 1</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, sequi ex dolores molestiae culpa aperiam nulla eum quos magnam repudiandae eius ipsa cupiditate totam possimus voluptatem similique suscipit perspiciatis. Tempora.</p>
+        </div>
+        <div class="size1of3 unit">
+            <h4>Form Col 2</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, officiis laboriosam labore eaque neque quidem nostrum provident architecto mollitia dolorem hic saepe temporibus sed aut praesentium quis impedit blanditiis eveniet.</p>
+        </div>
+        <div class="size1of3 lastUnit">
+            <h4>Form Col 3</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, doloremque, enim aperiam fuga quo possimus nostrum numquam quae. Eveniet odio ad mollitia ducimus autem! Quos, velit vitae eveniet quidem incidunt!</p>
+        </div>
+        <div class="size1of1 lastUnit">
+            <a href="" class="button">Submit Form</a>
+        </div>
+    </div>
+</div>
+
+<div class="lastUnit size1of1 main-section" ng-show="runs">
+    <div class="size2of3 unit nopadding">
         <h3>Upcoming Runs</h3>
     </div>
     <div class="size1of3 lastUnit">
         <input type="search" placeholder="Search Runs" ng-model="query">
     </div>
 
-    <!--     <table class="table">
-        <thead>
-            <tr>
-                <th>Run</th>
-                <th>Attending?</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr ng-repeat="run in runs.group_runs | filter: query">
-                <td><a href="/runs/{{run.id}}">{{run.name}}</a>
-                </td>
-                <td>
-                    <span ng-bind-html="run.signed_up | iconify"></span>
-                </td>
-                <td>
-                    <a href="" class="button relative" button-loading="button-loading" button-register="{{run.id}}">
-                       Join Run
-                    </a>
-                </td>
-            </tr>
-        </tbody>
-    </table> -->
-
     <ul class="media-list rows">
-        <li ng-repeat="run in runs.group_runs | filter: query">
+        <li ng-repeat="run in runs | filter: query">
             <div class="media">
-                <div class="size1of4 unit">
-                    <div class="size1of1 lastUnit">
-                        <div class="grayscale below12">
-                            <img ng-src="{{run.photos[0].photo.thumbnail}}" alt="{{run.name}}">
-                        </div>
+                <div class="media-image">
+                    <div class="grayscale thumbnail below12">
+                        <a href="/runs/{{run.id}}" title="View Details of {{run.name}}">
+                            <img ng-src="{{run.photos[0].photo.thumbnail}}" alt="{{run.name}}" class="">
+                        </a>
                     </div>
-
                 </div>
-                <div class="size3of4 lastUnit">
+                <div class="media-body">
                     <div class="line">
                         <div class="unit size3of4 below12">
                             <h4><a href="/runs/{{run.id}}">{{run.name}}</a>
                             </h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, est, dicta, aliquam nostrum vel velit ut reiciendis odit dolorum vero molestiae voluptatum sint unde tempora dignissimos pariatur vitae tenetur mollitia.
                             </p>
+                            <p>
+                                Attending:
+                                <span ng-bind-html="run.signed_up | iconify"></span>
+                            </p>
                         </div>
                         <div class="size1of4 lastUnit nopadding alignr">
-                            <a class="button nomargin full-width-mobile relative" href="" button-loading="button-loading" button-register="{{run.id}}">Join Run</a>
+                            <a class="button nomargin full-width-mobile relative" href="" button-loading="button-loading" button-register data-run-id="{{run.id}}" data-reg-id="{{run.registration_id}}">Join Run</a>
                         </div>
                     </div>
                 </div>
             </div>
         </li>
     </ul>
-
 </div>
 
-<div class="line main-section">
-    <div class="sub-section">
-        <div class="lastUnit size1of1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, dignissimos, eum, eos, aliquid quod ut fugiat nesciunt officiis sapiente autem molestiae facilis nihil maxime reiciendis possimus sit porro sunt impedit.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, obcaecati culpa incidunt animi officiis aspernatur mollitia ratione ullam reiciendis accusamus assumenda quo nostrum itaque! Suscipit, nemo quidem aliquid iste labore.</p>
-            <ul class="disc p">
-                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                <li>Aliquam tincidunt mauris eu risus.</li>
-                <li>Vestibulum auctor dapibus neque.</li>
-            </ul>
-
-        </div>
-    </div>
-    <div class="sub-section">
-        <div class="lastUnit size1of1">
-            <h3>Title</h3>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-        </div>
-    </div>
-</div>
+<no-data title="There's no data here" desc="A slightly more indepth explanation" icon="map" ng-show="!runs"></no-data>
