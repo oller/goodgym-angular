@@ -3,7 +3,7 @@
 // Have an element scroll to the passed in .class or #id on click.
 angular.module('goodgymApp')
   .directive('scrollTo', ['$window',
-    function($window) {
+    function ($window) {
       return {
         restrict: 'A',
         compile: function() {

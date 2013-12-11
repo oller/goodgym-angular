@@ -7,6 +7,4 @@ angular.module('goodgymApp')
       strapline: 'Some introductory sentence...'
     };
 
-    $rootScope.masthead = true;
-
   }]);
