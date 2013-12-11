@@ -7,7 +7,8 @@ angular.module('goodgymApp', [
   // 'ngAnimate',
   'ngRoute',
   // Third Party Modules
-  'toaster'
+  'toaster',
+  'LocalStorageModule'
 ])
   .config(['$routeProvider', '$locationProvider', '$httpProvider',
     function($routeProvider, $locationProvider, $httpProvider) {
@@ -21,37 +22,37 @@ angular.module('goodgymApp', [
         .when('/', {
           templateUrl: 'views/main.html',
           controller: 'MainCtrl',
-          access: access.anon //user, anon, admin or public
+          access: access.public //user, anon, admin or public
         })
         .when('/login', {
           templateUrl: 'views/login.html',
           controller: 'LoginCtrl',
-          access: access.anon
+          access: access.public
         })
         .when('/runs', {
           templateUrl: 'views/runs.html',
           controller: 'RunsCtrl',
-          access: access.anon
+          access: access.public
         })
         .when('/runs/:runId', {
           templateUrl: 'views/runDetail.html',
           controller: 'RunDetailCtrl',
-          access: access.anon
+          access: access.public
         })
         .when('/manage', {
           templateUrl: 'views/manage.html',
           controller: 'ManageCtrl',
-          access: access.anon
+          access: access.public
         })
         .when('/account', {
           templateUrl: 'views/account.html',
           controller: 'AccountCtrl',
-          access: access.anon
+          access: access.user
         })
         .when('/team', {
           templateUrl: 'views/team.html',
           controller: 'TeamCtrl',
-          access: access.anon
+          access: access.public
         })
         .when('/404', {
           templateUrl: 'views/404.html',
@@ -94,7 +95,7 @@ angular.module('goodgymApp', [
   function($rootScope, $location, AuthService) {
 
     $rootScope.$on('$routeChangeStart', function(event, next, current) {
-      // $rootScope.error = null;
+      AuthService.restoreSession();
       if (!AuthService.authorize(next.access)) {
         if (AuthService.isLoggedIn()) {
           $location.path('/');
