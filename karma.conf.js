@@ -4,24 +4,38 @@
 module.exports = function(config) {
   config.set({
     // base path, that will be used to resolve files and exclude
-    basePath: 'app',
+    // basePath: 'app',
+    basePath: '',
 
     // testing framework to use (jasmine/mocha/qunit/...)
     frameworks: ['jasmine'],
 
     // list of files / patterns to load in the browser
+    // files: [
+    //   'bower_components/angular/angular.js',
+    //   'bower_components/angular-mocks/angular-mocks.js',
+    //   'bower_components/angular-resource/angular-resource.js',
+    //   'bower_components/angular-cookies/angular-cookies.js',
+    //   'bower_components/angular-sanitize/angular-sanitize.js',
+    //   'bower_components/angular-route/angular-route.js',
+    //   'scripts/*.js',
+    //   'scripts/**/*.js',
+    //   '../test/mock/**/*.js',
+    //   '../test/spec/**/*.js'
+    // ],
     files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'bower_components/angular-resource/angular-resource.js',
-      'bower_components/angular-cookies/angular-cookies.js',
-      'bower_components/angular-sanitize/angular-sanitize.js',
-      'bower_components/angular-route/angular-route.js',
-      'scripts/*.js',
-      'scripts/**/*.js',
-      '../test/mock/**/*.js',
-      '../test/spec/**/*.js'
+      'app/bower_components/angular/angular.js',
+      'app/bower_components/angular-mocks/angular-mocks.js',
+      'app/bower_components/angular-resource/angular-resource.js',
+      'app/bower_components/angular-cookies/angular-cookies.js',
+      'app/bower_components/angular-sanitize/angular-sanitize.js',
+      'app/bower_components/angular-route/angular-route.js',
+      'app/scripts/*.js',
+      'app/scripts/**/*.js',
+      'test/mock/**/*.js',
+      'test/spec/**/*.js'
     ],
+
 
     // list of files / patterns to exclude
     exclude: [],
@@ -38,10 +52,10 @@ module.exports = function(config) {
     autoWatch: true,
 
     // Allow import and testing of templates
-    preprocessors: {
-      'views/**/*.html': 'html2js'
-      // ,'views/*.html': 'html2js'
-    },
+    // preprocessors: {
+    //   'views/**/*.html': 'html2js'
+    //   // ,'views/*.html': 'html2js'
+    // },
 
     // Start these browsers, currently available:
     // - Chrome

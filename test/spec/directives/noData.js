@@ -19,7 +19,7 @@ describe('Directive: noData', function () {
     element = $compile(element)(scope);
     scope.$digest();
     console.log('nodata directive');
-    console.log(element);
+    console.log(element.html());
     expect(element.text()).toBe('this is the noData directive');
   }));
 });
