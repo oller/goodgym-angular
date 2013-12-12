@@ -54,6 +54,14 @@ angular.module('goodgymApp', [
           controller: 'TeamCtrl',
           access: access.public
         })
+        .when('/legal', {
+          templateUrl: 'views/legal.html',
+          access: access.public
+        })
+        .when('/policy', {
+          templateUrl: 'views/policy.html',
+          access: access.public
+        })
         .when('/404', {
           templateUrl: 'views/404.html',
           access: access.public
