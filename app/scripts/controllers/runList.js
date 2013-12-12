@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .controller('RunsCtrl', ['$scope', 'Run', 'toaster',
+  .controller('RunListCtrl', ['$scope', 'Run', 'toaster',
     function($scope, Run, toaster) {
       $scope.title = 'Group Runs';
 

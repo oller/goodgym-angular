@@ -30,8 +30,8 @@ angular.module('goodgymApp', [
           access: access.public
         })
         .when('/runs', {
-          templateUrl: 'views/runs.html',
-          controller: 'RunsCtrl',
+          templateUrl: 'views/runList.html',
+          controller: 'RunListCtrl',
           access: access.public
         })
         .when('/runs/:runId', {
