@@ -21,6 +21,7 @@
 @import "goodgym/animations";
 @import "goodgym/typography";
 @import "goodgym/listHorizontal";
+@import "goodgym/listVertical";
 @import "goodgym/nav";
 @import "goodgym/navLocal";
 @import "goodgym/header";
@@ -37,9 +38,9 @@
 
 ._avatar-bg,.avatar,.img-overlay,.avatar-notes{background-size:cover;background-repeat:no-repeat;background-position:50% 50%}
 
-._feedback_link,#av-flash-block a,.feedback-block a,.panel-block a{color:#595959;border-bottom:1px solid #595959}._feedback_link.button,._feedback_link.button-small,#av-flash-block a.button,#av-flash-block a.button-small,.feedback-block a.button,.feedback-block a.button-small,.panel-block a.button,.panel-block a.button-small{color:#737373;border-bottom:0 none}._feedback_link.button.p0,._feedback_link.button-small.p0,#av-flash-block a.button.p0,#av-flash-block a.button-small.p0,.feedback-block a.button.p0,.feedback-block a.button-small.p0,.panel-block a.button.p0,.panel-block a.button-small.p0{color:$blank}
+._feedback_link,#av-flash-block a,.feedback-block a,.panel-block a{color:$ggPrimaryText;border-bottom:1px solid $ggPrimaryText}._feedback_link.button,._feedback_link.button-small,#av-flash-block a.button,#av-flash-block a.button-small,.feedback-block a.button,.feedback-block a.button-small,.panel-block a.button,.panel-block a.button-small{color:#737373;border-bottom:0 none}._feedback_link.button.p0,._feedback_link.button-small.p0,#av-flash-block a.button.p0,#av-flash-block a.button-small.p0,.feedback-block a.button.p0,.feedback-block a.button-small.p0,.panel-block a.button.p0,.panel-block a.button-small.p0{color:$blank}
 ._feedback_link.button:hover,._feedback_link.button-small:hover,._feedback_link.button:visited,._feedback_link.button-small:visited,#av-flash-block a.button:hover,#av-flash-block a.button-small:hover,#av-flash-block a.button:visited,#av-flash-block a.button-small:visited,.feedback-block a.button:hover,.feedback-block a.button-small:hover,.feedback-block a.button:visited,.feedback-block a.button-small:visited,.panel-block a.button:hover,.panel-block a.button-small:hover,.panel-block a.button:visited,.panel-block a.button-small:visited{border-bottom:0 none}
-._feedback_link:hover,._feedback_link:visited,#av-flash-block a:hover,#av-flash-block a:visited,.feedback-block a:hover,.feedback-block a:visited,.panel-block a:hover,.panel-block a:visited{color:#595959;border-bottom:1px solid #595959}
+._feedback_link:hover,._feedback_link:visited,#av-flash-block a:hover,#av-flash-block a:visited,.feedback-block a:hover,.feedback-block a:visited,.panel-block a:hover,.panel-block a:visited{color:$ggPrimaryText;border-bottom:1px solid $ggPrimaryText}
 ._mobile-nav-popover,.notify-bubble,.acl-popover{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;-ms-backface-visibility:hidden;-o-backface-visibility:hidden;backface-visibility:hidden;background-color:$blank;position:absolute;width:30em;-webkit-box-shadow:0 3px 6px 0 rgba(0, 0, 0, 0.18);box-shadow:0 3px 6px 0 rgba(0, 0, 0, 0.18);z-index:-5;display:none;border-radius:6px}._mobile-nav-popover>div,.notify-bubble>div,.acl-popover>div{border:1px solid #d0d0d0;border-radius:6px}
 ._mobile-nav-popover.active,.notify-bubble.active,.acl-popover.active{z-index:25;display:block}
 ._popover-heading,.notify-bubble h3,.acl-popover .separator{line-height:2.6666666666666665em;font-size:1.125em;background-color:#e0e0e0;text-align:center}
@@ -58,7 +59,7 @@ body {
     font-family: $ggFontFamilyPrimary;
     text-rendering: optimizeLegibility;
     vertical-align: baseline;
-    color: #595959;
+    color: $ggPrimaryText;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
     line-height: .375em;
@@ -361,10 +362,10 @@ table.dojoDndAvatar{width:89%;height:auto;overflow:hidden}.dojoDndMove table.doj
 #inspections-tab .button,#autoresponders-tab .button{margin-right:0}
 #inspections-tab .slats>ul>li,#autoresponders-tab .slats>ul>li{padding:11px 0}
 #reports-list .dijitTabController{margin-left:15px}
-#new-mailchimp{border:none;background:none}#new-mailchimp .dijitDialogTitleBar{display:none}
-#new-mailchimp .dijitDialogPaneContent{border-radius:12px;padding:0;border:none;background:#f2f2f0}#new-mailchimp .dijitDialogPaneContent h3{background:#6bb4c5 url(/release/8.8.61/images/new-mailchimp-modal-wide.jpg) no-repeat center bottom;font-size:2em;color:$blank;padding:10px 10px 295px 10px}
-#new-mailchimp .dijitDialogPaneContent .new-mailchimp-inner{font-size:.9em;padding:15px 30px;margin:0 auto;max-width:650px}
-#new-mailchimp_underlay{background:#000;opacity:.6}
+// #new-mailchimp{border:none;background:none}#new-mailchimp .dijitDialogTitleBar{display:none}
+// #new-mailchimp .dijitDialogPaneContent{border-radius:12px;padding:0;border:none;background:#f2f2f0}#new-mailchimp .dijitDialogPaneContent h3{background:#6bb4c5 url(/release/8.8.61/images/new-mailchimp-modal-wide.jpg) no-repeat center bottom;font-size:2em;color:$blank;padding:10px 10px 295px 10px}
+// #new-mailchimp .dijitDialogPaneContent .new-mailchimp-inner{font-size:.9em;padding:15px 30px;margin:0 auto;max-width:650px}
+// #new-mailchimp_underlay{background:#000;opacity:.6}
 
 
 .code-heading{padding-left:25px;font-size:.8125em;font-weight:bold}
@@ -374,6 +375,22 @@ table.dojoDndAvatar{width:89%;height:auto;overflow:hidden}.dojoDndMove table.doj
 
 // .toggle-nav{display:none}
 
+// // .drillnavbar a.button-small.drillback{position:absolute;top:23px;left:24px;background:none;padding:0;border:none;font-size:25px}
+// // .drillnavbar a.button-small.drillback:hover{opacity:.8}
+// // .drillnavbar h4{padding-top:26px}
+// ul.drillnav{display:block;position:relative}
+// ul.drillnav li>*{display:block;position:relative;padding:12px 30px 12px 24px;color:#555;text-decoration:none;border-bottom:1px dotted #aaa;-webkit-transition:none 0 linear .0001s;-moz-transition:none 0 linear .0001s;-o-transition:none 0 linear .0001s;-ms-transition:none 0 linear .0001s;transition:none 0 linear .0001s}
+// ul.drillnav li>*:after{content:"\e612";font-family:'entypo';font-size:20px;position:absolute;top:50%;right:15px;width:24px;height:24px;margin-top:-12px;color:#999}
+// ul.drillnav li>*:hover{background-color:$ggPrimaryColour;color:$blank;cursor:pointer}
+// ul.drillnav li>*:hover:after{color:$blank}
+// ul.drillnav li>* a{color:#5b5c5d}
+// ul.drillnav li>*:hover a{color:$blank}
+// // .feedback-meta{line-height:18px;margin-top:-3px}
+// // .feedback-meta strong{max-width:100%;padding-right:10px}
+// // .feedback-item .feedback{font-size:14px;line-height:18px;margin-bottom:5px}
+// // ul.drillnav .feedback{max-height:54px;overflow:hidden;text-overflow:ellipsis;padding-right:40px}
+// // #feedback-pane ul.drillnav li>*{padding-right:38
+
 
 .menu{background:none !important}
 // .animation-container{background-color:#fafafa;border-radius:6px}
@@ -381,10 +398,11 @@ table.dojoDndAvatar{width:89%;height:auto;overflow:hidden}.dojoDndMove table.doj
 // .btn-animation{margin-bottom:18px}
 .pl-box{display:inline-block;margin:0 24px 36px 0;background-color:#fcfcfc;border-radius:6px;border:1px solid #e8e8e8;min-width:140px;vertical-align:top}
 .pl-box .ggicon{background-color:$blank}
-.pl-box .ggicon:before,.pl-box .ggicon:after{color:#595959;font-size:42px;line-height:1.1}
+.pl-box .ggicon:before,.pl-box .ggicon:after{color:$ggPrimaryText;font-size:42px;line-height:1.1}
 .pl-box>p{width:inherit;margin:0 auto;text-align:center;padding:6px;white-space:nowrap;border-bottom:1px solid #e8e8e8}.pl-box>p:first-child code{font-size:18px;color:#737373}
 .pl-box>p:last-child{border-bottom:0 none}
-.t-nav{background:none;background-color:$ggPrimaryColour;width:100%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;height:54px}@media only screen and (max-width:64em){.t-nav{z-index:21}}.t-nav>div{height:inherit}.t-nav>div>div{display:inline-block;height:inherit}
+.t-nav{background:none;background-color:$ggPrimaryColour;width:100%;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;height:54px}
+@media only screen and (max-width:64em){.t-nav{z-index:21}}.t-nav>div{height:inherit}.t-nav>div>div{display:inline-block;height:inherit}
 .t-nav a{color:$blank;vertical-align:top}.t-nav a:hover,.t-nav a:visited{color:$blank}
 .t-nav .ggicon{font-size:24px;line-height:54px}
 .menu-right a,.menu-right span,.menu-right .badge{display:inline-block}

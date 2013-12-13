@@ -1,0 +1,92 @@
+/* ===================================
+ *
+ * Lists - Vertical
+ *
+ *    <ul class="leaders">
+ *       <li>
+ *         <span>List Avg</span>
+ *         <span class="fwb">61.7%</span>
+ *       </li>
+ *       <li>
+ *         <span>Industry Avg</span>
+ *         <span class="fwb">61.7%</span>
+ *       </li>
+ *     </ul>
+ *
+ * ================================= */
+
+.leaders {
+    overflow-x: hidden;
+    li {
+        line-height: 1.6em;
+        margin-bottom: .8em;
+        &:before {
+            float: left;
+            width: 0;
+            white-space: nowrap;
+            color: #d9d9d9;
+            content: "................................................................................................................................................................................................................................................................................................................................";
+            font-size: 10px;
+            line-height: inherit;
+        }
+        > span {
+            background-color: $blank;
+            &:first-child {
+                padding-right: 12px;
+            }
+            + span {
+                float: right;
+                padding-left: 12px;
+            }
+        }
+    }
+}
+
+ul.drillnav {
+    display: block;
+    position: relative;
+    li {
+        &:last-child>* {
+            border-bottom: none;
+        }
+        &>* {
+            display: block;
+            position: relative;
+            padding: 12px 30px 12px 24px;
+            color: #555;
+            text-decoration: none;
+            border-bottom: 1px dotted #aaaaaa;
+            -webkit-transition: none 0 linear 0.0001s;
+            -moz-transition: none 0 linear 0.0001s;
+            -o-transition: none 0 linear 0.0001s;
+            -ms-transition: none 0 linear 0.0001s;
+            transition: none 0 linear 0.0001s;
+            &:after {
+                content: "\e612";
+                font-family: 'entypo';
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                width: 24px;
+                height: 24px;
+                margin-top: -12px;
+                color: #999;
+            }
+            &:hover {
+                background-color: $ggPrimaryColour;
+                color: $blank;
+                cursor: pointer;
+                &:after {
+                    color: $blank;
+                }
+                a {
+                    color: $blank;
+                }
+            }
+            a {
+                color: #5b5c5d;
+            }
+        }
+    }
+}

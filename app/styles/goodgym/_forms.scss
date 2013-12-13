@@ -28,7 +28,7 @@ label, input, select, textarea {
 }
 
 label {
-    color: #595959;
+    color: $ggPrimaryText;
     font-weight: 500;
     display: block;
     -webkit-user-select: none;
@@ -590,7 +590,7 @@ table .checkbox-group {
     display: block;
     margin-top: 0;
     margin-left: 2.4em;
-    color: #595959;
+    color: $ggPrimaryText;
     font-weight: normal;
 }
 

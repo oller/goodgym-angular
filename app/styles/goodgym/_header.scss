@@ -2,11 +2,11 @@
  *
  * Header
  *
- * <div class="lastUnit size1of1 header"> 
- *   <h1><a href="/">Main Header</a></h1> 
+ * <div class="lastUnit size1of1 header">
+ *   <h1><a href="/">Main Header</a></h1>
  *   <h2>Sub Header</h2>
  * </div>
- * 
+ *
  * ================================= */
 
 .header {
@@ -39,10 +39,6 @@
         float: right;
         display: inline-block;
         margin: 3px 0 0 15px;
-    }
-    .dijitSelect.add-btn {
-        display: block;
-        overflow: hidden;
     }
     .hover-list {
         display: inline-block;
@@ -79,77 +75,44 @@
 @media screen and (max-width: 40em) {
     .header {
         margin-bottom: 1.0625em;
-    }
-}
-
-@media screen and (max-width: 40em) {
-    .header {
         h1, h2 {
             font-size: 1.625em;
             line-height: 1.3846153846153846em;
             margin-bottom: 1px;
         }
-    }
-}
-
-@media screen and (max-width: 40em) {
-    .header h1 + h2 {
-        font-size: 1.625em;
-        line-height: 1.3846153846153846em;
-        margin-bottom: 7px;
-    }
-}
-
-@media screen and (max-width: 40em) {
-    .header .add-btn {
-        margin: 24px 0 0;
-        width: 100%;
-        display: block;
-        + .add-btn {
-            margin-top: 17px;
+        h1 + h2 {
+            font-size: 1.625em;
+            line-height: 1.3846153846153846em;
+            margin-bottom: 7px;
         }
-    }
-}
-
-@media screen and (max-width: 40em) {
-    .header .dijitSelect.add-btn {
-        display: table;
-        width: 100%;
-        .dijitButtonContents {
-            width: 100%;
-        }
-        .dijitButtonText {
-            float: none;
-        }
-    }
-}
-
-@media screen and (max-width: 40em) {
-    .header .p0 {
-        height: 48px;
-        line-height: 48px;
-        tbody {
-            line-height: 45px;
-            * {
-                line-height: 45px;
+        .add-btn {
+                margin: 24px 0 0;
+                width: 100%;
+                display: block;
+                + .add-btn {
+                    margin-top: 17px;
             }
         }
-    }
-}
-
-@media screen and (max-width: 40em) {
-    .header .hover-list {
-        margin-top: -14px;
-    }
-}
-
-@media screen and (max-width: 40em) {
-    .header .hover-list > li > ul {
-        max-width: 40em;
-        a {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+        .p0 {
+            height: 48px;
+            line-height: 48px;
+            tbody {
+                line-height: 45px;
+                * {
+                    line-height: 45px;
+                }
+            }
+        }
+        .hover-list {
+            margin-top: -14px;
+            > li > ul {
+                max-width: 40em;
+                a {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
         }
     }
 }
