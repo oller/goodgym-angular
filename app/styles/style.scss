@@ -282,22 +282,25 @@ a.form-pathway-icon.embeddable-form{background-position:0 -500px}a.form-pathway-
 .form-integrations ol ul,.form-integrations ul ul{margin:6px 0 0}
 
 
-.meta{padding:0}
-.meta .size1of2:first-child{max-width:100%}
-@media screen and (max-width:60em){.meta{width:100%;float:none}}
-.meta .dijitCheckBox{float:left;margin:6px 30px 0 0;position:relative;z-index:1}
-.meta .dijitCheckBox+.ggicon{float:left;font-size:36px}
-@media screen and (max-width:60em){.meta .dijitCheckBox{margin-right:18px}}
-@media screen and (max-width:40em){.meta .dijitCheckBox{display:none}}
-.meta .ggicon{color:#959595;font-size:20px}
-.meta .ggicon.star:before,.meta .ggicon.graystar:before{margin-right:-5px}
-.meta h4{font-size:1.2em;line-height:1.6666666666666667em;margin:0}
-.meta p{margin:0;font-size:1em;line-height:1.6em}
-@media screen and (max-width:40em){.meta p+p{margin-top:6px}}
-.meta h4,.meta p{padding-left:54px}
-@media screen and (max-width:40em){.meta h4,.meta p{padding-left:0}}
-.meta .member-rating{margin-top:0}
-@media screen and (max-width:40em){.meta .member-rating{margin-right:12px}.meta .member-rating .ggicon{font-size:15px;vertical-align:baseline}}
+// .meta{padding:0}
+// .meta .size1of2:first-child{max-width:100%}
+// @media screen and (max-width:60em){.meta{width:100%;float:none}}
+// .meta .dijitCheckBox{float:left;margin:6px 30px 0 0;position:relative;z-index:1}
+// .meta .dijitCheckBox+.ggicon{float:left;font-size:36px}
+// @media screen and (max-width:60em){.meta .dijitCheckBox{margin-right:18px}}
+// @media screen and (max-width:40em){.meta .dijitCheckBox{display:none}}
+// .meta .ggicon{color:#959595;font-size:20px}
+// .meta .ggicon.star:before,.meta .ggicon.graystar:before{margin-right:-5px}
+// .meta h4{font-size:1.2em;line-height:1.6666666666666667em;margin:0}
+// .meta p{margin:0;font-size:1em;line-height:1.6em}
+// @media screen and (max-width:40em){.meta p+p{margin-top:6px}}
+// // .meta h4,.meta p{padding-left:54px}
+// @media screen and (max-width:40em){.meta h4,.meta p{padding-left:0}}
+
+// .meta .member-rating{margin-top:0}
+// @media screen and (max-width:40em){.meta .member-rating{margin-right:12px}.meta .member-rating .ggicon{font-size:15px;vertical-align:baseline}}
+
+
 .cp-meta h4,.cp-meta p{padding-left:122px}@media screen and (max-width:60em){.cp-meta h4,.cp-meta p{padding-left:96px}}
 @media screen and (max-width:40em){.cp-meta h4,.cp-meta p{padding-left:0}}.rss-children-list .cp-meta h4,.rss-children-list .cp-meta p,.conversations-list .cp-meta h4,.conversations-list .cp-meta p{padding-left:0}
 @media screen and (max-width:60em){.cp-meta p{margin-bottom:6px}}

@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: buttonRegister', function () {
+describe('Directive: registerRun', function () {
 
   // load the directive's module
   beforeEach(module('goodgymApp'));
@@ -13,8 +13,8 @@ describe('Directive: buttonRegister', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<button-register></button-register>');
+    element = angular.element('<register-run></register-run>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the buttonRegister directive');
+    expect(element.text()).toBe('this is the registerRun directive');
   }));
 });

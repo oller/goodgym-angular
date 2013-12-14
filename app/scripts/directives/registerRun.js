@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .directive('buttonRegister', ['Run', 'toaster',
+  .directive('registerRun', ['Run', 'toaster',
     function(Run, toaster) {
       return {
         restrict: 'A',

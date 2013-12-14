@@ -39,6 +39,11 @@ angular.module('goodgymApp', [
           controller: 'RunDetailCtrl',
           access: access.public
         })
+        .when('/areas', {
+          templateUrl: 'views/areas.html',
+          controller: 'AreaCtrl',
+          access: access.public
+        })
         .when('/manage', {
           templateUrl: 'views/manage.html',
           controller: 'ManageCtrl',
