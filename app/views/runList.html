@@ -58,7 +58,7 @@
             <li class="relative selfclear" ng-repeat="run in runs | filter: query">
 
                 <div class="line">
-                    <div class="size7of8 unit meta">
+                    <div class="size1of1 unit meta">
                         <div class="unit size1of4 nopadding">
                             <div class="grayscale below12">
                                 <a href="/runs/{{run.id}}" title="View Details of {{run.name}}">
@@ -68,9 +68,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="unit size3of4">
-                            <div class="unit size1of2 nopadding">
-
+                        <div class="size3of4 unit">
+                            <div class="size1of2 unit nopadding below12">
                                 <h4><a href="/runs/{{run.id}}">{{run.name}}</a>
                                 </h4>
                                 <p class="dim-el below12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -79,17 +78,17 @@
                                     <span ng-bind-html="run.signed_up | iconify"></span>
                                 </p>
                             </div>
-                            <div class="lastUnit size1of2 nopadding stats-container hide-phone">
-                                <div class="data inline-block float-left">
+                            <div class="size1of4 unit nopadding stats-container hide-phone">
+                                <div class="data inline-block float-left below12">
                                     <h4>{{ run.registrations.length }}</h4>
                                     <p class="dim-el" ng-pluralize count="run.registrations.length" when="{'1': 'Attendee', 'other': 'Attendees'}"></p>
                                 </div>
-                                <div class="data inline-block float-left">
+                                <div class="data inline-block float-left below12">
                                     <h4>0.0%</h4>
                                     <p class="dim-el">Another</p>
                                 </div>
                             </div>
-                            <div class="lastUnit size1of2 nopadding stats-container show-phone">
+                            <div class="size1of4 unit nopadding stats-container show-phone">
                                 <ul class="dotted-list nomargin">
                                     <li>
                                         <span ng-pluralize count="run.registrations.length" when="{'1': 'Attendee', 'other': 'Attendees'}"></span>
@@ -101,78 +100,16 @@
                                     </li>
                                 </ul>
                             </div>
-
+                            <div class="size1of4 lastUnit nopadding alignr meta-actions below18">
+                                <a class="button nomargin full-width relative" href="" button-loading="button-loading" register-run data-run-id="{{run.id}}" data-reg-id="{{run.registration_id}}">Join Run</a>
+                            </div>
                         </div>
-
-
                     </div>
-                    <div class="size1of8 lastUnit nopadding alignr meta-actions">
-                        <a class="button nomargin full-width-mobile relative" href="" button-loading="button-loading" register-run data-run-id="{{run.id}}" data-reg-id="{{run.registration_id}}">Join Run</a>
-                    </div>
-
-
                 </div>
             </li>
         </ul>
     </div>
 </div>
-<!--
-    <ul class="media-list rows">
-        <li ng-repeat="run in runs | filter: query">
-            <div class="media">
-                <div class="media-image">
-                    <div class="grayscale thumbnail below12">
-                        <a href="/runs/{{run.id}}" title="View Details of {{run.name}}">
-                            <img ng-src="{{run.photos[0].photo.thumbnail}}" alt="{{run.name}}" class="">
 
-                                <img src="http://placehold.it/300x300" alt="">
-                         </a>
-                    </div>
-                </div>
-                <div class="media-body">
-                    <div class="line">
-                        <div class="size3of4 unit">
-                            <div class="unit size3of4 nopadding">
-                                <h4><a href="/runs/{{run.id}}">{{run.name}}</a>
-                                </h4>
-                                <p class="dim-el below12">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <p class="small-meta">
-                                    Attending:
-                                    <span ng-bind-html="run.signed_up | iconify"></span>
-                                </p>
-                            </div>
-                            <div class="lastUnit size1of4 nopadding stats-container hide-phone">
-                                <div class="data inline-block float-left">
-                                    <h4>6</h4>
-                                    <p class="dim-el">Subscribers</p>
-                                </div>
-                                <div class="data inline-block float-left">
-                                    <h4>0.0%</h4>
-                                    <p class="dim-el">Open Rate</p>
-                                </div>
-                            </div>
-                            <div class="lastUnit size1of4 nopadding stats-container show-phone">
-                                <ul class="dotted-list nomargin">
-                                    <li>
-                                        <span>Subscribers</span>
-                                        <span class="fwb float-right">6</span>
-                                    </li>
-                                    <li>
-                                        <span>Open Rate</span>
-                                        <span class="fwb float-right">0.0%</span>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                        <div class="size1of4 lastUnit nopadding alignr meta-actions">
-                            <a class="button nomargin full-width-mobile relative" href="" button-loading="button-loading" register-run data-run-id="{{run.id}}" data-reg-id="{{run.registration_id}}">Join Run</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-</div> -->
 
 <no-data title="There are currently no runs scheduled" desc="This seems a little odd, we'll look into it!" icon="thumbs-down" ng-show="noDataPane" ng-cloak></no-data>

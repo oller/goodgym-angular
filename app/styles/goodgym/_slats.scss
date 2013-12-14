@@ -203,6 +203,9 @@
                 display: block;
             }
         }
+        &:last-child {
+            border-bottom: none;
+        }
     }
 }
 
