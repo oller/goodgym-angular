@@ -28,11 +28,11 @@ angular.module('goodgymApp')
         access: 'public',
         icon: 'users'
       }, {
-        title: 'View Team',
-        slug: 'team',
-        access: 'public',
-        icon: 'users'
-      }, {
+      //   title: 'View Team',
+      //   slug: 'team',
+      //   access: 'public',
+      //   icon: 'users'
+      // }, {
         title: 'My Account',
         slug: 'account',
         access: 'user',
