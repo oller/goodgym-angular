@@ -19,7 +19,8 @@ angular.module('goodgymApp')
             $location.path('/');
           },
           function(err) {
-            $rootScope.error = err;
+            $scope.loading = false;
+            toaster.pop('error', 'Uh-oh', 'There was an error trying to create your user. Please try again');
           });
       };
     }
