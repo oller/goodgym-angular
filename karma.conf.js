@@ -30,6 +30,7 @@ module.exports = function(config) {
       'app/bower_components/angular-cookies/angular-cookies.js',
       'app/bower_components/angular-sanitize/angular-sanitize.js',
       'app/bower_components/angular-route/angular-route.js',
+      'app/bower_components/angular-local-storage/angular-local-storage.js',
       'app/scripts/*.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
@@ -52,10 +53,10 @@ module.exports = function(config) {
     autoWatch: true,
 
     // Allow import and testing of templates
-    // preprocessors: {
-    //   'views/**/*.html': 'html2js'
-    //   // ,'views/*.html': 'html2js'
-    // },
+    preprocessors: {
+      'views/**/*.html': 'html2js'
+      // ,'views/*.html': 'html2js'
+    },
 
     // Start these browsers, currently available:
     // - Chrome
