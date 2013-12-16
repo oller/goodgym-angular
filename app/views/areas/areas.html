@@ -1,0 +1,27 @@
+<!-- Header -->
+<div class="lastUnit size1of1 header">
+    <h1>Areas</h1>
+</div>
+<!-- /Header -->
+
+<div class="line local-nav-container ng-scope">
+    <div class="lastUnit size1of1 below36">
+        <p class="mobile-top-nav nomargin full-width fwb"><a href="" toggle-parent="active">Navigation</a>
+        </p>
+        <ul class="local-nav selfclear">
+            <li ng-class="{current: tab.current == 'active'}"><a href="" ng-click="tab.current = 'active'">Active Areas</a>
+            </li>
+            <li ng-class="{current: tab.current == 'proposed'}"><a href="" ng-click="tab.current = 'proposed'">Proposed Areas</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="lastUnit size1of1 main-section" ng-switch on="tab.current">
+    <div ng-switch-when="active">
+        <div ng-include="'/views/areas/areasActive.html'"></div>
+    </div>
+    <div ng-switch-when="proposed">
+        <div ng-include="'/views/areas/areasProposed.html'"></div>
+    </div>
+</div>

@@ -6,7 +6,6 @@
 </div>
 <!-- /Header -->
 <div class="lastUnit size1of1 main-section" ng-show="toggleCreate">
-
     <div class="line">
         <div class="size1of2 unit">
             <div class="field-wrapper">
@@ -35,7 +34,6 @@
                     <option value="3">Lewisham</option>
                 </select>
             </div>
-
         </div>
     </div>
     <div class="line">
@@ -83,10 +81,10 @@
                                     <h4>{{ run.registrations.length }}</h4>
                                     <p class="dim-el" ng-pluralize count="run.registrations.length" when="{'1': 'Attendee', 'other': 'Attendees'}"></p>
                                 </div>
-                                <div class="data inline-block float-left below12">
+<!--                                 <div class="data inline-block float-left below12">
                                     <h4>0.0%</h4>
                                     <p class="dim-el">Another</p>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="size1of4 unit nopadding stats-container show-phone">
                                 <ul class="dotted-list nomargin">
@@ -94,13 +92,13 @@
                                         <span ng-pluralize count="run.registrations.length" when="{'1': 'Attendee', 'other': 'Attendees'}"></span>
                                         <span class="fwb float-right">{{ run.registrations.length }}</span>
                                     </li>
-                                    <li>
+<!--                                     <li>
                                         <span>Another</span>
                                         <span class="fwb float-right">0.0%</span>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
-                            <div class="size1of4 lastUnit nopadding alignr meta-actions below18">
+                            <div class="size1of4 lastUnit alignr meta-actions below18">
                                 <a class="button nomargin full-width relative" href="" button-loading="button-loading" register-run data-run-id="{{run.id}}" data-reg-id="{{run.registration_id}}">Join Run</a>
                             </div>
                         </div>

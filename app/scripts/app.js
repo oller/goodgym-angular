@@ -30,17 +30,17 @@ angular.module('goodgymApp', [
           access: access.public
         })
         .when('/runs', {
-          templateUrl: 'views/runList.html',
+          templateUrl: 'views/runs/runList.html',
           controller: 'RunListCtrl',
           access: access.public
         })
         .when('/runs/:runId', {
-          templateUrl: 'views/runDetail.html',
+          templateUrl: 'views/runs/runDetail.html',
           controller: 'RunDetailCtrl',
           access: access.public
         })
         .when('/areas', {
-          templateUrl: 'views/areas.html',
+          templateUrl: 'views/areas/areas.html',
           controller: 'AreaCtrl',
           access: access.public
         })
@@ -54,11 +54,11 @@ angular.module('goodgymApp', [
           controller: 'AccountCtrl',
           access: access.user
         })
-        .when('/team', {
-          templateUrl: 'views/team.html',
-          controller: 'TeamCtrl',
-          access: access.public
-        })
+        // .when('/team', {
+        //   templateUrl: 'views/team.html',
+        //   controller: 'TeamCtrl',
+        //   access: access.public
+        // })
         .when('/legal', {
           templateUrl: 'views/legal.html',
           access: access.public
