@@ -79,7 +79,7 @@ angular.module('toaster', [])
             }
 
             if (!toast.animation) {
-              toast.animation = mergedConfig['animation'];
+              toast.animation = mergedConfig.animation;
             }
 
             toast.icon = mergedConfig['icon-classes'][toast.type];
@@ -96,14 +96,17 @@ angular.module('toaster', [])
               toast.html = $sce.trustAsHtml(toast.body);
             }
 
-            var timeout = typeof(toast.timeout) == "number" ? toast.timeout : mergedConfig['time-out'];
-            if (timeout > 0)
+            var timeout = typeof(toast.timeout) == 'number' ? toast.timeout : mergedConfig['time-out'];
+            if (timeout > 0){
               setTimeout(toast, timeout);
+            }
 
-            if (mergedConfig['newest-on-top'] === true)
+            if (mergedConfig['newest-on-top'] === true){
               scope.toasters.unshift(toast);
-            else
+            }
+            else {
               scope.toasters.push(toast);
+            }
           }
 
           function setTimeout(toast, time) {
@@ -121,15 +124,17 @@ angular.module('toaster', [])
           function($scope, $element, $attrs) {
 
             $scope.stopTimer = function(toast) {
-              if (toast.timeout)
+              if (toast.timeout) {
                 $timeout.cancel(toast.timeout);
+              }
             };
 
             $scope.removeToast = function(id) {
               var i = 0;
               for (i; i < $scope.toasters.length; i++) {
-                if ($scope.toasters[i].id === id)
+                if ($scope.toasters[i].id === id) {
                   break;
+                }
               }
               $scope.toasters.splice(i, 1);
             };

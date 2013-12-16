@@ -35,8 +35,8 @@ angular.module('goodgymApp')
       function setToken(userSessionToken) {
         token = userSessionToken;
         localStorageServiceAlias.add('token', token);
-        $http.defaults.headers.common['Authorization'] = 'Bearer ' + token;
-      };
+        $http.defaults.headers.common.Authorization = 'Bearer ' + token;
+      }
 
       function matchScopeToRole(scope) {
         if (scope == "user") {
@@ -44,7 +44,7 @@ angular.module('goodgymApp')
         } else if (scope == "admin") {
           currentUser.role = userRoles.admin;
         }
-      };
+      }
 
       function saveSession(scope) {
         var ggCookie = {
@@ -56,14 +56,16 @@ angular.module('goodgymApp')
 
       return {
         authorize: function(accessLevel, role) {
-          if (role === undefined)
+          if (role === undefined) {
             role = currentUser.role;
+          }
 
           return accessLevel.bitMask & role.bitMask;
         },
         isLoggedIn: function(user) {
-          if (user === undefined)
+          if (user === undefined) {
             user = currentUser;
+          }
           return user.role.title === userRoles.user.title || user.role.title === userRoles.admin.title;
         },
         register: function(user, success, error) {

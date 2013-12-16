@@ -11,7 +11,7 @@ angular.module('goodgymApp')
             scope.loading = true;
             Area.subscribe({
               areaId: attrs.areaId,
-            }, function success(data) {
+            }, function success() {
               scope.loading = false;
               scope.area.signed_up = true;
               toaster.pop('success', 'Subscribed!', 'You\'re now subscribed to this area, we\'ll keep you updated with activity in this area');

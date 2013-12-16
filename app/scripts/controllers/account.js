@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('goodgymApp')
-  .controller('AccountCtrl', ['$scope', 'Me',
-    function($scope, Me) {
+  .controller('AccountCtrl', ['$scope', 'Me', 'toaster',
+    function($scope, Me, toaster) {
       $scope.title = 'My Account';
 
       var me = Me.query('',

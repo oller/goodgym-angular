@@ -2,9 +2,10 @@
 
 angular.module('goodgymApp')
   .controller('MainCtrl', ['$rootScope', '$scope',
-  	function($rootScope, $scope) {
-    $scope.text = {
-      strapline: 'Some introductory sentence...'
-    };
+    function($rootScope, $scope) {
+      $scope.text = {
+        strapline: 'Some introductory sentence...'
+      };
 
-  }]);
+    }
+  ]);

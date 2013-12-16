@@ -19,16 +19,20 @@ angular.module('goodgymApp')
           }, true);
 
           attrs.$observe('accessLevel', function(al) {
-            if (al) accessLevel = $scope.$eval(al);
+            if (al) {
+              accessLevel = $scope.$eval(al);
+            }
             updateCSS();
           });
 
           function updateCSS() {
             if (userRole && accessLevel) {
-              if (!AuthService.authorize(accessLevel, userRole))
+              if (!AuthService.authorize(accessLevel, userRole)) {
                 element.css('display', 'none');
-              else
+              }
+              else {
                 element.css('display', prevDisp);
+              }
             }
           }
         }

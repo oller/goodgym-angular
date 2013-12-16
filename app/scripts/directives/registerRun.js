@@ -43,7 +43,7 @@ angular.module('goodgymApp')
 
             if (scope.run.signed_up) {
               element.html('Leave run');
-              element.removeClass('p0')
+              element.removeClass('p0');
             } else {
               element.html('Join run');
               element.addClass('p0');
