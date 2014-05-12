@@ -5,7 +5,7 @@ angular.module('goodgymApp')
     function($http, $cookieStore, toaster, localStorageService) {
 
       var localStorageServiceAlias;
-      var localStorageSupported = localStorageService.isSupported();
+      var localStorageSupported = localStorageService.isSupported;
       //  Determine whether we're writing to LocalStorage or Cookies
       if (localStorageSupported) {
         localStorageServiceAlias = localStorageService;
