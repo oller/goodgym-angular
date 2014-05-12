@@ -15,9 +15,6 @@ angular.module('goodgymApp', [
 
       var access = routingConfig.accessLevels;
 
-      // console.log('access details:');
-      // console.log(access);
-
       $routeProvider
         .when('/', {
           templateUrl: 'views/main.html',
